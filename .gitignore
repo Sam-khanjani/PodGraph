@@ -149,6 +149,7 @@ activemq-data/
 
 # Environments
 .env
+.env.*
 .envrc
 .venv
 env/
@@ -216,3 +217,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+
+# SSL/TLS certificates and private keys
+*.pem
+*.key
+*.crt
+*.cert
+
+# Secrets / credentials
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+
+# Generic database files
+*.sqlite
+*.db

@@ -1,0 +1,83 @@
+# version: '3.9'
+
+services:
+  neo4j:
+    image: neo4j:2026.04.0-community
+    container_name: podgragh-neo4j
+    environment:
+      NEO4J_AUTH: none
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_apoc_export_file_enabled: 'true'
+      NEO4J_apoc_import_file_enabled: 'true'
+    ports:
+      - "7474:7474"  # Neo4j Browser
+      - "7687:7687"  # Bolt protocol
+    volumes:
+      - neo4j_data:/var/lib/neo4j/data
+      - neo4j_logs:/var/lib/neo4j/logs 
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "none", "RETURN 1"]
+      interval: 10s
+      timeout: 10s
+      start_period: 60s
+      retries: 5
+    networks:
+      - podgragh-network
+
+    
+  kafka:
+    image: confluentinc/cp-kafka:8.1.3
+    container_name: graphrag-kafka
+    hostname: kafka
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qk'
+    ports:
+      - "9092:9092"
+    networks:
+      - podgragh-network 
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-broker-api-versions --bootstrap-server kafka:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: graphrag-api
+    depends_on:
+      neo4j:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      PYTHONUNBUFFERED: 'true'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+    command: python -m uvicorn src.query.api:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - podgragh-network
+      
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+
+networks:
+  podgragh-network:
+    driver: bridge
