@@ -33,7 +33,7 @@ logs-neo4j:
 	docker compose logs -f neo4j
 
 test:
-	pytest src/tests -v --cov=src
+	python -m pytest src/tests -v --cov=src
 
 lint:
 	black --check src/
