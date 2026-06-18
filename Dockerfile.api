@@ -16,8 +16,8 @@ RUN pip install --no-cache-dir poetry \
 
 COPY src ./src
 
-HEALTHCHECK  --interval=30s --timeout=10s --start-period=5s --retries= \
-    CMD python -c  "import request;request.get('http://localhost:8000/health')"
+HEALTHCHECK  --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c  "import requests;request.get('http://localhost:8000/health')"
 
 
-CMD ["python", "-m", "uvicorn", "src.query.api:app", "--host", "0,0,0,0", "--report", "8000" ]
+CMD ["python", "-m", "uvicorn", "src.query.api:app", "--host", "0.0.0.0", "--report", "8000" ]

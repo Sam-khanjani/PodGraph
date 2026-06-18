@@ -12,10 +12,10 @@ class Neo4jConnection:
     def get_driver(cls) -> Driver:
         """Get or create Neo4j driver instance"""
         if cls._instance is None:
+            auth = None if not settings.neo4j_password else (settings.neo4j_username, settings.neo4j_password)
             cls._instance = GraphDatabase.driver(
                 settings.neo4j_uri,
-                auth=(settings.neo4j_username, settings.neo4j_password),
-                trust="TRUST_ALL_CERTIFICATES"  # Only for development!
+                auth=auth,
             )
         return cls._instance
     

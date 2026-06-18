@@ -12,6 +12,9 @@ help:
 	@echo "  make lint      - Run linting"
 	@echo "  make format    - Format code with black"
 	@echo "  make clean     - Clean up containers and volumes"
+	@echo "  make init-db    - Apply Neo4j schema"
+	@echo "  make seed       - Load sample data"
+	@echo "  make setup-data - init-db + seed in one shot"
 
 install:
 	poetry install
@@ -46,3 +49,12 @@ clean:
 	docker compose down -v
 	find . -type d -name __pycache__ -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
+
+init-db:
+	poetry run python -m src.setup.init_neo4j
+
+seed:
+	poetry run python -m src.setup.sample_data
+
+setup-data: init-db seed
+	@echo "Schema applied and sample data loaded.

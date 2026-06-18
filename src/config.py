@@ -4,7 +4,7 @@ from typing import Optional
 class Settings(BaseSettings):
 
     #neo4j
-    neo4j_uri: str = "bold://neo4j:7687"
+    neo4j_uri: str = "bolt://localhost:7687"
     neo4j_username: str = "neo4j"
     neo4j_password: str = "testpasssword123"
 
