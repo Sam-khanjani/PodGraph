@@ -2,6 +2,8 @@
 
 An agentic AI system that synthesizes insights across multiple podcasts using Neo4j graph database, Apache Kafka streaming, and large language models.
 
+> **Note:** Kafka is only required when scaling to high ingestion volumes. For small-scale or local use, it can be omitted and ingestion can run directly without a message queue.
+
 ## 🎯 Vision
 
 Instead of searching episodes one by one, ask cross-podcast questions:
@@ -16,48 +18,7 @@ The system:
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────┐
-│   Podcast RSS   │
-│    / YouTube    │
-└────────┬────────┘
-         │
-         ▼
-    ┌────────────┐
-    │   Kafka    │ ◄── Heavy lifting (background)
-    │ (async)    │
-    └────┬───────┘
-         │
-         ▼
-  ┌────────────────┐
-  │ Ingestion      │ Transcribe → Chunk → Embed → Extract Concepts
-  │ Workers        │
-  └────┬───────────┘
-       │
-       ▼
-  ┌──────────────┐
-  │   Neo4j      │ Knowledge graph with relationships
-  │ (Chunks,     │
-  │  Concepts,   │
-  │  Episodes)   │
-  └──┬──────────┬┘
-     │          │
-     │ (Vector  │
-     │  Search) │
-     │          │
-     ▼          ▼
-   ┌──────────────────────┐
-   │  FastAPI Server      │ ◄── Live (fast)
-   │  Router Agent        │
-   │  Synthesis Agent     │
-   └─────────┬────────────┘
-             │
-             ▼
-        ┌─────────────┐
-        │  Web UI     │
-        │  (User)     │
-        └─────────────┘
-```
+![Architecture](pr-flow.png)
 
 ## ⚡ Key Features
 
