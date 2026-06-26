@@ -1,22 +1,49 @@
-from fastapi import FastAPI, Depends, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from neo4j import Driver
 import logging
-from src.config import settings
-from src.query.db import get_db, Neo4jConnection
+from contextlib import asynccontextmanager
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from fastapi import FastAPI, Request, status
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
-# Create FastAPI app
+from src.query.db import AsyncNeo4j
+from src.query.repository import NotFoundError
+from src.query.routers import concepts, episodes, guests, podcasts, search, system
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(name)s | %(message)s")
+logger = logging.getLogger("graphrag")
+
+tags_metadata = [
+    {"name": "system", "description": "Liveness and readiness probes."},
+    {"name": "podcasts", "description": "Podcasts in the knowledge graph."},
+    {"name": "episodes", "description": "Episode detail with guests and transcript chunks."},
+    {"name": "concepts", "description": "Concepts and the cross-podcast graph-power view."},
+    {"name": "guests", "description": "Guests and everything they connect to."},
+    {"name": "search", "description": "Keyword search over chunk text."},
+]
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # --- startup ---
+    logger.info("Starting GraphRAG API...")
+    if await AsyncNeo4j.verify():
+        logger.info("Neo4j connectivity OK")
+    else:
+        logger.warning("Neo4j NOT reachable at startup (will retry per-request)")
+    yield
+    # --- shutdown ---
+    logger.info("Shutting down; closing Neo4j driver")
+    await AsyncNeo4j.close()
+
+
 app = FastAPI(
-    title="GraphRAG Podcast AI",
-    description="Agentic AI system for cross-podcast synthesis",
-    version="0.1.0"
+    title="PodGraph Podcast AI",
+    description="Cross-podcast synthesis over a Neo4j knowledge graph.",
+    version="0.1.0",
+    lifespan=lifespan,
+    openapi_tags=tags_metadata,
 )
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,61 +53,18 @@ app.add_middleware(
 )
 
 
-@app.on_event("startup")
-async def startup_event():
-    """Verify Neo4j connection on startup"""
-    logger.info("Starting up GraphRAG API...")
-    if Neo4jConnection.verify_connection():
-        logger.info("✓ Neo4j connection verified")
-    else:
-        logger.error("✗ Neo4j connection failed")
+@app.exception_handler(NotFoundError)
+async def not_found_handler(request: Request, exc: NotFoundError):
+    """Turn any domain NotFoundError into a clean HTTP 404."""
+    return JSONResponse(
+        status_code=status.HTTP_404_NOT_FOUND,
+        content={"detail": str(exc), "entity": exc.entity, "key": exc.key},
+    )
 
 
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Close Neo4j connection on shutdown"""
-    logger.info("Shutting down GraphRAG API...")
-    Neo4jConnection.close()
-
-
-@app.get("/health")
-async def health_check():
-    """Health check endpoint"""
-    return {
-        "status": "ok",
-        "service": "graphrag-api",
-        "version": "0.1.0"
-    }
-
-
-@app.get("/info")
-async def info():
-    """System info endpoint"""
-    return {
-        "name": "GraphRAG Podcast AI",
-        "neo4j_uri": settings.neo4j_uri,
-        "kafka_bootstrap_servers": settings.kafka_bootstrap_servers,
-    }
-
-
-@app.get("/podcasts")
-async def get_podcasts(db: Driver = Depends(get_db)):
-    """Get all podcasts in the database"""
-    try:
-        with db.session() as session:
-            result = session.run("MATCH (p:Podcast) RETURN p.name as name, p.host as host")
-            podcasts = [dict(record) for record in result]
-        
-        if not podcasts:
-            return {"podcasts": [], "message": "No podcasts found yet"}
-        
-        return {"podcasts": podcasts}
-    
-    except Exception as e:
-        logger.error(f"Error fetching podcasts: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host=settings.api_host, port=settings.api_port)
+app.include_router(system.router)
+app.include_router(podcasts.router)
+app.include_router(episodes.router)
+app.include_router(concepts.router)
+app.include_router(guests.router)
+app.include_router(search.router)

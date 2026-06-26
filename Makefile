@@ -15,6 +15,8 @@ help:
 	@echo "  make init-db    - Apply Neo4j schema"
 	@echo "  make seed       - Load sample data"
 	@echo "  make setup-data - init-db + seed in one shot"
+	@echo "  make test-api   - test fastapi"
+	@echo "  make test-live  - the 3 live integration tests"
 
 install:
 	poetry install
@@ -58,3 +60,10 @@ seed:
 
 setup-data: init-db seed
 	@echo "Schema applied and sample data loaded.
+
+test-api:
+	poetry run pytest src/tests/test_api.py -v
+
+test-live:
+	# Linux/Mac: RUN_LIVE_TESTS=1 poetry run pytest src/tests/test_api_integration.py -v
+	poetry run python -c "import os,subprocess,sys; os.environ['RUN_LIVE_TESTS']='1'; sys.exit(subprocess.run(['pytest','src/tests/test_api_integration.py','-v']).returncode)"
