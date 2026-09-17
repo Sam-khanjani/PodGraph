@@ -31,3 +31,12 @@ FOR (e:Episode) ON (e.number);
 
 CREATE INDEX concept_category_idx IF NOT EXISTS
 FOR (c:Concept) ON (c.category);
+
+// ---------- Vector index (semantic search). Dimensions must match src/ingestion/embedder.py ----------
+
+CREATE VECTOR INDEX chunk_embedding_index IF NOT EXISTS
+FOR (c:Chunk) ON (c.embedding)
+OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}};
+
+CREATE INDEX cached_answer_key_idx IF NOT EXISTS
+FOR (a:CachedAnswer) ON (a.key);

@@ -1,0 +1,3916 @@
+{
+ "podcast_name": "Beyond Coding",
+ "podcast_host": "Patrick Akil",
+ "episode_id": "yt-lFyiHwjHPj4",
+ "episode_title": "Why World Class Engineers Get Jobs on Easy Mode",
+ "audio_url": "https://www.youtube.com/watch?v=lFyiHwjHPj4",
+ "guest_name": "Bruno Schaatsbergen",
+ "summary": "The episode features a discussion with open source contributor Bruno Schaatsbergen on the significance of open source in his career and how to effectively contribute to it.",
+ "segments": [
+  {
+   "text": "It's been years since I actually created\na resume.",
+   "start": 0.28,
+   "duration": 3.12
+  },
+  {
+   "text": "Most of the jobs or companies\nI have worked for was through folks",
+   "start": 3.44,
+   "duration": 4.0
+  },
+  {
+   "text": "approaching me on GitHub.",
+   "start": 7.44,
+   "duration": 1.0
+  },
+  {
+   "text": "I think the bigger problem for open source\nis, at the moment, it's sort of being",
+   "start": 8.44,
+   "duration": 4.08
+  },
+  {
+   "text": "killed with kindness and a lot of slop\nfrom people that are trying to contribute.",
+   "start": 12.52,
+   "duration": 4.84
+  },
+  {
+   "text": "I look for like active contributors.",
+   "start": 17.4,
+   "duration": 1.72
+  },
+  {
+   "text": "Then I look for their pull requests\nand I filter on the ones that are merged",
+   "start": 19.12,
+   "duration": 3.76
+  },
+  {
+   "text": "and I just try and sort of\ncopy their style.",
+   "start": 23.08,
+   "duration": 2.48
+  },
+  {
+   "text": "It reduces the cognitive load\nfor a reviewer",
+   "start": 25.56,
+   "duration": 2.92
+  },
+  {
+   "text": "to understand what you're actually\nproposing if you speak their language.",
+   "start": 28.48,
+   "duration": 3.12
+  },
+  {
+   "text": "I don't want to lose my identity",
+   "start": 32.04,
+   "duration": 1.6
+  },
+  {
+   "text": "through using agents,\nbut I think you should use them.",
+   "start": 33.64,
+   "duration": 3.08
+  },
+  {
+   "text": "But just don't let it sort of steal\nyour identity.",
+   "start": 36.92,
+   "duration": 2.24
+  },
+  {
+   "text": "Don't outsource your thinking to it.",
+   "start": 39.16,
+   "duration": 2.0
+  },
+  {
+   "text": "Yeah, that's how you maintain ownership.",
+   "start": 41.16,
+   "duration": 1.68
+  },
+  {
+   "text": "If you've ever thought\nabout contributing to open source",
+   "start": 42.84,
+   "duration": 2.28
+  },
+  {
+   "text": "but you haven't actually started,\nthen this episode is for you.",
+   "start": 45.12,
+   "duration": 3.28
+  },
+  {
+   "text": "I'm joined by Bruno Schaatsbergen,\nand he is an open source legend.",
+   "start": 48.84,
+   "duration": 3.36
+  },
+  {
+   "text": "We discuss\nhow open source has shaped his career,",
+   "start": 52.56,
+   "duration": 2.76
+  },
+  {
+   "text": "what the impact is of\nagenetic on open source.",
+   "start": 55.32,
+   "duration": 3.0
+  },
+  {
+   "text": "How to make it easy for yourself to start\nand for the maintainers",
+   "start": 58.8,
+   "duration": 3.24
+  },
+  {
+   "text": "to actually merge\nyour pull requests and much, much more.",
+   "start": 62.04,
+   "duration": 3.52
+  },
+  {
+   "text": "So enjoy.",
+   "start": 65.84,
+   "duration": 1.4
+  },
+  {
+   "text": "Beyond Coding.",
+   "start": 67.24,
+   "duration": 3.0
+  },
+  {
+   "text": "I think open\nsource is one of the coolest things",
+   "start": 70.44,
+   "duration": 1.8
+  },
+  {
+   "text": "we have within this industry,\nspecifically in tech,",
+   "start": 72.24,
+   "duration": 3.0
+  },
+  {
+   "text": "and I haven't been in any other industry,\nso that's easy to say.",
+   "start": 75.32,
+   "duration": 2.84
+  },
+  {
+   "text": "But I wonder what role open source\nhas played throughout your career?",
+   "start": 78.16,
+   "duration": 3.0
+  },
+  {
+   "text": "Yeah, it's pretty much shaped my career.",
+   "start": 81.4,
+   "duration": 1.6
+  },
+  {
+   "text": "It's a form of escapism for me.",
+   "start": 83.0,
+   "duration": 3.32
+  },
+  {
+   "text": "So usually after my 9",
+   "start": 86.48,
+   "duration": 1.68
+  },
+  {
+   "text": "to 5 for different customers,\nI find myself working on projects.",
+   "start": 88.16,
+   "duration": 3.96
+  },
+  {
+   "text": "Terraform\nhas been a huge sort of ecosystem,",
+   "start": 93.4,
+   "duration": 2.32
+  },
+  {
+   "text": "as well as the tool itself\nthat I contributed to.",
+   "start": 95.72,
+   "duration": 3.0
+  },
+  {
+   "text": "Which even eventually ended up me,",
+   "start": 98.76,
+   "duration": 3.0
+  },
+  {
+   "text": "leaving me where I'm currently employed,\nto work for HashiCorp.",
+   "start": 101.76,
+   "duration": 3.72
+  },
+  {
+   "text": "Which was quite cool.",
+   "start": 106.4,
+   "duration": 1.4
+  },
+  {
+   "text": "So part of my career,\nI would say, I think to, to open source.",
+   "start": 107.8,
+   "duration": 3.56
+  },
+  {
+   "text": "And it's that form of,\nlike I said, escape escapism.",
+   "start": 111.96,
+   "duration": 3.0
+  },
+  {
+   "text": "I get to I'm kind of an introvert person.",
+   "start": 115.04,
+   "duration": 3.44
+  },
+  {
+   "text": "I like to put my headphones\non, get some solo time,",
+   "start": 118.64,
+   "duration": 3.0
+  },
+  {
+   "text": "and instead of reading like,",
+   "start": 122.08,
+   "duration": 2.08
+  },
+  {
+   "text": "instead of reading fiction\nor watching a movie,",
+   "start": 124.16,
+   "duration": 3.16
+  },
+  {
+   "text": "I quite enjoy sort of shaping\nas if you were a chef,",
+   "start": 127.32,
+   "duration": 4.2
+  },
+  {
+   "text": "shaping the kitchens and pans and pots\nyou work with.",
+   "start": 131.6,
+   "duration": 3.24
+  },
+  {
+   "text": "I get these shapes over the tools\nthat many of my colleagues work with.",
+   "start": 135.0,
+   "duration": 3.48
+  },
+  {
+   "text": "It's quite rewarding in that sense.",
+   "start": 139.2,
+   "duration": 2.04
+  },
+  {
+   "text": "It has\nallowed me to build up a lot of confidence",
+   "start": 142.8,
+   "duration": 2.32
+  },
+  {
+   "text": "in the pride I take in the work we do.",
+   "start": 145.12,
+   "duration": 3.56
+  },
+  {
+   "text": "And the artifacts\nthat I produce as an engineer, I,",
+   "start": 149.04,
+   "duration": 3.4
+  },
+  {
+   "text": "and when I mentioned that is,",
+   "start": 153.72,
+   "duration": 2.84
+  },
+  {
+   "text": "I really value,\nthe artifacts that I produce.",
+   "start": 156.56,
+   "duration": 4.2
+  },
+  {
+   "text": "So the code that I write\nis, is just part of it, but also how",
+   "start": 161.24,
+   "duration": 2.96
+  },
+  {
+   "text": "I propose it to a team or a project,",
+   "start": 164.2,
+   "duration": 3.0
+  },
+  {
+   "text": "whether and how I write a blog about it.",
+   "start": 167.48,
+   "duration": 2.28
+  },
+  {
+   "text": "A lot of people that I work with\nor that have seen my contributions will",
+   "start": 169.76,
+   "duration": 3.72
+  },
+  {
+   "text": "see that sometimes in GitHub, you can see\nhow many times you edit the the message.",
+   "start": 173.48,
+   "duration": 3.64
+  },
+  {
+   "text": "I sometimes find myself\nworking on a PR for an hour,",
+   "start": 177.68,
+   "duration": 3.0
+  },
+  {
+   "text": "and I spend about 2 hours\nor 3 hours on the actual proposal",
+   "start": 181.0,
+   "duration": 4.76
+  },
+  {
+   "text": "or sort of the PR description,\nand I it's added at like 15 times",
+   "start": 185.76,
+   "duration": 3.8
+  },
+  {
+   "text": "because I'm trying\nto find the right words for it.",
+   "start": 189.84,
+   "duration": 2.16
+  },
+  {
+   "text": "Why is it specifically open\nsource contributions?",
+   "start": 192.0,
+   "duration": 2.76
+  },
+  {
+   "text": "Why aren't these just personal projects?",
+   "start": 194.76,
+   "duration": 1.8
+  },
+  {
+   "text": "Because I know a lot of people",
+   "start": 196.56,
+   "duration": 0.96
+  },
+  {
+   "text": "that do projects and they they really work\nin their own kind of sphere.",
+   "start": 197.52,
+   "duration": 4.12
+  },
+  {
+   "text": "But you continuously work and you provide\nI mean, you polished tooling,",
+   "start": 201.96,
+   "duration": 3.68
+  },
+  {
+   "text": "that's what you mentioned there.",
+   "start": 206.08,
+   "duration": 1.28
+  },
+  {
+   "text": "That's the gift\nI provide. Yeah. Community.",
+   "start": 207.36,
+   "duration": 2.6
+  },
+  {
+   "text": "Why is that?",
+   "start": 209.96,
+   "duration": 1.4
+  },
+  {
+   "text": "If you look at how some companies approach\nthis open core model",
+   "start": 211.36,
+   "duration": 3.92
+  },
+  {
+   "text": "is where they get sort of rapid\nfeedback and free test users.",
+   "start": 215.28,
+   "duration": 4.08
+  },
+  {
+   "text": "I like to",
+   "start": 220.6,
+   "duration": 1.16
+  },
+  {
+   "text": "produce code, share it with colleagues,\nbut also get feedback on the things I do.",
+   "start": 221.76,
+   "duration": 3.84
+  },
+  {
+   "text": "I think it as a feedback loop.",
+   "start": 225.68,
+   "duration": 2.12
+  },
+  {
+   "text": "Yeah.",
+   "start": 227.8,
+   "duration": 1.92
+  },
+  {
+   "text": "And have you\nbecause typically what I've heard",
+   "start": 229.72,
+   "duration": 3.0
+  },
+  {
+   "text": "my colleagues for example\nthey want to contribute to open source,",
+   "start": 232.92,
+   "duration": 3.0
+  },
+  {
+   "text": "but then their PR gets stale\nor it stays open for a long long time.",
+   "start": 236.32,
+   "duration": 3.2
+  },
+  {
+   "text": "And then when they get feedback\nit's like maybe nitpicking",
+   "start": 239.52,
+   "duration": 3.0
+  },
+  {
+   "text": "or maybe the whole solution\ndirection was just wrong.",
+   "start": 242.52,
+   "duration": 2.12
+  },
+  {
+   "text": "So that investment",
+   "start": 244.64,
+   "duration": 1.44
+  },
+  {
+   "text": "not just the time investment,\nbut also like emotional investment.",
+   "start": 246.08,
+   "duration": 3.0
+  },
+  {
+   "text": "People want to close their PR,\nthey want their changes to be merged.",
+   "start": 249.52,
+   "duration": 2.6
+  },
+  {
+   "text": "That's the feeling of fulfillment\nwhen it stays open for a long time.",
+   "start": 252.12,
+   "duration": 3.0
+  },
+  {
+   "text": "I feel like they'll lose it and\nthey probably won't contribute anymore.",
+   "start": 255.36,
+   "duration": 3.0
+  },
+  {
+   "text": "How do you accommodate for that?",
+   "start": 258.44,
+   "duration": 1.12
+  },
+  {
+   "text": "Yeah, that's a very common problem.",
+   "start": 259.56,
+   "duration": 3.08
+  },
+  {
+   "text": "I would say an open source.",
+   "start": 262.64,
+   "duration": 2.2
+  },
+  {
+   "text": "I had the exact same experience\nwhen I started out.",
+   "start": 266.36,
+   "duration": 2.32
+  },
+  {
+   "text": "As anyone that tries to contribute\nto a project for the first time",
+   "start": 268.68,
+   "duration": 4.08
+  },
+  {
+   "text": "is sort of trying to find its way. Right?",
+   "start": 272.76,
+   "duration": 2.2
+  },
+  {
+   "text": "Just writing the code is one thing,\nbut the way how you create your PR,",
+   "start": 274.96,
+   "duration": 4.56
+  },
+  {
+   "text": "how you what kind of title you use, \nwhat kind of commit message you use.",
+   "start": 279.52,
+   "duration": 6.32
+  },
+  {
+   "text": "All of those\nare sort of part of your contribution",
+   "start": 285.84,
+   "duration": 2.36
+  },
+  {
+   "text": "and how I at some point navigate it,\nthat is, I just in GitHub,",
+   "start": 288.2,
+   "duration": 4.68
+  },
+  {
+   "text": "there's a great way to figure out\nwho contributes the most to to the repo.",
+   "start": 292.88,
+   "duration": 4.32
+  },
+  {
+   "text": "So I look for like active contributors.",
+   "start": 298.08,
+   "duration": 1.8
+  },
+  {
+   "text": "Then I look for their pull requests\nand I filter on the ones that are merged,",
+   "start": 299.88,
+   "duration": 3.8
+  },
+  {
+   "text": "and I just try and sort of copy\ntheir style.",
+   "start": 304.12,
+   "duration": 3.0
+  },
+  {
+   "text": "Of of the maintainers that are,",
+   "start": 307.32,
+   "duration": 2.56
+  },
+  {
+   "text": "proposing those PR or merging things in,",
+   "start": 309.88,
+   "duration": 3.0
+  },
+  {
+   "text": "it reduces the cognitive load\nfor a reviewer, to understand",
+   "start": 313.24,
+   "duration": 4.36
+  },
+  {
+   "text": "what you're actually proposing\nif you speak their language.",
+   "start": 317.6,
+   "duration": 3.0
+  },
+  {
+   "text": "If you do something\nthat's completely the opposite.",
+   "start": 320.76,
+   "duration": 2.12
+  },
+  {
+   "text": "Usually when I review PR on my projects\nor projects that contribute to",
+   "start": 322.88,
+   "duration": 3.88
+  },
+  {
+   "text": "that are not conform to the style\nor the documentation we've published,",
+   "start": 326.76,
+   "duration": 3.96
+  },
+  {
+   "text": "I don't want to say that",
+   "start": 331.8,
+   "duration": 0.96
+  },
+  {
+   "text": "I, I would say\nI sort of mentally park them,",
+   "start": 332.76,
+   "duration": 3.48
+  },
+  {
+   "text": "until I get some, some time\nto sort of dig into into their proposal.",
+   "start": 336.56,
+   "duration": 4.96
+  },
+  {
+   "text": "Lowering that cognitive load",
+   "start": 342.0,
+   "duration": 1.52
+  },
+  {
+   "text": "for maintainers\nis something I think is really important.",
+   "start": 343.52,
+   "duration": 3.0
+  },
+  {
+   "text": "It worked for me and it worked for\nfor those who I advise to do so.",
+   "start": 347.04,
+   "duration": 3.56
+  },
+  {
+   "text": "This is really like",
+   "start": 350.88,
+   "duration": 0.96
+  },
+  {
+   "text": "knowing your audience, which is for me,\nit's a bit counterintuitive",
+   "start": 351.84,
+   "duration": 3.4
+  },
+  {
+   "text": "because sometimes I've had conversations\nwith people and I was also like this,",
+   "start": 355.24,
+   "duration": 3.48
+  },
+  {
+   "text": "this is the way I like to structure\nmy commits.",
+   "start": 359.24,
+   "duration": 1.88
+  },
+  {
+   "text": "This is the way I like to structure\nmy peers.",
+   "start": 361.12,
+   "duration": 2.36
+  },
+  {
+   "text": "It's very personal,",
+   "start": 363.48,
+   "duration": 1.32
+  },
+  {
+   "text": "but you are offering something\nthat gets merged into a greater whole.",
+   "start": 364.8,
+   "duration": 3.24
+  },
+  {
+   "text": "So your audience is the people\nthat are going to review",
+   "start": 368.04,
+   "duration": 2.72
+  },
+  {
+   "text": "this, that are like the\nthe gate between you and the merging.",
+   "start": 370.76,
+   "duration": 3.0
+  },
+  {
+   "text": "So accommodating for that.\nIt does make a lot of sense.",
+   "start": 373.96,
+   "duration": 2.4
+  },
+  {
+   "text": "Yes. I've never thought of that though.",
+   "start": 376.36,
+   "duration": 1.48
+  },
+  {
+   "text": "Okay. Oh, that's, that's really cool.",
+   "start": 377.84,
+   "duration": 1.84
+  },
+  {
+   "text": "Hereby, I would say try it out.",
+   "start": 379.68,
+   "duration": 1.76
+  },
+  {
+   "text": "Yeah. Yeah.",
+   "start": 381.44,
+   "duration": 1.08
+  },
+  {
+   "text": "So then that makes the process\na lot easier for me.",
+   "start": 382.52,
+   "duration": 2.84
+  },
+  {
+   "text": "Especially when I think about contributing\nto open source.",
+   "start": 385.36,
+   "duration": 2.76
+  },
+  {
+   "text": "It's open.",
+   "start": 388.12,
+   "duration": 0.8
+  },
+  {
+   "text": "I feel like I'm a little bit naked,\nwhich also means that",
+   "start": 388.92,
+   "duration": 2.8
+  },
+  {
+   "text": "especially early in career,\nI advise people to do it.",
+   "start": 391.72,
+   "duration": 2.8
+  },
+  {
+   "text": "I feel like it's good.",
+   "start": 394.52,
+   "duration": 0.96
+  },
+  {
+   "text": "I agree with you.\nIt's really good feedback. It's solid.",
+   "start": 395.48,
+   "duration": 2.08
+  },
+  {
+   "text": "But there is",
+   "start": 398.52,
+   "duration": 0.6
+  },
+  {
+   "text": "also always the sense of imposter syndrome\nwhere it's",
+   "start": 399.12,
+   "duration": 3.0
+  },
+  {
+   "text": "very much out of your comfort zone\nif you've never done it.",
+   "start": 402.32,
+   "duration": 2.68
+  },
+  {
+   "text": "I feel like if you do that continuously,\nif you're like you,",
+   "start": 405.0,
+   "duration": 2.48
+  },
+  {
+   "text": "you probably have an opinion",
+   "start": 407.48,
+   "duration": 1.4
+  },
+  {
+   "text": "on how you structure things\nand you take pride in that.",
+   "start": 408.88,
+   "duration": 2.12
+  },
+  {
+   "text": "You've become good at that.",
+   "start": 411.0,
+   "duration": 1.48
+  },
+  {
+   "text": "It's easier when you're good,\nand it's not easy when you're not good.",
+   "start": 412.48,
+   "duration": 3.0
+  },
+  {
+   "text": "How do you accommodate for that?",
+   "start": 415.84,
+   "duration": 1.16
+  },
+  {
+   "text": "Or what would your advice be? Yeah.",
+   "start": 417.0,
+   "duration": 1.72
+  },
+  {
+   "text": "So I would say I read a lot of code\nand read a lot of open source code.",
+   "start": 418.72,
+   "duration": 3.96
+  },
+  {
+   "text": "Try to understand\nhow other people do this.",
+   "start": 422.68,
+   "duration": 1.92
+  },
+  {
+   "text": "I would say the way I write code\nnowadays has been shaped by open source.",
+   "start": 424.6,
+   "duration": 4.24
+  },
+  {
+   "text": "And it has obviously been shaped\nby the code that I read",
+   "start": 430.28,
+   "duration": 2.88
+  },
+  {
+   "text": "through my 9 to 5,\nbut it's somehow different.",
+   "start": 433.16,
+   "duration": 2.72
+  },
+  {
+   "text": "I think a lot of people,",
+   "start": 435.88,
+   "duration": 1.28
+  },
+  {
+   "text": "an intent, unintentionally",
+   "start": 438.12,
+   "duration": 1.6
+  },
+  {
+   "text": "or unconsciously, take inspiration\nfrom how open source code is written.",
+   "start": 439.72,
+   "duration": 3.96
+  },
+  {
+   "text": "Especially those that contribute\nto those projects.",
+   "start": 443.88,
+   "duration": 2.84
+  },
+  {
+   "text": "If you are a beginner that finds yourself",
+   "start": 446.72,
+   "duration": 3.0
+  },
+  {
+   "text": "in a position where you either,\nfeel this sort of imposter",
+   "start": 449.76,
+   "duration": 3.72
+  },
+  {
+   "text": "syndrome, where like,\noh, am I good enough to contribute or not?",
+   "start": 453.48,
+   "duration": 3.0
+  },
+  {
+   "text": "I would say spend time, reading code.",
+   "start": 456.72,
+   "duration": 2.48
+  },
+  {
+   "text": "There's, \nthere's tons of amazing projects out there",
+   "start": 459.2,
+   "duration": 3.24
+  },
+  {
+   "text": "that keep a really high bar\non code quality.",
+   "start": 462.44,
+   "duration": 3.0
+  },
+  {
+   "text": "Find something that's within your niece\nor niche or within your industry.",
+   "start": 465.44,
+   "duration": 3.0
+  },
+  {
+   "text": "For me, it was Terraform. Yeah.",
+   "start": 468.44,
+   "duration": 1.84
+  },
+  {
+   "text": "And Terraform ecosystem.",
+   "start": 470.28,
+   "duration": 2.0
+  },
+  {
+   "text": "Mitchell and Armon and Martin Atkins\nand a lot of folks over at HashiCorp",
+   "start": 472.28,
+   "duration": 5.08
+  },
+  {
+   "text": "spent a decade building\nan amazing ecosystem.",
+   "start": 477.36,
+   "duration": 3.0
+  },
+  {
+   "text": "And most of the go code I write nowadays",
+   "start": 480.84,
+   "duration": 2.72
+  },
+  {
+   "text": "has been shaped by sort of reading all the\ncode from all those projects.",
+   "start": 483.56,
+   "duration": 3.52
+  },
+  {
+   "text": "So Reed Martin, you write to begin with.",
+   "start": 488.08,
+   "duration": 2.16
+  },
+  {
+   "text": "Gotcha. Yeah.",
+   "start": 490.24,
+   "duration": 1.04
+  },
+  {
+   "text": "And this also this",
+   "start": 491.28,
+   "duration": 1.84
+  },
+  {
+   "text": "the fact that you do this, it\ngives you energy because a lot of people 9",
+   "start": 493.12,
+   "duration": 3.04
+  },
+  {
+   "text": "to 5, they're like, this is my tech\nstuff is my regular day to day things.",
+   "start": 496.16,
+   "duration": 4.12
+  },
+  {
+   "text": "And they don't want to do more tech things\noutside of work.",
+   "start": 500.28,
+   "duration": 2.76
+  },
+  {
+   "text": "It does, it does give me energy.",
+   "start": 503.04,
+   "duration": 3.0
+  },
+  {
+   "text": "But it's like I said in the beginning,\nit's also a form of escapism for me.",
+   "start": 506.16,
+   "duration": 3.2
+  },
+  {
+   "text": "Yeah. I'm a bit of an introvert person.",
+   "start": 509.4,
+   "duration": 2.6
+  },
+  {
+   "text": "So you won't see me in in clubs or bars\nor whatever.",
+   "start": 512.0,
+   "duration": 3.84
+  },
+  {
+   "text": "So that's definitely a form for me\nto sort of escape from,",
+   "start": 516.24,
+   "duration": 4.08
+  },
+  {
+   "text": "from, from life and personal things\nand, and work on these projects.",
+   "start": 520.6,
+   "duration": 4.52
+  },
+  {
+   "text": "On the other side, it's being able to",
+   "start": 525.16,
+   "duration": 3.2
+  },
+  {
+   "text": "I use, for\nexample, Terraform or Kubernetes a lot.",
+   "start": 529.92,
+   "duration": 2.68
+  },
+  {
+   "text": "Being able to also contribute to it",
+   "start": 532.6,
+   "duration": 2.08
+  },
+  {
+   "text": "allows me to better understand\nthe tools that I work with.",
+   "start": 534.68,
+   "duration": 2.32
+  },
+  {
+   "text": "That's smart.",
+   "start": 537.0,
+   "duration": 0.68
+  },
+  {
+   "text": "Like, like a chef that gets to design\ntheir own patterns and knives.",
+   "start": 537.68,
+   "duration": 4.96
+  },
+  {
+   "text": "It also allows you to position yourself",
+   "start": 542.76,
+   "duration": 4.08
+  },
+  {
+   "text": "in a certain.",
+   "start": 548.76,
+   "duration": 1.48
+  },
+  {
+   "text": "It allows you to position yourself, \namong your colleagues,",
+   "start": 550.24,
+   "duration": 3.64
+  },
+  {
+   "text": "that someone that can be perceived\nas, someone having",
+   "start": 553.88,
+   "duration": 3.64
+  },
+  {
+   "text": "a certain sense of thought, leadership\non how these tools",
+   "start": 557.88,
+   "duration": 2.8
+  },
+  {
+   "text": "should be used as you get to sort of peek\nbehind the curtains.",
+   "start": 560.68,
+   "duration": 3.0
+  },
+  {
+   "text": "Which I think is really important.",
+   "start": 563.84,
+   "duration": 2.08
+  },
+  {
+   "text": "My first contributions started, funny.",
+   "start": 565.92,
+   "duration": 4.32
+  },
+  {
+   "text": "And I think ZB actually. Okay.",
+   "start": 570.24,
+   "duration": 1.6
+  },
+  {
+   "text": "I was working at, Adidas.",
+   "start": 571.84,
+   "duration": 2.12
+  },
+  {
+   "text": "They wanted to build and machine\nlearning platform on AWS,",
+   "start": 573.96,
+   "duration": 5.56
+  },
+  {
+   "text": "and a lot of the resources\nthat were required for services were not",
+   "start": 579.52,
+   "duration": 3.2
+  },
+  {
+   "text": "in the Terraform AWS provider\nat that time.",
+   "start": 582.72,
+   "duration": 3.0
+  },
+  {
+   "text": "So I figured, you know, maybe I'll just\ngive it a shot and contribute something.",
+   "start": 586.2,
+   "duration": 3.52
+  },
+  {
+   "text": "And my first contribution got merged\nrelatively quickly.",
+   "start": 590.24,
+   "duration": 4.0
+  },
+  {
+   "text": "And I got to bring this to work\nas a customer saying, okay, I,",
+   "start": 595.16,
+   "duration": 2.52
+  },
+  {
+   "text": "I sort of unblocked you.",
+   "start": 597.68,
+   "duration": 1.48
+  },
+  {
+   "text": "We now get to use these, these new\nTerraform resources that I added.",
+   "start": 599.16,
+   "duration": 3.6
+  },
+  {
+   "text": "And they were quite impressed.",
+   "start": 603.28,
+   "duration": 1.44
+  },
+  {
+   "text": "Which positioned me as a consultant in,\nin a good in a good spot.",
+   "start": 604.72,
+   "duration": 4.32
+  },
+  {
+   "text": "Yeah. And that",
+   "start": 609.24,
+   "duration": 1.72
+  },
+  {
+   "text": "was quite satisfying, that feeling.",
+   "start": 612.24,
+   "duration": 1.96
+  },
+  {
+   "text": "So that's when I started contributing\nmore and contributing more.",
+   "start": 614.2,
+   "duration": 3.0
+  },
+  {
+   "text": "That's how I would say\nmy contributions begin.",
+   "start": 617.48,
+   "duration": 3.6
+  },
+  {
+   "text": "Gotcha.",
+   "start": 621.12,
+   "duration": 0.72
+  },
+  {
+   "text": "Yeah, I, I remember a time,\nand I think this triggered me, like, five,",
+   "start": 621.84,
+   "duration": 3.88
+  },
+  {
+   "text": "six, seven years ago, kind of early\nin my career where we also were working",
+   "start": 625.72,
+   "duration": 4.64
+  },
+  {
+   "text": "with Terraform and there wasn't something\nthat we needed, was not supported.",
+   "start": 630.36,
+   "duration": 3.24
+  },
+  {
+   "text": "So one of my colleagues just built it. I,\nI was like, guy, you just built thing.",
+   "start": 633.64,
+   "duration": 2.92
+  },
+  {
+   "text": "So yeah, I'm like, man,\nthis is what senior engineers do.",
+   "start": 636.56,
+   "duration": 2.48
+  },
+  {
+   "text": "They just build something\nand then it's contributing to source.",
+   "start": 639.04,
+   "duration": 3.04
+  },
+  {
+   "text": "That was really cool.",
+   "start": 642.32,
+   "duration": 0.92
+  },
+  {
+   "text": "But then I never took the conscious step\nto actually start doing it myself.",
+   "start": 643.24,
+   "duration": 3.2
+  },
+  {
+   "text": "Would you advise people to start\ncontributing to open source",
+   "start": 647.36,
+   "duration": 2.72
+  },
+  {
+   "text": "in any aspect of their career?",
+   "start": 650.08,
+   "duration": 1.52
+  },
+  {
+   "text": "Does it matter if you're early in career\nor more senior or what's your take?",
+   "start": 651.6,
+   "duration": 3.4
+  },
+  {
+   "text": "I think, and this is something that\nI would say I plus one with this opinion.",
+   "start": 655.64,
+   "duration": 4.96
+  },
+  {
+   "text": "It's something that Mitchell shared.",
+   "start": 660.6,
+   "duration": 1.16
+  },
+  {
+   "text": "Mitchell Hashimoto is,\nsome of the best engineers.",
+   "start": 661.76,
+   "duration": 3.0
+  },
+  {
+   "text": "Don't have a great get a profile.",
+   "start": 664.88,
+   "duration": 3.44
+  },
+  {
+   "text": "Okay.",
+   "start": 668.32,
+   "duration": 0.28
+  },
+  {
+   "text": "Don't spend all their time on social media\nor writing code outside of your 95.",
+   "start": 668.6,
+   "duration": 5.16
+  },
+  {
+   "text": "Because they are the ones to least\ncontext switch.",
+   "start": 674.32,
+   "duration": 3.0
+  },
+  {
+   "text": "It doesn't really.",
+   "start": 677.8,
+   "duration": 0.8
+  },
+  {
+   "text": "You don't have to be.",
+   "start": 678.6,
+   "duration": 0.96
+  },
+  {
+   "text": "You don't become a better engineer\nby forcing yourself",
+   "start": 679.56,
+   "duration": 3.16
+  },
+  {
+   "text": "to contribute through open source.",
+   "start": 682.72,
+   "duration": 1.16
+  },
+  {
+   "text": "But if you generally are interested\nin understanding",
+   "start": 683.88,
+   "duration": 3.36
+  },
+  {
+   "text": "how some of the tooling work.",
+   "start": 687.88,
+   "duration": 1.44
+  },
+  {
+   "text": "So we as currently in my position\nas as an engineer",
+   "start": 689.32,
+   "duration": 4.52
+  },
+  {
+   "text": "who exhibit, I use a lot of software,\nI get to build less.",
+   "start": 693.84,
+   "duration": 3.56
+  },
+  {
+   "text": "So I get to build on top of Kubernetes.",
+   "start": 697.8,
+   "duration": 1.84
+  },
+  {
+   "text": "I get to use Terraform or AWS CDK,\nbut you don't get to build",
+   "start": 699.64,
+   "duration": 4.2
+  },
+  {
+   "text": "those tools from scratch.",
+   "start": 704.0,
+   "duration": 1.28
+  },
+  {
+   "text": "And that is, something I was missing.",
+   "start": 705.28,
+   "duration": 3.48
+  },
+  {
+   "text": "I'm a software engineer by heart.",
+   "start": 708.96,
+   "duration": 2.88
+  },
+  {
+   "text": "But I now end up just using like APIs\nand writing configuration files,",
+   "start": 711.84,
+   "duration": 4.4
+  },
+  {
+   "text": "for me to better understand Terraform.",
+   "start": 717.32,
+   "duration": 2.92
+  },
+  {
+   "text": "I started contributing to it.",
+   "start": 720.24,
+   "duration": 1.52
+  },
+  {
+   "text": "But if you find yourself already writing\ncode from 9 to 5,",
+   "start": 721.76,
+   "duration": 4.12
+  },
+  {
+   "text": "I wouldn't say you hugely benefit off\ncontributing to it.",
+   "start": 726.36,
+   "duration": 4.08
+  },
+  {
+   "text": "The only angle that might be interesting\nis sort of the social",
+   "start": 731.16,
+   "duration": 3.0
+  },
+  {
+   "text": "aspect to it.",
+   "start": 734.16,
+   "duration": 3.0
+  },
+  {
+   "text": "Nowadays,",
+   "start": 737.16,
+   "duration": 0.84
+  },
+  {
+   "text": "a lot of folks can contribute\nto your open source using AI.",
+   "start": 738.0,
+   "duration": 2.96
+  },
+  {
+   "text": "But part of your contribution",
+   "start": 740.96,
+   "duration": 4.6
+  },
+  {
+   "text": "is the, research\nyou do at first understanding",
+   "start": 745.56,
+   "duration": 4.28
+  },
+  {
+   "text": "the different GitHub issues, even looking\nwhether there is a generation or not,",
+   "start": 749.84,
+   "duration": 3.2
+  },
+  {
+   "text": "making one according to the documentation",
+   "start": 753.56,
+   "duration": 2.92
+  },
+  {
+   "text": "and joining like this community hour\nwhere you,",
+   "start": 756.48,
+   "duration": 3.0
+  },
+  {
+   "text": "present your own research and,",
+   "start": 760.44,
+   "duration": 3.08
+  },
+  {
+   "text": "sort of the patch you want to create\nor the fix you want to propose.",
+   "start": 763.52,
+   "duration": 3.32
+  },
+  {
+   "text": "I think that is something\na lot of engineers could benefit from.",
+   "start": 767.6,
+   "duration": 2.84
+  },
+  {
+   "text": "Which are sort of\nthe social aspects. Offset.",
+   "start": 770.44,
+   "duration": 2.12
+  },
+  {
+   "text": "You know,",
+   "start": 774.04,
+   "duration": 0.52
+  },
+  {
+   "text": "last time I spoke about open source\non the podcast in of its own,",
+   "start": 774.56,
+   "duration": 4.16
+  },
+  {
+   "text": "I got a comment that says,",
+   "start": 779.04,
+   "duration": 1.56
+  },
+  {
+   "text": "oh, the Prime Engine had this podcast,",
+   "start": 780.6,
+   "duration": 1.44
+  },
+  {
+   "text": "and he was saying,\ndon't contribute to open source.",
+   "start": 782.04,
+   "duration": 1.96
+  },
+  {
+   "text": "And they were actually talking\nabout this other video",
+   "start": 784.0,
+   "duration": 2.4
+  },
+  {
+   "text": "which had millions of views,\nI think about 5 million views.",
+   "start": 786.4,
+   "duration": 4.0
+  },
+  {
+   "text": "It was about something\nrelated to Kubernetes.",
+   "start": 790.4,
+   "duration": 2.36
+  },
+  {
+   "text": "And they said, well, you just go here\nand here to this repository,",
+   "start": 792.76,
+   "duration": 2.8
+  },
+  {
+   "text": "you change the read me.",
+   "start": 795.56,
+   "duration": 1.28
+  },
+  {
+   "text": "And that's what people were doing.",
+   "start": 796.84,
+   "duration": 1.04
+  },
+  {
+   "text": "They were bombarding this repository\nwith all read me changes and like,",
+   "start": 797.88,
+   "duration": 3.72
+  },
+  {
+   "text": "damn, this is like the dark side.",
+   "start": 801.96,
+   "duration": 1.44
+  },
+  {
+   "text": "This is the downside of getting people\nto contribute to open source.",
+   "start": 803.4,
+   "duration": 2.96
+  },
+  {
+   "text": "And they don't necessarily provide value.",
+   "start": 806.36,
+   "duration": 2.56
+  },
+  {
+   "text": "They just provide change.",
+   "start": 808.92,
+   "duration": 1.44
+  },
+  {
+   "text": "And change is not always good.",
+   "start": 810.36,
+   "duration": 1.88
+  },
+  {
+   "text": "I feel like it needs to be valuable.",
+   "start": 812.24,
+   "duration": 1.56
+  },
+  {
+   "text": "Yeah, there's a high signal to noise\nratio at the moment.",
+   "start": 813.8,
+   "duration": 3.16
+  },
+  {
+   "text": "And there has always been before\nI as well,",
+   "start": 817.0,
+   "duration": 3.0
+  },
+  {
+   "text": "I has lowered the contribution barrier\nfor a lot of folks.",
+   "start": 820.44,
+   "duration": 3.84
+  },
+  {
+   "text": "Yeah.",
+   "start": 824.28,
+   "duration": 0.6
+  },
+  {
+   "text": "But before that, people just wanted",
+   "start": 824.88,
+   "duration": 1.24
+  },
+  {
+   "text": "to get their name\ninto the list of contributors.",
+   "start": 826.12,
+   "duration": 2.6
+  },
+  {
+   "text": "Which I think is there's nothing wrong\nwith, changing something in",
+   "start": 828.72,
+   "duration": 3.2
+  },
+  {
+   "text": "to read me\nif there's genuinely a typo or whatever,",
+   "start": 831.92,
+   "duration": 3.0
+  },
+  {
+   "text": "as your first contribution is a good way\nto get familiar with the process.",
+   "start": 835.08,
+   "duration": 3.76
+  },
+  {
+   "text": "I think the bigger problem for open",
+   "start": 840.96,
+   "duration": 1.68
+  },
+  {
+   "text": "source is at the moment,\nand that's how I feel.",
+   "start": 842.64,
+   "duration": 3.72
+  },
+  {
+   "text": "It's sort of being killed with kindness\nand a lot of slop from people",
+   "start": 846.72,
+   "duration": 3.48
+  },
+  {
+   "text": "that are trying to contribute.",
+   "start": 850.2,
+   "duration": 2.28
+  },
+  {
+   "text": "What do you mean with kindness?",
+   "start": 852.48,
+   "duration": 1.4
+  },
+  {
+   "text": "Well,\nthere's a lot of people that people don't",
+   "start": 853.88,
+   "duration": 2.2
+  },
+  {
+   "text": "just randomly target repos\nand run an agent against it.",
+   "start": 856.08,
+   "duration": 3.72
+  },
+  {
+   "text": "People generally want to contribute,\nbut they don't want to put in the time",
+   "start": 859.84,
+   "duration": 3.8
+  },
+  {
+   "text": "and effort.",
+   "start": 863.64,
+   "duration": 1.0
+  },
+  {
+   "text": "There's this filter on on open source\ncontributions.",
+   "start": 864.64,
+   "duration": 3.2
+  },
+  {
+   "text": "There's a filter on open source.",
+   "start": 867.84,
+   "duration": 1.4
+  },
+  {
+   "text": "In general, it's",
+   "start": 869.24,
+   "duration": 2.08
+  },
+  {
+   "text": "consistency and commitment wins over\nsort of beats intensity.",
+   "start": 871.32,
+   "duration": 3.8
+  },
+  {
+   "text": "It's easy to generate a\nPR using an agent,",
+   "start": 875.2,
+   "duration": 3.0
+  },
+  {
+   "text": "but making sure it's conform\nthe language of the maintainers",
+   "start": 878.64,
+   "duration": 3.72
+  },
+  {
+   "text": "and according to the styling\nand showing up in that community hour.",
+   "start": 882.36,
+   "duration": 3.04
+  },
+  {
+   "text": "That's another thing.",
+   "start": 885.44,
+   "duration": 0.84
+  },
+  {
+   "text": "So yeah,\nthere are tons of I think if you look at,",
+   "start": 888.76,
+   "duration": 2.24
+  },
+  {
+   "text": "I think curl\nrecently closed its bug bounty program",
+   "start": 891.0,
+   "duration": 3.2
+  },
+  {
+   "text": "because it was sort of bombarded\nwith attempts.",
+   "start": 894.2,
+   "duration": 2.92
+  },
+  {
+   "text": "Yeah. With attacks.",
+   "start": 897.12,
+   "duration": 1.08
+  },
+  {
+   "text": "Yeah.",
+   "start": 898.2,
+   "duration": 0.52
+  },
+  {
+   "text": "Most of them,\nwhich were making no sense at all.",
+   "start": 898.72,
+   "duration": 3.0
+  },
+  {
+   "text": "There might be genuine intention\nfrom people, because I like to assume",
+   "start": 901.96,
+   "duration": 5.04
+  },
+  {
+   "text": "that I don't want to assume the bad\nand the worse than people.",
+   "start": 907.0,
+   "duration": 3.0
+  },
+  {
+   "text": "But it is a burden on maintainers.",
+   "start": 911.0,
+   "duration": 2.12
+  },
+  {
+   "text": "And maintainers are sort of now in this\nstage where if you put in five minutes,",
+   "start": 913.12,
+   "duration": 3.88
+  },
+  {
+   "text": "then I will put five minutes\nback of my time into reviewing it,",
+   "start": 917.0,
+   "duration": 2.44
+  },
+  {
+   "text": "which could mean,\noh, it's generated by AI.",
+   "start": 919.44,
+   "duration": 2.04
+  },
+  {
+   "text": "So I will close it. Yeah.",
+   "start": 921.48,
+   "duration": 1.52
+  },
+  {
+   "text": "And that's yeah.",
+   "start": 923.0,
+   "duration": 0.8
+  },
+  {
+   "text": "That's what some maintain or so. Okay.",
+   "start": 923.8,
+   "duration": 2.36
+  },
+  {
+   "text": "Which I think it's, it's,",
+   "start": 926.16,
+   "duration": 2.88
+  },
+  {
+   "text": "it's sort of putting\na burden on maintainers.",
+   "start": 929.04,
+   "duration": 3.0
+  },
+  {
+   "text": "Yeah.",
+   "start": 932.04,
+   "duration": 1.32
+  },
+  {
+   "text": "I feel like the, the burden on maintainers\nwas already there.",
+   "start": 933.36,
+   "duration": 3.0
+  },
+  {
+   "text": "And now there's this trend of",
+   "start": 936.6,
+   "duration": 1.44
+  },
+  {
+   "text": "we just have so much execution power,\nwe can generate a lot.",
+   "start": 938.04,
+   "duration": 3.0
+  },
+  {
+   "text": "I feel like reviewing in\nand outside of open source",
+   "start": 941.2,
+   "duration": 3.0
+  },
+  {
+   "text": "is going to be a problem we need to solve\nbecause we are creating so much code,",
+   "start": 944.72,
+   "duration": 3.4
+  },
+  {
+   "text": "and then there's not many people\nthat review as much code,",
+   "start": 948.64,
+   "duration": 4.4
+  },
+  {
+   "text": "I think, as open source maintainers\nspecifically,",
+   "start": 953.04,
+   "duration": 2.56
+  },
+  {
+   "text": "especially if it's something\nthat they've built up from scratch.",
+   "start": 955.6,
+   "duration": 2.6
+  },
+  {
+   "text": "It's like something\nthey take a lot of pride in.",
+   "start": 958.2,
+   "duration": 2.44
+  },
+  {
+   "text": "They will put in the time\nand effort to do that.",
+   "start": 960.64,
+   "duration": 2.6
+  },
+  {
+   "text": "I genuinely believe that.",
+   "start": 963.24,
+   "duration": 1.84
+  },
+  {
+   "text": "But I'm also the same.",
+   "start": 965.08,
+   "duration": 0.96
+  },
+  {
+   "text": "If I get bombarded with messages that say,\noh, I want to edit for the podcast,",
+   "start": 966.04,
+   "duration": 3.16
+  },
+  {
+   "text": "I'm like, yeah, well,\nI can only do so much.",
+   "start": 969.2,
+   "duration": 2.44
+  },
+  {
+   "text": "So at some point you just see it as noise,\nwhich is a shame",
+   "start": 971.64,
+   "duration": 2.64
+  },
+  {
+   "text": "if there's people in there\nthat genuinely want to contribute.",
+   "start": 974.28,
+   "duration": 3.0
+  },
+  {
+   "text": "But I don't know how to solve this\nproblem yet.",
+   "start": 977.52,
+   "duration": 2.52
+  },
+  {
+   "text": "Yeah, it's something\nI find myself struggling with as well.",
+   "start": 980.04,
+   "duration": 2.6
+  },
+  {
+   "text": "It's interesting.",
+   "start": 984.0,
+   "duration": 0.64
+  },
+  {
+   "text": "So a lot of maintainers\ntake different approaches to this.",
+   "start": 984.64,
+   "duration": 3.2
+  },
+  {
+   "text": "Mitchell, who I used to work\nwith, Ash Carter,",
+   "start": 987.96,
+   "duration": 3.76
+  },
+  {
+   "text": "who unfortunately left now built ghosty,\nwhich is a terminal.",
+   "start": 991.84,
+   "duration": 4.04
+  },
+  {
+   "text": "He also deals with a lot of, like,\nAI contributions, and he's working on",
+   "start": 996.12,
+   "duration": 4.92
+  },
+  {
+   "text": "or prototyping a system called vouch\nwhere instead of sort of trust by default.",
+   "start": 1001.04,
+   "duration": 6.04
+  },
+  {
+   "text": "So anyone is a great contributor\nand anyone has good intentions.",
+   "start": 1007.08,
+   "duration": 2.84
+  },
+  {
+   "text": "It's now sort of a deny by default\nor reject by default.",
+   "start": 1009.92,
+   "duration": 3.0
+  },
+  {
+   "text": "As in you have to prove yourself\nas a trusted committer first.",
+   "start": 1012.92,
+   "duration": 3.0
+  },
+  {
+   "text": "So that is one approach that people take.",
+   "start": 1016.6,
+   "duration": 2.32
+  },
+  {
+   "text": "And he just sort of straight up\ncloses your PR if it's if it's slop",
+   "start": 1018.92,
+   "duration": 3.36
+  },
+  {
+   "text": "in the next time\nif you create a PR gets auto closed.",
+   "start": 1022.28,
+   "duration": 3.0
+  },
+  {
+   "text": "So that was one approach.",
+   "start": 1025.36,
+   "duration": 1.12
+  },
+  {
+   "text": "I understand\nand I see his reasoning behind why other",
+   "start": 1026.48,
+   "duration": 5.32
+  },
+  {
+   "text": "I think the flux time\nflux is a very popular Kubernetes",
+   "start": 1031.92,
+   "duration": 3.68
+  },
+  {
+   "text": "deployment tool.",
+   "start": 1036.6,
+   "duration": 0.76
+  },
+  {
+   "text": "I won't bother with introducing\nwhat the whole project is, but",
+   "start": 1037.36,
+   "duration": 3.0
+  },
+  {
+   "text": "they also have an interesting approach\nis they if you raise like a bug issue,",
+   "start": 1040.88,
+   "duration": 5.04
+  },
+  {
+   "text": "they're saying, oh, there's this, race\ncondition in, in this, in this code path,",
+   "start": 1045.92,
+   "duration": 3.84
+  },
+  {
+   "text": "instead of spending hours as a maintainer\ntrying to understand and reproduce this,",
+   "start": 1049.76,
+   "duration": 4.68
+  },
+  {
+   "text": "this race condition,\nwhich is a very hard problem,",
+   "start": 1054.44,
+   "duration": 2.76
+  },
+  {
+   "text": "they just throw",
+   "start": 1057.2,
+   "duration": 0.48
+  },
+  {
+   "text": "a bunch of agents on on this issue\nwho try and replicate what you're saying.",
+   "start": 1057.68,
+   "duration": 4.44
+  },
+  {
+   "text": "Okay.",
+   "start": 1062.16,
+   "duration": 0.4
+  },
+  {
+   "text": "So they are not the ones anymore\nthat spent the time on it.",
+   "start": 1062.56,
+   "duration": 2.84
+  },
+  {
+   "text": "That's in the maintainers.",
+   "start": 1065.4,
+   "duration": 1.04
+  },
+  {
+   "text": "But they outsource outsource\nthis thinking and reproducing to agents.",
+   "start": 1066.44,
+   "duration": 4.12
+  },
+  {
+   "text": "Cool.",
+   "start": 1070.6,
+   "duration": 0.96
+  },
+  {
+   "text": "So there's a various approaches\nto how maintainer to deal with this.",
+   "start": 1071.56,
+   "duration": 3.52
+  },
+  {
+   "text": "And I don't know what\nthe right approach is yet.",
+   "start": 1075.32,
+   "duration": 2.64
+  },
+  {
+   "text": "Gotcha.",
+   "start": 1077.96,
+   "duration": 0.84
+  },
+  {
+   "text": "Do you yourself use any agent tools\nwhen you contribute to open source?",
+   "start": 1078.8,
+   "duration": 4.04
+  },
+  {
+   "text": "Yeah.",
+   "start": 1082.92,
+   "duration": 0.4
+  },
+  {
+   "text": "You already mentioned you have a lot of\nlike passion for the craft.",
+   "start": 1083.32,
+   "duration": 3.0
+  },
+  {
+   "text": "So do you.",
+   "start": 1086.52,
+   "duration": 1.04
+  },
+  {
+   "text": "I do. I do, yeah, I,",
+   "start": 1087.56,
+   "duration": 3.04
+  },
+  {
+   "text": "I, in my\nopinion, like a it's a revolutionary tool.",
+   "start": 1091.96,
+   "duration": 3.44
+  },
+  {
+   "text": "And I would be crazy if I were to say I'm\nnot using it or not gonna use it.",
+   "start": 1095.4,
+   "duration": 3.96
+  },
+  {
+   "text": "I use it as sort of a better programmer.",
+   "start": 1101.24,
+   "duration": 2.64
+  },
+  {
+   "text": "I love spark programing.",
+   "start": 1103.88,
+   "duration": 1.2
+  },
+  {
+   "text": "It's what I used to do, before\nI, and I would pick someone else's,",
+   "start": 1105.08,
+   "duration": 3.2
+  },
+  {
+   "text": "someone else's brain.",
+   "start": 1108.96,
+   "duration": 2.72
+  },
+  {
+   "text": "I let it generate some code sometimes\neven, I would say two in parallel.",
+   "start": 1111.68,
+   "duration": 3.92
+  },
+  {
+   "text": "See what sort of differences are.",
+   "start": 1115.76,
+   "duration": 2.16
+  },
+  {
+   "text": "I use AMP to do a lot of like\nresearching a deeper code",
+   "start": 1117.92,
+   "duration": 4.12
+  },
+  {
+   "text": "base and understanding larger code bases.",
+   "start": 1122.04,
+   "duration": 2.72
+  },
+  {
+   "text": "And I use Claude, true open code,",
+   "start": 1124.76,
+   "duration": 3.0
+  },
+  {
+   "text": "to work on features and things like that.",
+   "start": 1128.36,
+   "duration": 2.68
+  },
+  {
+   "text": "But I take a lot of pride\nin what I eventually propose.",
+   "start": 1131.04,
+   "duration": 4.8
+  },
+  {
+   "text": "Yeah.",
+   "start": 1135.88,
+   "duration": 0.24
+  },
+  {
+   "text": "So it might be that I work on a feature\nin, on a project for, like, half a day",
+   "start": 1136.12,
+   "duration": 6.0
+  },
+  {
+   "text": "or two days, and I spend a whole lotta day\npolishing up that code,",
+   "start": 1142.12,
+   "duration": 3.88
+  },
+  {
+   "text": "making sure I understand everything,\ncrafting a proper PR description.",
+   "start": 1146.2,
+   "duration": 4.12
+  },
+  {
+   "text": "Because I don't want to lose my identity.",
+   "start": 1151.76,
+   "duration": 1.72
+  },
+  {
+   "text": "True.",
+   "start": 1153.48,
+   "duration": 1.12
+  },
+  {
+   "text": "Using agents.",
+   "start": 1154.6,
+   "duration": 0.84
+  },
+  {
+   "text": "But I think you should use them.",
+   "start": 1155.44,
+   "duration": 2.56
+  },
+  {
+   "text": "But just don't let it sort of\nsteal your identity.",
+   "start": 1158.0,
+   "duration": 2.44
+  },
+  {
+   "text": "Or don't let it.",
+   "start": 1160.44,
+   "duration": 1.0
+  },
+  {
+   "text": "Don't outsource your thinking to it.",
+   "start": 1161.44,
+   "duration": 2.68
+  },
+  {
+   "text": "Yeah. That's how you maintain ownership.",
+   "start": 1164.12,
+   "duration": 1.44
+  },
+  {
+   "text": "Yeah, that's for me",
+   "start": 1165.56,
+   "duration": 0.84
+  },
+  {
+   "text": "is the biggest risk because now\ngenerating code has become easier.",
+   "start": 1166.4,
+   "duration": 3.4
+  },
+  {
+   "text": "So it's also the E.",
+   "start": 1170.2,
+   "duration": 0.92
+  },
+  {
+   "text": "It's it's a very small\nstep to do a lot of it basically.",
+   "start": 1171.12,
+   "duration": 4.0
+  },
+  {
+   "text": "But a lot is not always better.",
+   "start": 1175.12,
+   "duration": 1.68
+  },
+  {
+   "text": "Which means that\nif you do take pride in this",
+   "start": 1176.8,
+   "duration": 1.96
+  },
+  {
+   "text": "and this is kind of what you perceive\nyour craft,",
+   "start": 1178.76,
+   "duration": 2.04
+  },
+  {
+   "text": "you still need\nto maintain ownership of it.",
+   "start": 1180.8,
+   "duration": 2.88
+  },
+  {
+   "text": "And that for me is interesting\nbecause not everyone has the same passion",
+   "start": 1183.68,
+   "duration": 2.64
+  },
+  {
+   "text": "or the same vigor\nto actually own this thing.",
+   "start": 1186.32,
+   "duration": 2.04
+  },
+  {
+   "text": "So then you get generated a lot of things.",
+   "start": 1188.36,
+   "duration": 2.04
+  },
+  {
+   "text": "All the things we call stuff nowadays,\nand it was liable for",
+   "start": 1190.4,
+   "duration": 2.92
+  },
+  {
+   "text": "for the things that are being generated.\nRight.",
+   "start": 1193.32,
+   "duration": 1.92
+  },
+  {
+   "text": "Is it the agent\nor is it the author of the code?",
+   "start": 1195.24,
+   "duration": 3.0
+  },
+  {
+   "text": "I generally feel myself\nas an an author of code.",
+   "start": 1198.28,
+   "duration": 3.16
+  },
+  {
+   "text": "When I, when I produce something,\nwhen I write something,",
+   "start": 1202.36,
+   "duration": 2.0
+  },
+  {
+   "text": "whether it's in the read me\nor whether it's a comment on a function",
+   "start": 1204.36,
+   "duration": 2.6
+  },
+  {
+   "text": "or whether it's, a new struct\nI introduce or a whole new functionality.",
+   "start": 1206.96,
+   "duration": 4.08
+  },
+  {
+   "text": "I see myself as the author, which results\nin me being the the owner of this piece.",
+   "start": 1211.84,
+   "duration": 4.24
+  },
+  {
+   "text": "Gotcha. I think that is really important.",
+   "start": 1216.28,
+   "duration": 1.72
+  },
+  {
+   "text": "Yeah.",
+   "start": 1218.0,
+   "duration": 0.36
+  },
+  {
+   "text": "A lot of people just push code\nwithout assuming that they",
+   "start": 1218.36,
+   "duration": 3.28
+  },
+  {
+   "text": "have to either fix it or own it,\nor that they're liable for it.",
+   "start": 1221.64,
+   "duration": 3.32
+  },
+  {
+   "text": "Yeah.",
+   "start": 1226.2,
+   "duration": 2.16
+  },
+  {
+   "text": "I was talking over lunch with Nicole Guest\nthat came on the episode air",
+   "start": 1228.36,
+   "duration": 3.56
+  },
+  {
+   "text": "probably last week,",
+   "start": 1231.92,
+   "duration": 1.2
+  },
+  {
+   "text": "and she was talking to me about this\nVeritasium video that came out.",
+   "start": 1233.12,
+   "duration": 3.24
+  },
+  {
+   "text": "It's a YouTube channel.",
+   "start": 1236.64,
+   "duration": 0.84
+  },
+  {
+   "text": "And they talked about someone that hacked\nsomething in an open source project,",
+   "start": 1237.48,
+   "duration": 4.84
+  },
+  {
+   "text": "and that almost made it\ninto quite a lot of systems,",
+   "start": 1242.32,
+   "duration": 3.28
+  },
+  {
+   "text": "which gave me a thought,\nbecause right now I can make a,",
+   "start": 1246.4,
+   "duration": 2.52
+  },
+  {
+   "text": "I think, a anonymized account on GitHub.",
+   "start": 1248.92,
+   "duration": 3.0
+  },
+  {
+   "text": "I can contribute a whole lot\nand someone will never know who I am.",
+   "start": 1251.96,
+   "duration": 3.0
+  },
+  {
+   "text": "Which also means there's not really\nany personal information",
+   "start": 1255.16,
+   "duration": 3.32
+  },
+  {
+   "text": "within those accounts.",
+   "start": 1258.48,
+   "duration": 1.0
+  },
+  {
+   "text": "And I'm wondering if it would be better,\nmaybe for the industry",
+   "start": 1259.48,
+   "duration": 3.28
+  },
+  {
+   "text": "if there was a one on one.",
+   "start": 1263.12,
+   "duration": 1.32
+  },
+  {
+   "text": "Patrick, is this on GitHub?",
+   "start": 1264.44,
+   "duration": 1.56
+  },
+  {
+   "text": "Like I am also on LinkedIn? Yeah.",
+   "start": 1266.0,
+   "duration": 2.48
+  },
+  {
+   "text": "I'm wondering what your thoughts on\nare on that.",
+   "start": 1268.48,
+   "duration": 2.2
+  },
+  {
+   "text": "Interesting one.",
+   "start": 1270.68,
+   "duration": 0.68
+  },
+  {
+   "text": "I think it is important to understand\nwho is contributing to your project.",
+   "start": 1271.36,
+   "duration": 4.52
+  },
+  {
+   "text": "But if a patch or a proposal or\na piece of code makes sense, I wouldn't be",
+   "start": 1276.6,
+   "duration": 5.0
+  },
+  {
+   "text": "rejecting it.",
+   "start": 1282.8,
+   "duration": 3.0
+  },
+  {
+   "text": "But proposing as,\nas when you're contribute to your project",
+   "start": 1286.08,
+   "duration": 4.44
+  },
+  {
+   "text": "or when you become like,\nsort of a trusted contributor.",
+   "start": 1290.52,
+   "duration": 2.0
+  },
+  {
+   "text": "There's there sort of levels\nto this, right?",
+   "start": 1292.52,
+   "duration": 3.0
+  },
+  {
+   "text": "In some projects",
+   "start": 1296.88,
+   "duration": 1.0
+  },
+  {
+   "text": "you sort of graduated to different tiers\nor levels or ranks.",
+   "start": 1297.88,
+   "duration": 4.0
+  },
+  {
+   "text": "So on certain projects,\nlike a CRO cube resource orchestrator,",
+   "start": 1302.24,
+   "duration": 3.28
+  },
+  {
+   "text": "I got certain permissions\nto do things on certain Terraform repos.",
+   "start": 1305.52,
+   "duration": 3.92
+  },
+  {
+   "text": "I previously, before working in HashiCorp,",
+   "start": 1309.92,
+   "duration": 2.84
+  },
+  {
+   "text": "I had the ability to triage issues\nor close or merge features.",
+   "start": 1312.76,
+   "duration": 3.0
+  },
+  {
+   "text": "And these are earned rights.\nThese are earned rights.",
+   "start": 1316.12,
+   "duration": 1.88
+  },
+  {
+   "text": "And that's I think, where you have to\nbe careful with who you grant this to.",
+   "start": 1318.0,
+   "duration": 3.16
+  },
+  {
+   "text": "Maybe I think for most of the projects\nwhere I ended up with, like",
+   "start": 1323.08,
+   "duration": 3.36
+  },
+  {
+   "text": "more permissions than I would\nrandomly grant any other, contributor is",
+   "start": 1326.96,
+   "duration": 4.92
+  },
+  {
+   "text": "I met the repo sort of owners",
+   "start": 1331.88,
+   "duration": 3.12
+  },
+  {
+   "text": "or the team behind it in person as well.",
+   "start": 1335.0,
+   "duration": 3.0
+  },
+  {
+   "text": "Yeah.",
+   "start": 1338.16,
+   "duration": 0.52
+  },
+  {
+   "text": "That happened to like KubeCon\nor AWS Reinvent.",
+   "start": 1338.68,
+   "duration": 3.08
+  },
+  {
+   "text": "Yeah.",
+   "start": 1341.84,
+   "duration": 0.52
+  },
+  {
+   "text": "Which I would never, \nreject a PR if it made sense.",
+   "start": 1342.36,
+   "duration": 4.76
+  },
+  {
+   "text": "But when\nit comes to handing out permissions,",
+   "start": 1348.44,
+   "duration": 2.32
+  },
+  {
+   "text": "I would like to know\nwho's who's behind, the profile.",
+   "start": 1350.76,
+   "duration": 3.6
+  },
+  {
+   "text": "Yeah. Makes sense.",
+   "start": 1354.4,
+   "duration": 1.12
+  },
+  {
+   "text": "You met these people in person,\nand you actively kind of form",
+   "start": 1355.52,
+   "duration": 3.84
+  },
+  {
+   "text": "the connection with them.",
+   "start": 1359.36,
+   "duration": 1.56
+  },
+  {
+   "text": "Because you're also mentioning,\nlike, you're introvert.",
+   "start": 1360.92,
+   "duration": 1.92
+  },
+  {
+   "text": "Me, or I see myself\nas an introvert as well, even though I'm",
+   "start": 1362.84,
+   "duration": 2.68
+  },
+  {
+   "text": "a little bit more extra on the podcast,\nI guess, see myself as",
+   "start": 1365.52,
+   "duration": 3.08
+  },
+  {
+   "text": "kind of different people\nin different circumstances, I guess.",
+   "start": 1369.28,
+   "duration": 3.0
+  },
+  {
+   "text": "But stepping up to someone in a conference\nis still something that I find",
+   "start": 1372.56,
+   "duration": 3.04
+  },
+  {
+   "text": "quite daunting, to be honest.\nHow did you do that?",
+   "start": 1375.8,
+   "duration": 2.44
+  },
+  {
+   "text": "I try to approach folks through slack\nfirst.",
+   "start": 1378.24,
+   "duration": 2.8
+  },
+  {
+   "text": "Okay, I have an asynchronous,",
+   "start": 1381.04,
+   "duration": 1.8
+  },
+  {
+   "text": "asynchronous communication relationship\nwith most most folks in open source.",
+   "start": 1382.84,
+   "duration": 3.56
+  },
+  {
+   "text": "We don't we don't video call\nor do those things that we chat.",
+   "start": 1386.4,
+   "duration": 4.2
+  },
+  {
+   "text": "People know each other by their GitHub\nhandle.",
+   "start": 1391.56,
+   "duration": 1.96
+  },
+  {
+   "text": "Yeah.",
+   "start": 1393.52,
+   "duration": 0.48
+  },
+  {
+   "text": "But at some point, I did\nlike the projects that I consistently",
+   "start": 1394.0,
+   "duration": 3.64
+  },
+  {
+   "text": "contributed to and spent\nmostly sort of evenings and nights too.",
+   "start": 1397.64,
+   "duration": 4.08
+  },
+  {
+   "text": "At some point when I at some point,\nyou sort of meet each other at,",
+   "start": 1402.2,
+   "duration": 3.72
+  },
+  {
+   "text": "at a KubeCon\nor an AWS Reinvent or a Google next.",
+   "start": 1405.92,
+   "duration": 3.12
+  },
+  {
+   "text": "And for me to be able I quickly,",
+   "start": 1409.76,
+   "duration": 3.08
+  },
+  {
+   "text": "I think I realized to get more",
+   "start": 1412.84,
+   "duration": 3.0
+  },
+  {
+   "text": "I don't want to say authority, but you get\nmore ownership on a particular project.",
+   "start": 1416.16,
+   "duration": 4.2
+  },
+  {
+   "text": "I had to introduce myself. It's trust.",
+   "start": 1420.64,
+   "duration": 2.88
+  },
+  {
+   "text": "It's trust.",
+   "start": 1423.52,
+   "duration": 0.56
+  },
+  {
+   "text": "Yeah. It's open source. Is built on trust.",
+   "start": 1424.08,
+   "duration": 2.56
+  },
+  {
+   "text": "So I went ahead and like for CRO,\nfor example, camp reasons orchestrator,",
+   "start": 1426.64,
+   "duration": 5.44
+  },
+  {
+   "text": "I reached out to the maintainers",
+   "start": 1432.12,
+   "duration": 1.52
+  },
+  {
+   "text": "of that project where some folks over\nat AWS, Microsoft in Azure,",
+   "start": 1433.64,
+   "duration": 3.4
+  },
+  {
+   "text": "and we met at KubeCon, and we sat down",
+   "start": 1437.48,
+   "duration": 1.92
+  },
+  {
+   "text": "and they talked me through the potential\nthings I could contribute to.",
+   "start": 1439.4,
+   "duration": 3.28
+  },
+  {
+   "text": "And during the conference,\nI went back to my hotel room",
+   "start": 1443.16,
+   "duration": 3.56
+  },
+  {
+   "text": "and started contributing\nto this, to those items.",
+   "start": 1446.72,
+   "duration": 3.0
+  },
+  {
+   "text": "And the next day we met up\nand he marched them and we spoke about it.",
+   "start": 1449.84,
+   "duration": 3.12
+  },
+  {
+   "text": "And it's been a huge trust builder for\nfor About Us.",
+   "start": 1453.76,
+   "duration": 3.72
+  },
+  {
+   "text": "Yeah.",
+   "start": 1457.64,
+   "duration": 0.24
+  },
+  {
+   "text": "For me, as in like other\nthere's good leadership on this project",
+   "start": 1457.88,
+   "duration": 3.24
+  },
+  {
+   "text": "and freedom\nis there's an actual trusted contributor",
+   "start": 1461.6,
+   "duration": 2.8
+  },
+  {
+   "text": "who wants to sort of advance\nthis project forward.",
+   "start": 1464.4,
+   "duration": 2.6
+  },
+  {
+   "text": "That's really cool.",
+   "start": 1467.0,
+   "duration": 0.76
+  },
+  {
+   "text": "And there's no other exchange.",
+   "start": 1467.76,
+   "duration": 1.88
+  },
+  {
+   "text": "There's no I don't pay them.\nThey don't pay me.",
+   "start": 1469.64,
+   "duration": 2.4
+  },
+  {
+   "text": "It's my most\nI don't expect anything I don't expect.",
+   "start": 1472.04,
+   "duration": 3.72
+  },
+  {
+   "text": "No, no.",
+   "start": 1475.88,
+   "duration": 1.0
+  },
+  {
+   "text": "Funny enough,\nwe sometimes do get something.",
+   "start": 1476.88,
+   "duration": 2.12
+  },
+  {
+   "text": "Yeah, but you don't expect it.",
+   "start": 1479.0,
+   "duration": 1.32
+  },
+  {
+   "text": "You don't expect it.",
+   "start": 1480.32,
+   "duration": 0.76
+  },
+  {
+   "text": "Well,\nand I think that's an interesting one.",
+   "start": 1481.08,
+   "duration": 2.72
+  },
+  {
+   "text": "David Hanmer. Hanson.",
+   "start": 1483.8,
+   "duration": 3.0
+  },
+  {
+   "text": "One chart is never run\nan open source project as a business.",
+   "start": 1486.92,
+   "duration": 3.92
+  },
+  {
+   "text": "Because you will then you",
+   "start": 1492.2,
+   "duration": 2.32
+  },
+  {
+   "text": "build something I like I said before,\nI give my code to the community.",
+   "start": 1494.52,
+   "duration": 4.0
+  },
+  {
+   "text": "You don't get to mandate\nwhat goes into my project.",
+   "start": 1499.04,
+   "duration": 3.12
+  },
+  {
+   "text": "You absolutely do not.",
+   "start": 1502.52,
+   "duration": 1.36
+  },
+  {
+   "text": "I will consider it, but, even if it gets\n100 uploads, I might still reject it.",
+   "start": 1503.88,
+   "duration": 6.08
+  },
+  {
+   "text": "For what it's worth.",
+   "start": 1510.08,
+   "duration": 1.28
+  },
+  {
+   "text": "If it's not in line with my vision,\nI think that's an important one.",
+   "start": 1511.36,
+   "duration": 3.52
+  },
+  {
+   "text": "Some people do.",
+   "start": 1515.96,
+   "duration": 1.56
+  },
+  {
+   "text": "You do sort of community\ndriven development as they",
+   "start": 1517.52,
+   "duration": 3.0
+  },
+  {
+   "text": "view that as their roadmap,\nwhatever their community size.",
+   "start": 1520.76,
+   "duration": 3.0
+  },
+  {
+   "text": "But a lot of solutions that are proposed\nmight, might sometimes not be the best",
+   "start": 1523.88,
+   "duration": 4.04
+  },
+  {
+   "text": "solution or, are not in line\nwith your thinking or vision.",
+   "start": 1527.92,
+   "duration": 3.64
+  },
+  {
+   "text": "Yeah.",
+   "start": 1532.24,
+   "duration": 2.12
+  },
+  {
+   "text": "I think sort of what David said\nwas, community,",
+   "start": 1534.36,
+   "duration": 2.88
+  },
+  {
+   "text": "open\nsource is not a community nor a democracy.",
+   "start": 1537.24,
+   "duration": 3.08
+  },
+  {
+   "text": "Which I think is something\nthat's pretty powerful.",
+   "start": 1540.96,
+   "duration": 1.8
+  },
+  {
+   "text": "Yeah. Nice.",
+   "start": 1542.76,
+   "duration": 1.24
+  },
+  {
+   "text": "I am wondering and probably\nsome listeners are thinking, okay,",
+   "start": 1544.0,
+   "duration": 3.28
+  },
+  {
+   "text": "I understand open source.",
+   "start": 1547.8,
+   "duration": 1.52
+  },
+  {
+   "text": "I've always given the advice of\nI do think it's quite valuable",
+   "start": 1549.32,
+   "duration": 2.96
+  },
+  {
+   "text": "both for your skill set\nbut potentially for your career.",
+   "start": 1552.28,
+   "duration": 3.0
+  },
+  {
+   "text": "And the potential is quite a big thing.",
+   "start": 1555.4,
+   "duration": 2.0
+  },
+  {
+   "text": "Like you mentioned,\nif you value this craft,",
+   "start": 1557.4,
+   "duration": 3.2
+  },
+  {
+   "text": "you kind of find this passion\nfor contributing.",
+   "start": 1560.84,
+   "duration": 3.0
+  },
+  {
+   "text": "And there is no expectation\nthat this will have certain outcomes.",
+   "start": 1564.32,
+   "duration": 3.44
+  },
+  {
+   "text": "It's a belief that you need to have\nand it's consistency.",
+   "start": 1567.8,
+   "duration": 3.72
+  },
+  {
+   "text": "I feel like without that consistency part\nand that consistency is still vague",
+   "start": 1572.12,
+   "duration": 3.72
+  },
+  {
+   "text": "because it can be in very long time\nor it can be in shorter time.",
+   "start": 1575.84,
+   "duration": 3.72
+  },
+  {
+   "text": "But I do think it's quite valuable,\nespecially in the current market",
+   "start": 1580.16,
+   "duration": 3.12
+  },
+  {
+   "text": "where getting your foot in\nthe door is very difficult.",
+   "start": 1583.28,
+   "duration": 3.0
+  },
+  {
+   "text": "I saw this post on Reddit person that\nsaid, I've hired hundreds of engineers.",
+   "start": 1586.4,
+   "duration": 3.72
+  },
+  {
+   "text": "Now all the profiles I get are custom\ntailor made",
+   "start": 1590.6,
+   "duration": 3.36
+  },
+  {
+   "text": "based on the job description that we have,\nand they all look the same.",
+   "start": 1593.96,
+   "duration": 3.0
+  },
+  {
+   "text": "Which means how do I then filter\nthe resume part already in and of its own?",
+   "start": 1597.12,
+   "duration": 3.6
+  },
+  {
+   "text": "And if that becomes very hard,\nthen getting your foot in the door,",
+   "start": 1601.24,
+   "duration": 2.52
+  },
+  {
+   "text": "you need to think of alternatives.",
+   "start": 1603.76,
+   "duration": 1.84
+  },
+  {
+   "text": "I think open source is a good alternative.",
+   "start": 1605.6,
+   "duration": 3.0
+  },
+  {
+   "text": "It is.",
+   "start": 1608.92,
+   "duration": 0.56
+  },
+  {
+   "text": "If you look for alternative,\nyou can consider contributing to vendors.",
+   "start": 1609.48,
+   "duration": 4.8
+  },
+  {
+   "text": "You would like to work for it, right?",
+   "start": 1614.28,
+   "duration": 1.2
+  },
+  {
+   "text": "And, but I wouldn't recommend\nstarting to contribute",
+   "start": 1615.48,
+   "duration": 5.6
+  },
+  {
+   "text": "to a vendor's project with the assumption\nthat you'll be hired one day.",
+   "start": 1621.08,
+   "duration": 3.08
+  },
+  {
+   "text": "Similarly, opening an opening a business",
+   "start": 1624.56,
+   "duration": 2.64
+  },
+  {
+   "text": "to assume your B become\nrich is also not a great plan, right?",
+   "start": 1627.2,
+   "duration": 3.84
+  },
+  {
+   "text": "Find something you love doing and execute\non that and be consistent.",
+   "start": 1632.24,
+   "duration": 3.36
+  },
+  {
+   "text": "And then hopefully you will be recognized\nby those that benefit",
+   "start": 1635.6,
+   "duration": 3.92
+  },
+  {
+   "text": "from your contributions.",
+   "start": 1639.52,
+   "duration": 3.0
+  },
+  {
+   "text": "I've been recognized through, like, GitHub\nsponsored programs",
+   "start": 1643.32,
+   "duration": 3.12
+  },
+  {
+   "text": "where I randomly got money\nfrom, from folks like a lot of money,",
+   "start": 1646.44,
+   "duration": 2.84
+  },
+  {
+   "text": "which I never understood\nwhy they would send it. Send it.",
+   "start": 1649.28,
+   "duration": 2.4
+  },
+  {
+   "text": "That's cool.",
+   "start": 1651.68,
+   "duration": 0.96
+  },
+  {
+   "text": "There was someone selling, like,\nhundreds of of dollars over and over.",
+   "start": 1652.64,
+   "duration": 3.52
+  },
+  {
+   "text": "Okay.",
+   "start": 1656.32,
+   "duration": 0.6
+  },
+  {
+   "text": "I never spoke to you, but you do.",
+   "start": 1656.92,
+   "duration": 1.84
+  },
+  {
+   "text": "You know for what I said, I have no clue.",
+   "start": 1658.76,
+   "duration": 2.2
+  },
+  {
+   "text": "It might be good for your legacy.",
+   "start": 1660.96,
+   "duration": 2.0
+  },
+  {
+   "text": "Yeah,\nit might be some random contributions",
+   "start": 1662.96,
+   "duration": 1.88
+  },
+  {
+   "text": "that I did to one of one of these projects\nthat usually benefit to them.",
+   "start": 1664.84,
+   "duration": 2.92
+  },
+  {
+   "text": "Yeah.",
+   "start": 1667.76,
+   "duration": 1.4
+  },
+  {
+   "text": "It might also be for something else,\nI don't know.",
+   "start": 1669.16,
+   "duration": 2.52
+  },
+  {
+   "text": "But that's not what I do open source for.",
+   "start": 1671.68,
+   "duration": 2.48
+  },
+  {
+   "text": "It's it's, it's sort of this, this, this\ncraftsmanship and me trying to position",
+   "start": 1674.16,
+   "duration": 5.16
+  },
+  {
+   "text": "myself as a thought leadership in certain\ntools and industries and niches.",
+   "start": 1679.32,
+   "duration": 3.56
+  },
+  {
+   "text": "And I happened to be offered a job,",
+   "start": 1683.64,
+   "duration": 3.44
+  },
+  {
+   "text": "at HashiCorp through all the contributions\nI did, because I positioned myself.",
+   "start": 1687.08,
+   "duration": 3.88
+  },
+  {
+   "text": "Yeah.",
+   "start": 1691.0,
+   "duration": 0.24
+  },
+  {
+   "text": "Within that community\nand within that ecosystem.",
+   "start": 1691.24,
+   "duration": 2.92
+  },
+  {
+   "text": "And in addition to creating\nthose features, I attended dozens",
+   "start": 1694.16,
+   "duration": 3.84
+  },
+  {
+   "text": "or more than dozens of community",
+   "start": 1698.0,
+   "duration": 3.12
+  },
+  {
+   "text": "hours\nand roadmap sessions with those teams.",
+   "start": 1701.12,
+   "duration": 3.0
+  },
+  {
+   "text": "I attended multiple times HashiCorp\nfor just a HashiCorp conference",
+   "start": 1704.64,
+   "duration": 3.92
+  },
+  {
+   "text": "where I spoke to the teams directly that\nI contributed to and some other folks.",
+   "start": 1708.92,
+   "duration": 3.88
+  },
+  {
+   "text": "So that is that",
+   "start": 1714.12,
+   "duration": 0.56
+  },
+  {
+   "text": "consistency that can get you somewhere,\nbut it can also get you nowhere.",
+   "start": 1714.68,
+   "duration": 3.6
+  },
+  {
+   "text": "Yeah.",
+   "start": 1718.28,
+   "duration": 0.24
+  },
+  {
+   "text": "And you shouldn't be disappointed\nif it doesn't get you anywhere.",
+   "start": 1718.52,
+   "duration": 3.0
+  },
+  {
+   "text": "No it does help. Yeah.",
+   "start": 1721.56,
+   "duration": 2.04
+  },
+  {
+   "text": "If you're surrounded by the right people,\nthat's the part that contradicts.",
+   "start": 1723.6,
+   "duration": 3.04
+  },
+  {
+   "text": "Right?",
+   "start": 1726.64,
+   "duration": 0.28
+  },
+  {
+   "text": "Because, there might be an outcome,\nbut there might not be.",
+   "start": 1726.92,
+   "duration": 3.56
+  },
+  {
+   "text": "So I don't think it's bad\nthat you have the intention",
+   "start": 1730.52,
+   "duration": 2.4
+  },
+  {
+   "text": "that there might be an outcome,\nbecause that's reality, right?",
+   "start": 1732.92,
+   "duration": 2.28
+  },
+  {
+   "text": "That's a that's a maybe.",
+   "start": 1735.2,
+   "duration": 1.68
+  },
+  {
+   "text": "But in the end, the fact that you might\nget disappointed does the risk in the end.",
+   "start": 1736.88,
+   "duration": 4.72
+  },
+  {
+   "text": "I feel like you're a person\nthat is very diligently",
+   "start": 1742.04,
+   "duration": 3.36
+  },
+  {
+   "text": "doing their work in their effort,\nand that you also get energy out of this.",
+   "start": 1745.4,
+   "duration": 2.48
+  },
+  {
+   "text": "Otherwise you would have never made it\nwork. Right.",
+   "start": 1747.88,
+   "duration": 2.4
+  },
+  {
+   "text": "I feel like I can do a lot of things,",
+   "start": 1750.28,
+   "duration": 1.72
+  },
+  {
+   "text": "and with discipline I can do\na lot of things for a long, long time.",
+   "start": 1752.0,
+   "duration": 3.0
+  },
+  {
+   "text": "But the things that I've done\nfor the longest,",
+   "start": 1755.4,
+   "duration": 1.64
+  },
+  {
+   "text": "they also give me energy back in return,\nbecause otherwise you're just drained.",
+   "start": 1757.04,
+   "duration": 4.08
+  },
+  {
+   "text": "If nothing counterbalances\nthe effort that you put in,",
+   "start": 1761.12,
+   "duration": 2.96
+  },
+  {
+   "text": "if you don't get energy out of the things\nthat you do, that's how you kind of lose",
+   "start": 1764.08,
+   "duration": 3.56
+  },
+  {
+   "text": "passion for the things that you do\nin the first place. Yeah.",
+   "start": 1767.64,
+   "duration": 2.52
+  },
+  {
+   "text": "It is. That's what a lot of things\nactually it is.",
+   "start": 1770.16,
+   "duration": 2.44
+  },
+  {
+   "text": "And I think something that's\nprobably I've never shared that in public",
+   "start": 1772.6,
+   "duration": 3.88
+  },
+  {
+   "text": "speaking before,\nbut I'm a university dropout.",
+   "start": 1776.48,
+   "duration": 2.48
+  },
+  {
+   "text": "I changed, university\nfor my first software",
+   "start": 1778.96,
+   "duration": 4.48
+  },
+  {
+   "text": "engineering gig as they approached me\nduring my, my, my second year",
+   "start": 1783.44,
+   "duration": 3.52
+  },
+  {
+   "text": "and after after leaving uni, I, in",
+   "start": 1788.04,
+   "duration": 3.8
+  },
+  {
+   "text": "my view, had a pretty successful career\nas a software engineer.",
+   "start": 1791.84,
+   "duration": 3.04
+  },
+  {
+   "text": "But moving from company\nto company over and over,",
+   "start": 1795.32,
+   "duration": 2.92
+  },
+  {
+   "text": "you do have to sort of extra\nprove yourself somehow.",
+   "start": 1798.24,
+   "duration": 3.0
+  },
+  {
+   "text": "There's no fancy",
+   "start": 1801.76,
+   "duration": 2.32
+  },
+  {
+   "text": "certificate or diploma\nthat I that I can put on my resume.",
+   "start": 1804.08,
+   "duration": 3.16
+  },
+  {
+   "text": "So part of my resume\nis also my contributions.",
+   "start": 1807.28,
+   "duration": 3.04
+  },
+  {
+   "text": "I it's it's been a year\nsince I, actually created the resume.",
+   "start": 1810.36,
+   "duration": 5.36
+  },
+  {
+   "text": "Most of the",
+   "start": 1816.08,
+   "duration": 2.24
+  },
+  {
+   "text": "jobs or companies\nI have not worked for was true.",
+   "start": 1818.32,
+   "duration": 2.8
+  },
+  {
+   "text": "Folks approach me on get up. Yeah,\nthat's very cool.",
+   "start": 1821.12,
+   "duration": 2.76
+  },
+  {
+   "text": "That's like the status that you've built\nup. It's it's rewarding.",
+   "start": 1823.88,
+   "duration": 2.6
+  },
+  {
+   "text": "Yeah.",
+   "start": 1826.48,
+   "duration": 0.44
+  },
+  {
+   "text": "It's also sometimes interesting\nbecause I've also had recruiters",
+   "start": 1826.92,
+   "duration": 2.8
+  },
+  {
+   "text": "ask me like, hey,\nwhy was there no activity between month X?",
+   "start": 1829.72,
+   "duration": 2.88
+  },
+  {
+   "text": "Oh, like",
+   "start": 1833.68,
+   "duration": 0.72
+  },
+  {
+   "text": "school holidays or conference season or.",
+   "start": 1834.4,
+   "duration": 3.2
+  },
+  {
+   "text": "Yeah, you have to explain yourself.",
+   "start": 1837.6,
+   "duration": 2.36
+  },
+  {
+   "text": "Yeah.\nThat's something a little little tough.",
+   "start": 1839.96,
+   "duration": 2.4
+  },
+  {
+   "text": "And people\nsometimes do expect something from you.",
+   "start": 1842.36,
+   "duration": 2.08
+  },
+  {
+   "text": "Okay.",
+   "start": 1844.44,
+   "duration": 0.28
+  },
+  {
+   "text": "Currently I'm doing construction\non our house and trying to sort of",
+   "start": 1844.72,
+   "duration": 3.28
+  },
+  {
+   "text": "understand\nwhat marriage is, is or trying to engage.",
+   "start": 1848.0,
+   "duration": 3.0
+  },
+  {
+   "text": "I haven't contributed a single line\nof code to open source for the past",
+   "start": 1851.68,
+   "duration": 3.84
+  },
+  {
+   "text": "few weeks. Okay.",
+   "start": 1855.68,
+   "duration": 1.28
+  },
+  {
+   "text": "And I wasn't sure\nif I had to feel guilty about this or,",
+   "start": 1856.96,
+   "duration": 3.84
+  },
+  {
+   "text": "like, people started commenting on PR,\nlike, hey, can I get reviewed?",
+   "start": 1860.8,
+   "duration": 4.24
+  },
+  {
+   "text": "Or hey, what are your thoughts on this?",
+   "start": 1865.04,
+   "duration": 1.92
+  },
+  {
+   "text": "Some of my draft peers were even closed.",
+   "start": 1866.96,
+   "duration": 2.48
+  },
+  {
+   "text": "Because things just took too long\nand mean things move on, right?",
+   "start": 1869.44,
+   "duration": 3.2
+  },
+  {
+   "text": "Open source doesn't wait for you\nunless it's your project and",
+   "start": 1872.8,
+   "duration": 4.24
+  },
+  {
+   "text": "you own, everything.",
+   "start": 1877.4,
+   "duration": 1.4
+  },
+  {
+   "text": "But, yeah, I was also trying to consider.",
+   "start": 1879.92,
+   "duration": 2.4
+  },
+  {
+   "text": "Should I post something on social media\nor not?",
+   "start": 1882.32,
+   "duration": 1.8
+  },
+  {
+   "text": "Like,\nhey, I'm currently dealing with lies.",
+   "start": 1884.12,
+   "duration": 2.6
+  },
+  {
+   "text": "I'm not always on people.",
+   "start": 1886.72,
+   "duration": 1.6
+  },
+  {
+   "text": "Sometimes I expect you to be always on.",
+   "start": 1888.32,
+   "duration": 2.24
+  },
+  {
+   "text": "I spent a good 16 to 20 hours",
+   "start": 1890.56,
+   "duration": 2.96
+  },
+  {
+   "text": "sometimes on, sitting behind my computer.",
+   "start": 1893.52,
+   "duration": 3.4
+  },
+  {
+   "text": "And certainly going to prioritize things\nin life.",
+   "start": 1897.08,
+   "duration": 3.28
+  },
+  {
+   "text": "Is interesting\nhow the community response to that.",
+   "start": 1901.12,
+   "duration": 3.0
+  },
+  {
+   "text": "Yeah.\nI like your balanced approach though.",
+   "start": 1904.2,
+   "duration": 2.04
+  },
+  {
+   "text": "Like some of my friends have said,\nbuilding has become so easy now",
+   "start": 1906.24,
+   "duration": 4.44
+  },
+  {
+   "text": "that if I don't build, it's almost\nlike an addiction because now is the time.",
+   "start": 1911.04,
+   "duration": 4.52
+  },
+  {
+   "text": "And now tools are still a lot more\naffordable than potentially in five years,",
+   "start": 1915.56,
+   "duration": 3.96
+  },
+  {
+   "text": "which means that this is the adoption\nphase and wants to have a lot of users.",
+   "start": 1919.52,
+   "duration": 3.72
+  },
+  {
+   "text": "They can slowly up the prices, which means",
+   "start": 1923.24,
+   "duration": 1.8
+  },
+  {
+   "text": "I want to get the most out of it\nright now.",
+   "start": 1925.04,
+   "duration": 2.04
+  },
+  {
+   "text": "And I'm like, yeah, know, it sounds like\nthere is an addiction in there.",
+   "start": 1927.08,
+   "duration": 4.04
+  },
+  {
+   "text": "Did you ever get to a point\nwhere you were like, I have to contribute.",
+   "start": 1931.48,
+   "duration": 3.08
+  },
+  {
+   "text": "I have to do this continuously",
+   "start": 1934.56,
+   "duration": 1.28
+  },
+  {
+   "text": "because now it sounds like you've\nkind of let that go.",
+   "start": 1935.84,
+   "duration": 3.0
+  },
+  {
+   "text": "Yeah, I think there was\nthere were times where I was sort of",
+   "start": 1938.96,
+   "duration": 2.64
+  },
+  {
+   "text": "trying to prove myself.",
+   "start": 1941.6,
+   "duration": 1.12
+  },
+  {
+   "text": "So open source and vendors notice\nthey do a great job",
+   "start": 1942.72,
+   "duration": 3.12
+  },
+  {
+   "text": "at like having different tiers and ranks\nso you can become a Terraform",
+   "start": 1945.84,
+   "duration": 5.04
+  },
+  {
+   "text": "core contributor\nor an AWS CDK distinguished contributor.",
+   "start": 1950.88,
+   "duration": 3.92
+  },
+  {
+   "text": "And you have to do\nyou have to meet certain metrics",
+   "start": 1955.52,
+   "duration": 2.48
+  },
+  {
+   "text": "which they don't share with you.",
+   "start": 1958.0,
+   "duration": 1.36
+  },
+  {
+   "text": "So the amount of like PR",
+   "start": 1959.36,
+   "duration": 1.2
+  },
+  {
+   "text": "you've opened or comments you've put,\nor there's a different type of metrics",
+   "start": 1960.56,
+   "duration": 4.2
+  },
+  {
+   "text": "where they metric try and measure\nactual valuable contributions.",
+   "start": 1964.76,
+   "duration": 3.4
+  },
+  {
+   "text": "That's a metric that they get to decide.",
+   "start": 1968.6,
+   "duration": 2.36
+  },
+  {
+   "text": "And sometimes it's a little hard\nfor you to understand.",
+   "start": 1970.96,
+   "duration": 2.4
+  },
+  {
+   "text": "Am I going to miss the boat\nor not this year?",
+   "start": 1973.36,
+   "duration": 2.6
+  },
+  {
+   "text": "I was lucky enough to be for years,\nlike a recurring core contributor,",
+   "start": 1975.96,
+   "duration": 3.8
+  },
+  {
+   "text": "but I never understood\nwhere that threshold was.",
+   "start": 1980.44,
+   "duration": 3.0
+  },
+  {
+   "text": "So, yeah, sometimes I did\nfeel like I have to contribute.",
+   "start": 1983.68,
+   "duration": 3.04
+  },
+  {
+   "text": "And that was sort of to meet\nthose those levels.",
+   "start": 1987.64,
+   "duration": 3.32
+  },
+  {
+   "text": "Yeah.",
+   "start": 1991.0,
+   "duration": 0.76
+  },
+  {
+   "text": "Which don't really mean anything\nbesides a badge and a T shirt.",
+   "start": 1991.76,
+   "duration": 3.6
+  },
+  {
+   "text": "I guess that's what we that's what I do.",
+   "start": 1995.72,
+   "duration": 1.8
+  },
+  {
+   "text": "Open source for.",
+   "start": 1997.52,
+   "duration": 0.84
+  },
+  {
+   "text": "But,",
+   "start": 1999.56,
+   "duration": 0.96
+  },
+  {
+   "text": "there's also been times where I, you know,\nlife was a little harder.",
+   "start": 2000.52,
+   "duration": 3.2
+  },
+  {
+   "text": "And again, it's sort of escapism\nwas it worked",
+   "start": 2003.72,
+   "duration": 3.28
+  },
+  {
+   "text": "well for me to sit behind the computer\nand just contribute, put my headset on,",
+   "start": 2007.0,
+   "duration": 4.08
+  },
+  {
+   "text": "no meetings, just pure me writing code and\nand solving problems.",
+   "start": 2011.08,
+   "duration": 4.92
+  },
+  {
+   "text": "That's something you have to enjoy.",
+   "start": 2016.96,
+   "duration": 1.32
+  },
+  {
+   "text": "So the same as some folks\nwould turn on a PlayStation,",
+   "start": 2018.28,
+   "duration": 2.32
+  },
+  {
+   "text": "which could be an addiction\nor a form of escapism.",
+   "start": 2020.6,
+   "duration": 3.0
+  },
+  {
+   "text": "I happen to enjoy doing this.",
+   "start": 2023.72,
+   "duration": 1.52
+  },
+  {
+   "text": "Yeah I like that a lot.",
+   "start": 2025.24,
+   "duration": 1.84
+  },
+  {
+   "text": "And I think, sort of the network\nyou build up through, like",
+   "start": 2027.08,
+   "duration": 4.72
+  },
+  {
+   "text": "LinkedIn and people reaching out to you\nthat it's it's rewarding.",
+   "start": 2031.8,
+   "duration": 3.28
+  },
+  {
+   "text": "It's a great community to be part of.",
+   "start": 2035.52,
+   "duration": 2.2
+  },
+  {
+   "text": "That's great.",
+   "start": 2037.72,
+   "duration": 0.84
+  },
+  {
+   "text": "Yeah.",
+   "start": 2038.56,
+   "duration": 0.8
+  },
+  {
+   "text": "For me, the I really admire",
+   "start": 2039.36,
+   "duration": 2.76
+  },
+  {
+   "text": "people that have really cool\nacquired skills.",
+   "start": 2042.12,
+   "duration": 3.0
+  },
+  {
+   "text": "And for me,\nthe acquired skills that you can do",
+   "start": 2045.24,
+   "duration": 2.52
+  },
+  {
+   "text": "kind of building in public\nor in this manner are just very cool.",
+   "start": 2047.76,
+   "duration": 3.84
+  },
+  {
+   "text": "Yeah.",
+   "start": 2051.96,
+   "duration": 0.2
+  },
+  {
+   "text": "Like it's",
+   "start": 2052.16,
+   "duration": 0.36
+  },
+  {
+   "text": "not something that I've done in my career,\nbut it is something that I admire.",
+   "start": 2052.52,
+   "duration": 3.68
+  },
+  {
+   "text": "If I would go back.",
+   "start": 2056.2,
+   "duration": 1.8
+  },
+  {
+   "text": "I don't think I would change",
+   "start": 2058.0,
+   "duration": 1.64
+  },
+  {
+   "text": "a lot of my own career\nbecause I like where I ended up.",
+   "start": 2059.64,
+   "duration": 2.44
+  },
+  {
+   "text": "But that doesn't mean that for someone\nelse, it's not a good choice.",
+   "start": 2062.08,
+   "duration": 3.4
+  },
+  {
+   "text": "I feel like it's a very solid way\nof working in a way",
+   "start": 2065.48,
+   "duration": 3.24
+  },
+  {
+   "text": "of acquiring skills, which is just it's\nvery cool and very unique, I would say.",
+   "start": 2068.72,
+   "duration": 3.56
+  },
+  {
+   "text": "Yeah.",
+   "start": 2072.56,
+   "duration": 0.64
+  },
+  {
+   "text": "And I think another thing\nthat could be really interesting to folks",
+   "start": 2073.2,
+   "duration": 3.0
+  },
+  {
+   "text": "that are new to open source is something\nthat was very valuable to me, is,",
+   "start": 2076.2,
+   "duration": 3.92
+  },
+  {
+   "text": "you know, you don't get to",
+   "start": 2081.0,
+   "duration": 1.0
+  },
+  {
+   "text": "easily pick where you work, right?",
+   "start": 2082.96,
+   "duration": 1.44
+  },
+  {
+   "text": "I would love to work on certain Google\nservice teams or like an AWS service",
+   "start": 2084.4,
+   "duration": 4.28
+  },
+  {
+   "text": "to ensure they just don't happen to hire\nin the Netherlands or in Europe.",
+   "start": 2088.68,
+   "duration": 3.76
+  },
+  {
+   "text": "Yeah, a lot of like interesting service\nteams are over in the US,",
+   "start": 2092.56,
+   "duration": 3.0
+  },
+  {
+   "text": "but still there are certain projects.",
+   "start": 2096.32,
+   "duration": 2.6
+  },
+  {
+   "text": "And the reason",
+   "start": 2098.92,
+   "duration": 0.56
+  },
+  {
+   "text": "why I'm saying this,\nlike I would like to work with",
+   "start": 2099.48,
+   "duration": 1.6
+  },
+  {
+   "text": "some of the people that work there\nto be able",
+   "start": 2101.08,
+   "duration": 1.68
+  },
+  {
+   "text": "to pick their brain\nand understand how they think.",
+   "start": 2102.76,
+   "duration": 3.0
+  },
+  {
+   "text": "I started contributing to CRO,\nwhich is a joint effort",
+   "start": 2105.88,
+   "duration": 3.16
+  },
+  {
+   "text": "by Google, Microsoft and Azure, \nGoogle, Microsoft.",
+   "start": 2109.04,
+   "duration": 2.28
+  },
+  {
+   "text": "And it was awesome.",
+   "start": 2111.32,
+   "duration": 1.28
+  },
+  {
+   "text": "And when you join those community hours\nand we speak those maintainers,",
+   "start": 2112.6,
+   "duration": 3.48
+  },
+  {
+   "text": "you get a chance to pick their brain.",
+   "start": 2116.08,
+   "duration": 1.8
+  },
+  {
+   "text": "I, I get the chance to talk to\nto one of the principal engineers",
+   "start": 2117.88,
+   "duration": 3.92
+  },
+  {
+   "text": "that works on Amazon, ECS,",
+   "start": 2121.8,
+   "duration": 1.76
+  },
+  {
+   "text": "who also happens\nto be the co-founder of Case Earth. So",
+   "start": 2123.56,
+   "duration": 2.96
+  },
+  {
+   "text": "you get to really learn from these people\nand I think that is very valuable.",
+   "start": 2126.52,
+   "duration": 3.88
+  },
+  {
+   "text": "So I feel like there's\nquite a close way of building a connection",
+   "start": 2132.52,
+   "duration": 3.44
+  },
+  {
+   "text": "rather than I mean, they are overseas,\nthey are in different companies.",
+   "start": 2135.96,
+   "duration": 3.08
+  },
+  {
+   "text": "And I've never thought about this\nperspective.",
+   "start": 2139.88,
+   "duration": 2.12
+  },
+  {
+   "text": "Right.",
+   "start": 2142.0,
+   "duration": 0.24
+  },
+  {
+   "text": "Where communities come together\nis where you can find people like that,",
+   "start": 2142.24,
+   "duration": 3.0
+  },
+  {
+   "text": "which is very neat.",
+   "start": 2145.68,
+   "duration": 0.84
+  },
+  {
+   "text": "So I just be able to learn from them\nsort of for free is, I think, awesome.",
+   "start": 2146.52,
+   "duration": 4.96
+  },
+  {
+   "text": "We've covered a lot\nwith regards to open source.",
+   "start": 2152.28,
+   "duration": 2.0
+  },
+  {
+   "text": "Also your career path\nand what it has meant through out there.",
+   "start": 2154.28,
+   "duration": 3.16
+  },
+  {
+   "text": "Is there anything that we still haven't\ndiscussed",
+   "start": 2157.92,
+   "duration": 2.76
+  },
+  {
+   "text": "which you want to slice open\nbefore we leave off?",
+   "start": 2160.68,
+   "duration": 2.84
+  },
+  {
+   "text": "Freeman is part interesting one.",
+   "start": 2163.52,
+   "duration": 3.0
+  },
+  {
+   "text": "Not necessarily. No.",
+   "start": 2167.96,
+   "duration": 1.88
+  },
+  {
+   "text": "I wonder because right now the bar\nfor entry is quite easy to open source.",
+   "start": 2169.84,
+   "duration": 5.8
+  },
+  {
+   "text": "Do you think it's going to get harder?",
+   "start": 2176.08,
+   "duration": 1.52
+  },
+  {
+   "text": "Because the the thing that you mentioned,\nit wasn't valor, it was the other vouch.",
+   "start": 2177.6,
+   "duration": 5.52
+  },
+  {
+   "text": "Yeah.",
+   "start": 2183.2,
+   "duration": 0.24
+  },
+  {
+   "text": "Vouch that that will in the end,\nif the vision of vouch holds",
+   "start": 2183.44,
+   "duration": 3.0
+  },
+  {
+   "text": "true then some projects might just say,\nwell, you have to have X amount of.",
+   "start": 2186.44,
+   "duration": 3.2
+  },
+  {
+   "text": "I see it as a point system\nor ranking system.",
+   "start": 2189.64,
+   "duration": 2.44
+  },
+  {
+   "text": "You have to have a certain rank",
+   "start": 2192.08,
+   "duration": 1.0
+  },
+  {
+   "text": "which makes the open source\nnot that open for contributors.",
+   "start": 2193.08,
+   "duration": 2.52
+  },
+  {
+   "text": "Yeah.",
+   "start": 2195.6,
+   "duration": 0.36
+  },
+  {
+   "text": "I think something I would like to share\nwith folks is like, I think",
+   "start": 2195.96,
+   "duration": 3.72
+  },
+  {
+   "text": "a gigantic tool to generate\ncode is is amazing,",
+   "start": 2200.48,
+   "duration": 2.96
+  },
+  {
+   "text": "and it gets you to contribute",
+   "start": 2203.44,
+   "duration": 1.2
+  },
+  {
+   "text": "to some of these projects,\nbut don't outsource your thinking to it,",
+   "start": 2204.64,
+   "duration": 3.96
+  },
+  {
+   "text": "and don't let it sort of take away\nyour personality and your craftsmanship",
+   "start": 2209.16,
+   "duration": 3.92
+  },
+  {
+   "text": "when you contribute to these projects.",
+   "start": 2213.08,
+   "duration": 1.48
+  },
+  {
+   "text": "We as a",
+   "start": 2216.0,
+   "duration": 0.76
+  },
+  {
+   "text": "maintainers and other maintainers\nof different projects love to",
+   "start": 2216.76,
+   "duration": 3.68
+  },
+  {
+   "text": "guide people, especially beginners\ntreat our first contributions.",
+   "start": 2221.56,
+   "duration": 3.52
+  },
+  {
+   "text": "But it is also true, and I think,",
+   "start": 2225.08,
+   "duration": 3.8
+  },
+  {
+   "text": "I think it holds true that we also expect\na certain form of effort.",
+   "start": 2229.2,
+   "duration": 4.24
+  },
+  {
+   "text": "And if you put one minute into something\nwithout a PR description,",
+   "start": 2234.04,
+   "duration": 3.0
+  },
+  {
+   "text": "it's fair to say that",
+   "start": 2237.96,
+   "duration": 2.8
+  },
+  {
+   "text": "I'm allowed to spend like an another",
+   "start": 2240.76,
+   "duration": 2.64
+  },
+  {
+   "text": "5 minutes or 10 minutes on this as well.",
+   "start": 2243.4,
+   "duration": 3.0
+  },
+  {
+   "text": "If you shape your contributions,",
+   "start": 2248.4,
+   "duration": 1.92
+  },
+  {
+   "text": "don't don't outsource your thinking.",
+   "start": 2250.32,
+   "duration": 3.84
+  },
+  {
+   "text": "Yeah. And your personality. Perfect.",
+   "start": 2254.4,
+   "duration": 2.2
+  },
+  {
+   "text": "Thank you so much for coming\non. This was great.",
+   "start": 2256.6,
+   "duration": 2.16
+  },
+  {
+   "text": "Thank you. Better.",
+   "start": 2258.76,
+   "duration": 1.2
+  },
+  {
+   "text": "If you're still with us",
+   "start": 2259.96,
+   "duration": 0.84
+  },
+  {
+   "text": "let me know in the comment section\nwhat you thought of this episode.",
+   "start": 2260.8,
+   "duration": 2.28
+  },
+  {
+   "text": "And we'll see you in the next one.",
+   "start": 2263.08,
+   "duration": 1.08
+  },
+  {
+   "text": "Beyond Coding",
+   "start": 2265.52,
+   "duration": 1.76
+  }
+ ]
+}

@@ -1,0 +1,3456 @@
+{
+ "podcast_name": "Silicon Valley Girl",
+ "podcast_host": "Marina Mogilko",
+ "episode_id": "yt-cVGHg4Vd9uM",
+ "episode_title": "The Biggest AI Opportunities Are Hiding in Boring Businesses",
+ "audio_url": "https://www.youtube.com/watch?v=cVGHg4Vd9uM",
+ "guest_name": "Alex Mashrab",
+ "summary": "Salcan discusses insights from AI founders, including Alex Mashrab, on identifying business opportunities in overlooked industries.",
+ "segments": [
+  {
+   "text": "I find that building something",
+   "start": 0.08,
+   "duration": 4.0
+  },
+  {
+   "text": "meaningful often takes either real",
+   "start": 1.6,
+   "duration": 5.84
+  },
+  {
+   "text": "technical depth uh and or deep cusper",
+   "start": 4.08,
+   "duration": 5.599
+  },
+  {
+   "text": "insight and integration with customers.",
+   "start": 7.44,
+   "duration": 5.04
+  },
+  {
+   "text": "And yes, we can now, you know, use AI to",
+   "start": 9.679,
+   "duration": 4.561
+  },
+  {
+   "text": "code something in a few hours, but",
+   "start": 12.48,
+   "duration": 3.199
+  },
+  {
+   "text": "that's a small piece of the puzzle.",
+   "start": 14.24,
+   "duration": 3.68
+  },
+  {
+   "text": ">> If you're trying to make money with AI,",
+   "start": 15.679,
+   "duration": 4.321
+  },
+  {
+   "text": "this is probably where you're stuck. The",
+   "start": 17.92,
+   "duration": 4.32
+  },
+  {
+   "text": "tools are everywhere. Everyone's so",
+   "start": 20.0,
+   "duration": 4.88
+  },
+  {
+   "text": "positive about one person businesses,",
+   "start": 22.24,
+   "duration": 4.72
+  },
+  {
+   "text": "and building is cheaper than ever. But",
+   "start": 24.88,
+   "duration": 4.719
+  },
+  {
+   "text": "the hard part is knowing what to build",
+   "start": 26.96,
+   "duration": 4.96
+  },
+  {
+   "text": "and what a real customer will actually",
+   "start": 29.599,
+   "duration": 4.241
+  },
+  {
+   "text": "pay for. So over the past year on my",
+   "start": 31.92,
+   "duration": 3.52
+  },
+  {
+   "text": "Silicon Valley Growth podcast, I've",
+   "start": 33.84,
+   "duration": 3.76
+  },
+  {
+   "text": "spoken with more than 50 [music] AI",
+   "start": 35.44,
+   "duration": 4.4
+  },
+  {
+   "text": "founders, CEOs, and researchers,",
+   "start": 37.6,
+   "duration": 3.665
+  },
+  {
+   "text": "including people behind billiondoll",
+   "start": 39.84,
+   "duration": 3.52
+  },
+  {
+   "text": "[music] companies, products used by",
+   "start": 41.265,
+   "duration": 4.095
+  },
+  {
+   "text": "millions and the tools reshaping how we",
+   "start": 43.36,
+   "duration": 3.679
+  },
+  {
+   "text": "work. A lot of them build their",
+   "start": 45.36,
+   "duration": 3.765
+  },
+  {
+   "text": "companies in the past 2 years, which",
+   "start": 47.039,
+   "duration": 3.761
+  },
+  {
+   "text": "[music] is the most fascinating thing,",
+   "start": 49.125,
+   "duration": 3.995
+  },
+  {
+   "text": "proving that this AI thing is actually",
+   "start": 50.8,
+   "duration": 4.32
+  },
+  {
+   "text": "working and it is helping people make",
+   "start": 53.12,
+   "duration": 3.759
+  },
+  {
+   "text": "millions. And I kept asking all of them",
+   "start": 55.12,
+   "duration": 4.239
+  },
+  {
+   "text": "some version of the same question. So",
+   "start": 56.879,
+   "duration": 4.721
+  },
+  {
+   "text": "where are the biggest opportunities",
+   "start": 59.359,
+   "duration": 3.921
+  },
+  {
+   "text": "right now? And [music] one answer kept",
+   "start": 61.6,
+   "duration": 4.4
+  },
+  {
+   "text": "coming back. Look where everyone else",
+   "start": 63.28,
+   "duration": 3.839
+  },
+  {
+   "text": "isn't looking.",
+   "start": 66.0,
+   "duration": 2.88
+  },
+  {
+   "text": ">> My advice would be don't run to where",
+   "start": 67.119,
+   "duration": 3.281
+  },
+  {
+   "text": "everyone else is running. Try to find",
+   "start": 68.88,
+   "duration": 4.239
+  },
+  {
+   "text": "the lanes that are most empty. Try to",
+   "start": 70.4,
+   "duration": 5.28
+  },
+  {
+   "text": "find the the most boring industries that",
+   "start": 73.119,
+   "duration": 5.521
+  },
+  {
+   "text": "are most ripe uh for applying some of",
+   "start": 75.68,
+   "duration": 5.36
+  },
+  {
+   "text": "these uh uh technologies.",
+   "start": 78.64,
+   "duration": 5.04
+  },
+  {
+   "text": ">> That's Salcan, the founder of K Academy.",
+   "start": 81.04,
+   "duration": 5.36
+  },
+  {
+   "text": "His point is simple. Look for a process",
+   "start": 83.68,
+   "duration": 5.2
+  },
+  {
+   "text": "that wastes time or loses money in an",
+   "start": 86.4,
+   "duration": 4.88
+  },
+  {
+   "text": "ordinary business, especially one still",
+   "start": 88.88,
+   "duration": 5.12
+  },
+  {
+   "text": "held together by phone calls, email, and",
+   "start": 91.28,
+   "duration": 4.879
+  },
+  {
+   "text": "a spreadsheet. In this video, I'll show",
+   "start": 94.0,
+   "duration": 4.88
+  },
+  {
+   "text": "you how to find those overlooked niches.",
+   "start": 96.159,
+   "duration": 5.121
+  },
+  {
+   "text": "How to turn what you already know from",
+   "start": 98.88,
+   "duration": 3.956
+  },
+  {
+   "text": "your current job into an advantage,",
+   "start": 101.28,
+   "duration": 2.08
+  },
+  {
+   "text": "[music]",
+   "start": 102.836,
+   "duration": 3.164
+  },
+  {
+   "text": "and how to package one painful workflow",
+   "start": 103.36,
+   "duration": 4.64
+  },
+  {
+   "text": "into something a business will actually",
+   "start": 106.0,
+   "duration": 4.64
+  },
+  {
+   "text": "pay for. I'll rank seven areas I'd look",
+   "start": 108.0,
+   "duration": 4.24
+  },
+  {
+   "text": "at [music] from the ones you can",
+   "start": 110.64,
+   "duration": 4.64
+  },
+  {
+   "text": "realistically test this week to the ones",
+   "start": 112.24,
+   "duration": 4.96
+  },
+  {
+   "text": "that take a little bit more expertise",
+   "start": 115.28,
+   "duration": 4.32
+  },
+  {
+   "text": "and time but solve much more valuable",
+   "start": 117.2,
+   "duration": 4.0
+  },
+  {
+   "text": "problems. But first let's look [music]",
+   "start": 119.6,
+   "duration": 4.559
+  },
+  {
+   "text": "at where the gap actually is. So let's",
+   "start": 121.2,
+   "duration": 5.36
+  },
+  {
+   "text": "say a dental practice they can open Chad",
+   "start": 124.159,
+   "duration": 4.88
+  },
+  {
+   "text": "GBT and [music] any company can really",
+   "start": 126.56,
+   "duration": 4.319
+  },
+  {
+   "text": "do that and so can a small accounting",
+   "start": 129.039,
+   "duration": 4.081
+  },
+  {
+   "text": "firm. Goldman Sachs surveyed small",
+   "start": 130.879,
+   "duration": 5.041
+  },
+  {
+   "text": "business owners this March. 76% said",
+   "start": 133.12,
+   "duration": 6.96
+  },
+  {
+   "text": "they were already using AI, but only 14%",
+   "start": 135.92,
+   "duration": 5.76
+  },
+  {
+   "text": "had actually built it into their [music]",
+   "start": 140.08,
+   "duration": 4.32
+  },
+  {
+   "text": "core operations. That's the gap. And",
+   "start": 141.68,
+   "duration": 4.386
+  },
+  {
+   "text": "this dental practice still misses",
+   "start": 144.4,
+   "duration": 2.96
+  },
+  {
+   "text": "[music] patients because nobody picked",
+   "start": 146.066,
+   "duration": 2.974
+  },
+  {
+   "text": "up the phone at lunch. They still",
+   "start": 147.36,
+   "duration": 3.599
+  },
+  {
+   "text": "haven't figured out how to build an AI",
+   "start": 149.04,
+   "duration": 3.52
+  },
+  {
+   "text": "robot that will pick up the phone and",
+   "start": 150.959,
+   "duration": 3.041
+  },
+  {
+   "text": "make everything work. The construction",
+   "start": 152.56,
+   "duration": 3.679
+  },
+  {
+   "text": "manager still builds estimates by hand.",
+   "start": 154.0,
+   "duration": 3.84
+  },
+  {
+   "text": "Yes, they might be using AI, but it's",
+   "start": 156.239,
+   "duration": 3.28
+  },
+  {
+   "text": "not [music] automated yet. My accounting",
+   "start": 157.84,
+   "duration": 4.0
+  },
+  {
+   "text": "firm still chases me with documents over",
+   "start": 159.519,
+   "duration": 4.08
+  },
+  {
+   "text": "email. Let me give you a cool example.",
+   "start": 161.84,
+   "duration": 4.08
+  },
+  {
+   "text": "So this year I talked to Alex Mashrab, a",
+   "start": 163.599,
+   "duration": 3.841
+  },
+  {
+   "text": "phenomenal entrepreneur, the founder of",
+   "start": 165.92,
+   "duration": 3.2
+  },
+  {
+   "text": "Hicksfield. They've been growing like",
+   "start": 167.44,
+   "duration": 3.84
+  },
+  {
+   "text": "crazy and he told me about a large",
+   "start": 169.12,
+   "duration": 4.24
+  },
+  {
+   "text": "property company that was already using",
+   "start": 171.28,
+   "duration": 4.16
+  },
+  {
+   "text": "AI for advertising. But once he looked",
+   "start": 173.36,
+   "duration": 3.68
+  },
+  {
+   "text": "at their business, the bigger",
+   "start": 175.44,
+   "duration": 4.159
+  },
+  {
+   "text": "opportunity had almost nothing to do",
+   "start": 177.04,
+   "duration": 3.36
+  },
+  {
+   "text": "with content.",
+   "start": 179.599,
+   "duration": 2.401
+  },
+  {
+   "text": ">> In this industry, there is a very",
+   "start": 180.4,
+   "duration": 6.64
+  },
+  {
+   "text": "specific um workflow of a customer. Like",
+   "start": 182.0,
+   "duration": 8.239
+  },
+  {
+   "text": "customer needs to learn about about the",
+   "start": 187.04,
+   "duration": 5.36
+  },
+  {
+   "text": "property. Then they need to go to the",
+   "start": 190.239,
+   "duration": 4.161
+  },
+  {
+   "text": "website and get all the details. Then",
+   "start": 192.4,
+   "duration": 3.68
+  },
+  {
+   "text": "they need to call. Then they need to",
+   "start": 194.4,
+   "duration": 3.52
+  },
+  {
+   "text": "show up. Then they leave deposit and the",
+   "start": 196.08,
+   "duration": 4.0
+  },
+  {
+   "text": "whole customer journey. No one is",
+   "start": 197.92,
+   "duration": 4.88
+  },
+  {
+   "text": "actually building solution specifically",
+   "start": 200.08,
+   "duration": 6.799
+  },
+  {
+   "text": "for this industry to like cover this",
+   "start": 202.8,
+   "duration": 6.24
+  },
+  {
+   "text": "journey end to end with agents. And the",
+   "start": 206.879,
+   "duration": 4.241
+  },
+  {
+   "text": "reason why agents are going to deliver",
+   "start": 209.04,
+   "duration": 4.16
+  },
+  {
+   "text": "lots of value in this specific business",
+   "start": 211.12,
+   "duration": 5.52
+  },
+  {
+   "text": "is that customers who want to maybe",
+   "start": 213.2,
+   "duration": 5.44
+  },
+  {
+   "text": "let's say rent apartment especially in",
+   "start": 216.64,
+   "duration": 4.4
+  },
+  {
+   "text": "certain price points they want to make a",
+   "start": 218.64,
+   "duration": 3.599
+  },
+  {
+   "text": "decision rather quickly.",
+   "start": 221.04,
+   "duration": 1.6
+  },
+  {
+   "text": ">> Yeah.",
+   "start": 222.239,
+   "duration": 3.041
+  },
+  {
+   "text": ">> So every day of delay, every day of just",
+   "start": 222.64,
+   "duration": 4.72
+  },
+  {
+   "text": "moving from one stage to another is just",
+   "start": 225.28,
+   "duration": 4.16
+  },
+  {
+   "text": "lost revenue. And I'm confident there",
+   "start": 227.36,
+   "duration": 3.76
+  },
+  {
+   "text": "are many more examples like that.",
+   "start": 229.44,
+   "duration": 3.84
+  },
+  {
+   "text": ">> What stood out to me was how much money",
+   "start": 231.12,
+   "duration": 4.24
+  },
+  {
+   "text": "the company loses between one step and",
+   "start": 233.28,
+   "duration": 4.0
+  },
+  {
+   "text": "the next. Someone sees a listing and",
+   "start": 235.36,
+   "duration": 3.92
+  },
+  {
+   "text": "waits too long for a reply. They book a",
+   "start": 237.28,
+   "duration": 3.76
+  },
+  {
+   "text": "viewing, then spend three days waiting",
+   "start": 239.28,
+   "duration": 3.84
+  },
+  {
+   "text": "for a paperwork. The same kind of delay",
+   "start": 241.04,
+   "duration": 4.08
+  },
+  {
+   "text": "shows up in all sorts of traditional",
+   "start": 243.12,
+   "duration": 3.839
+  },
+  {
+   "text": "businesses. It seems like the tools to",
+   "start": 245.12,
+   "duration": 4.16
+  },
+  {
+   "text": "fix all of this already exist. I'm Jad",
+   "start": 246.959,
+   "duration": 5.041
+  },
+  {
+   "text": "Masad, the CEO of Replet, explained what",
+   "start": 249.28,
+   "duration": 4.4
+  },
+  {
+   "text": "will still set builders apart. What do",
+   "start": 252.0,
+   "duration": 2.799
+  },
+  {
+   "text": "you think is going to happen when",
+   "start": 253.68,
+   "duration": 2.399
+  },
+  {
+   "text": "everyone's building an app?",
+   "start": 254.799,
+   "duration": 3.601
+  },
+  {
+   "text": ">> I think domain knowledge is very",
+   "start": 256.079,
+   "duration": 6.4
+  },
+  {
+   "text": "important. So if you're you have",
+   "start": 258.4,
+   "duration": 6.16
+  },
+  {
+   "text": "excellent domain knowledge in on YouTube",
+   "start": 262.479,
+   "duration": 5.361
+  },
+  {
+   "text": "and so you need to imbue you need to",
+   "start": 264.56,
+   "duration": 5.12
+  },
+  {
+   "text": "give that domain knowledge into the",
+   "start": 267.84,
+   "duration": 3.28
+  },
+  {
+   "text": "agent. You need to prompt it in a",
+   "start": 269.68,
+   "duration": 3.44
+  },
+  {
+   "text": "certain way so that you're downloading",
+   "start": 271.12,
+   "duration": 3.6
+  },
+  {
+   "text": "your domain knowledge and that is your",
+   "start": 273.12,
+   "duration": 2.799
+  },
+  {
+   "text": "competitive advantage.",
+   "start": 274.72,
+   "duration": 4.96
+  },
+  {
+   "text": ">> But at the same time what open AI models",
+   "start": 275.919,
+   "duration": 6.481
+  },
+  {
+   "text": "are training on on what I know and then",
+   "start": 279.68,
+   "duration": 4.799
+  },
+  {
+   "text": "they're so much better at defining what",
+   "start": 282.4,
+   "duration": 3.76
+  },
+  {
+   "text": "a good YouTube video is. I think you",
+   "start": 284.479,
+   "duration": 3.761
+  },
+  {
+   "text": "still have tacet knowledge that is not",
+   "start": 286.16,
+   "duration": 5.2
+  },
+  {
+   "text": "necessarily expressed in all your videos",
+   "start": 288.24,
+   "duration": 5.92
+  },
+  {
+   "text": "and all the content out there. Um, that",
+   "start": 291.36,
+   "duration": 6.64
+  },
+  {
+   "text": "CFO at the VC firm has a lot of",
+   "start": 294.16,
+   "duration": 6.0
+  },
+  {
+   "text": "knowledge and skills he built up over",
+   "start": 298.0,
+   "duration": 6.08
+  },
+  {
+   "text": "the years that he can make into an app",
+   "start": 300.16,
+   "duration": 6.319
+  },
+  {
+   "text": "that you can't find on blogs and you",
+   "start": 304.08,
+   "duration": 5.2
+  },
+  {
+   "text": "can't find online. And so I think every",
+   "start": 306.479,
+   "duration": 5.44
+  },
+  {
+   "text": "one of us as we go through life, we",
+   "start": 309.28,
+   "duration": 6.24
+  },
+  {
+   "text": "build up a lot of experiences that LLMs",
+   "start": 311.919,
+   "duration": 5.681
+  },
+  {
+   "text": "do not get to experience because they're",
+   "start": 315.52,
+   "duration": 3.04
+  },
+  {
+   "text": "not embodied.",
+   "start": 317.6,
+   "duration": 3.039
+  },
+  {
+   "text": ">> People tend to underestimate how useful",
+   "start": 318.56,
+   "duration": 4.16
+  },
+  {
+   "text": "ordinary work experience can be. After a",
+   "start": 320.639,
+   "duration": 4.56
+  },
+  {
+   "text": "few years in an industry, you know which",
+   "start": 322.72,
+   "duration": 4.64
+  },
+  {
+   "text": "customer calls twice, which document",
+   "start": 325.199,
+   "duration": 4.241
+  },
+  {
+   "text": "always comes back wrong, and which weird",
+   "start": 327.36,
+   "duration": 4.72
+  },
+  {
+   "text": "exception slows everyone down. Most of",
+   "start": 329.44,
+   "duration": 5.199
+  },
+  {
+   "text": "that knowledge never makes it onto the",
+   "start": 332.08,
+   "duration": 4.24
+  },
+  {
+   "text": "internet. Now with prototypes being",
+   "start": 334.639,
+   "duration": 3.521
+  },
+  {
+   "text": "cheap to build, choosing the right",
+   "start": 336.32,
+   "duration": 3.76
+  },
+  {
+   "text": "problem matters more than ever. I asked",
+   "start": 338.16,
+   "duration": 3.84
+  },
+  {
+   "text": "the legendary Andreing, founder of",
+   "start": 340.08,
+   "duration": 4.24
+  },
+  {
+   "text": "Corsera, where he thinks the best",
+   "start": 342.0,
+   "duration": 3.52
+  },
+  {
+   "text": "opportunities are",
+   "start": 344.32,
+   "duration": 4.0
+  },
+  {
+   "text": ">> for an individual that wants to build. I",
+   "start": 345.52,
+   "duration": 5.119
+  },
+  {
+   "text": "don't think it's one size fits all. But",
+   "start": 348.32,
+   "duration": 4.8
+  },
+  {
+   "text": "because the cost of building has",
+   "start": 350.639,
+   "duration": 4.081
+  },
+  {
+   "text": "plummeted,",
+   "start": 353.12,
+   "duration": 5.68
+  },
+  {
+   "text": "um, I encourage people to learn AI,",
+   "start": 354.72,
+   "duration": 7.68
+  },
+  {
+   "text": "build fast, and talk to customers. I",
+   "start": 358.8,
+   "duration": 6.72
+  },
+  {
+   "text": "find myself building things I don't know",
+   "start": 362.4,
+   "duration": 6.079
+  },
+  {
+   "text": "every week, every weekend because I or",
+   "start": 365.52,
+   "duration": 5.119
+  },
+  {
+   "text": "someone on our team have some problem",
+   "start": 368.479,
+   "duration": 5.121
+  },
+  {
+   "text": "and I have some idea for building some",
+   "start": 370.639,
+   "duration": 6.801
+  },
+  {
+   "text": "AI thing to automated. Last weekend I",
+   "start": 373.6,
+   "duration": 5.76
+  },
+  {
+   "text": "had really I was using a frontier model",
+   "start": 377.44,
+   "duration": 3.68
+  },
+  {
+   "text": "to analyze a lot of our key business",
+   "start": 379.36,
+   "duration": 3.279
+  },
+  {
+   "text": "metrics because I didn't have time to do",
+   "start": 381.12,
+   "duration": 4.24
+  },
+  {
+   "text": "it myself but it was kind of measuring",
+   "start": 382.639,
+   "duration": 5.12
+  },
+  {
+   "text": "you know deandized key business metrics.",
+   "start": 385.36,
+   "duration": 4.0
+  },
+  {
+   "text": "What's happen with AI is the cost of",
+   "start": 387.759,
+   "duration": 3.44
+  },
+  {
+   "text": "building has plummeted and so the",
+   "start": 389.36,
+   "duration": 3.679
+  },
+  {
+   "text": "challenge is shifting to deciding what",
+   "start": 391.199,
+   "duration": 3.44
+  },
+  {
+   "text": "to build which I've been calling the",
+   "start": 393.039,
+   "duration": 4.0
+  },
+  {
+   "text": "product management bottleneck and so",
+   "start": 394.639,
+   "duration": 4.161
+  },
+  {
+   "text": "people you know founders engineers",
+   "start": 397.039,
+   "duration": 4.16
+  },
+  {
+   "text": "product managers they can talk to",
+   "start": 398.8,
+   "duration": 4.64
+  },
+  {
+   "text": "customers get a sense for the taste of",
+   "start": 401.199,
+   "duration": 4.321
+  },
+  {
+   "text": "judgment on what to build and then build",
+   "start": 403.44,
+   "duration": 4.4
+  },
+  {
+   "text": "with AI and iterate quickly I think",
+   "start": 405.52,
+   "duration": 4.64
+  },
+  {
+   "text": "that's just a ton of exciting things",
+   "start": 407.84,
+   "duration": 4.16
+  },
+  {
+   "text": ">> answer gives you a pretty practical",
+   "start": 410.16,
+   "duration": 3.68
+  },
+  {
+   "text": "place to start look for a recurring",
+   "start": 412.0,
+   "duration": 4.24
+  },
+  {
+   "text": "problem that costs a business time or",
+   "start": 413.84,
+   "duration": 4.56
+  },
+  {
+   "text": "money and when I say bor boring niche. I",
+   "start": 416.24,
+   "duration": 4.239
+  },
+  {
+   "text": "don't necessarily mean an entire boring",
+   "start": 418.4,
+   "duration": 4.48
+  },
+  {
+   "text": "industry. Sometimes it's just one",
+   "start": 420.479,
+   "duration": 4.401
+  },
+  {
+   "text": "annoying workflow inside a normal",
+   "start": 422.88,
+   "duration": 4.08
+  },
+  {
+   "text": "business that someone still has to do",
+   "start": 424.88,
+   "duration": 4.24
+  },
+  {
+   "text": "every single week. And maybe you are the",
+   "start": 426.96,
+   "duration": 4.639
+  },
+  {
+   "text": "person doing that single boring process",
+   "start": 429.12,
+   "duration": 4.56
+  },
+  {
+   "text": "which makes you actually the best",
+   "start": 431.599,
+   "duration": 4.401
+  },
+  {
+   "text": "founder because you know the process",
+   "start": 433.68,
+   "duration": 4.239
+  },
+  {
+   "text": "inside out. This is how I started my",
+   "start": 436.0,
+   "duration": 4.0
+  },
+  {
+   "text": "company Lingua Trip where we help people",
+   "start": 437.919,
+   "duration": 4.321
+  },
+  {
+   "text": "study abroad because I was that student",
+   "start": 440.0,
+   "duration": 3.759
+  },
+  {
+   "text": "booking all the schools and I didn't",
+   "start": 442.24,
+   "duration": 3.12
+  },
+  {
+   "text": "have this technology back then. We did",
+   "start": 443.759,
+   "duration": 3.601
+  },
+  {
+   "text": "everything by hand, but it is just the",
+   "start": 445.36,
+   "duration": 3.6
+  },
+  {
+   "text": "proof of this pattern. When you're",
+   "start": 447.36,
+   "duration": 3.119
+  },
+  {
+   "text": "inside the process, when you're the",
+   "start": 448.96,
+   "duration": 3.92
+  },
+  {
+   "text": "person doing everything by hand, you're",
+   "start": 450.479,
+   "duration": 4.0
+  },
+  {
+   "text": "the one to solve the problem. So, this",
+   "start": 452.88,
+   "duration": 3.2
+  },
+  {
+   "text": "is your inspiration to start. Even if",
+   "start": 454.479,
+   "duration": 3.201
+  },
+  {
+   "text": "you think that, you know, I'm just an",
+   "start": 456.08,
+   "duration": 3.28
+  },
+  {
+   "text": "employee. I don't know how to start a",
+   "start": 457.68,
+   "duration": 3.68
+  },
+  {
+   "text": "company. You have all the information to",
+   "start": 459.36,
+   "duration": 4.32
+  },
+  {
+   "text": "do that. So, a lot of people are asking,",
+   "start": 461.36,
+   "duration": 5.279
+  },
+  {
+   "text": "how do I get AI to actually do work, not",
+   "start": 463.68,
+   "duration": 5.2
+  },
+  {
+   "text": "just chat back and forth? This part of",
+   "start": 466.639,
+   "duration": 3.68
+  },
+  {
+   "text": "the video is brought to you by",
+   "start": 468.88,
+   "duration": 4.96
+  },
+  {
+   "text": "Omniscent. You open COD or chat GPT and",
+   "start": 470.319,
+   "duration": 5.6
+  },
+  {
+   "text": "connect your Omnisend account in a few",
+   "start": 473.84,
+   "duration": 3.68
+  },
+  {
+   "text": "clicks. The newest version added",
+   "start": 475.919,
+   "duration": 3.601
+  },
+  {
+   "text": "readonly permissions so you can give it",
+   "start": 477.52,
+   "duration": 4.239
+  },
+  {
+   "text": "access without letting it touch anything",
+   "start": 479.52,
+   "duration": 4.48
+  },
+  {
+   "text": "and any email it drafts for you now",
+   "start": 481.759,
+   "duration": 4.401
+  },
+  {
+   "text": "comes back fully editable. From there",
+   "start": 484.0,
+   "duration": 4.4
+  },
+  {
+   "text": "you can just ask it run a health check",
+   "start": 486.16,
+   "duration": 5.2
+  },
+  {
+   "text": "on my account. Score my campaign cadence",
+   "start": 488.4,
+   "duration": 5.12
+  },
+  {
+   "text": "automation coverage and product catalog",
+   "start": 491.36,
+   "duration": 5.279
+  },
+  {
+   "text": "out of 100. Then tell me what to fix",
+   "start": 493.52,
+   "duration": 5.359
+  },
+  {
+   "text": "first. It comes back with a score for",
+   "start": 496.639,
+   "duration": 4.321
+  },
+  {
+   "text": "each area and the top three things to",
+   "start": 498.879,
+   "duration": 4.561
+  },
+  {
+   "text": "fix. The kind of audit that used to mean",
+   "start": 500.96,
+   "duration": 4.239
+  },
+  {
+   "text": "digging through three different reports",
+   "start": 503.44,
+   "duration": 3.439
+  },
+  {
+   "text": "probably missing something. Some of the",
+   "start": 505.199,
+   "duration": 3.84
+  },
+  {
+   "text": "queries that we run ask for top five",
+   "start": 506.879,
+   "duration": 4.481
+  },
+  {
+   "text": "campaigns by revenue over the last 180",
+   "start": 509.039,
+   "duration": 4.401
+  },
+  {
+   "text": "days. Have you check your deliverability",
+   "start": 511.36,
+   "duration": 4.239
+  },
+  {
+   "text": "across recent cents and for that you use",
+   "start": 513.44,
+   "duration": 3.519
+  },
+  {
+   "text": "the same window and the same",
+   "start": 515.599,
+   "duration": 3.68
+  },
+  {
+   "text": "conversation. Omniscent customers get",
+   "start": 516.959,
+   "duration": 5.121
+  },
+  {
+   "text": "$79 back for every dollar they spend.",
+   "start": 519.279,
+   "duration": 5.12
+  },
+  {
+   "text": "The official app is coming soon but the",
+   "start": 522.08,
+   "duration": 4.4
+  },
+  {
+   "text": "setup right now takes a few minutes. Go",
+   "start": 524.399,
+   "duration": 5.321
+  },
+  {
+   "text": "to www.ommnisend.com/aimcp.",
+   "start": 526.48,
+   "duration": 3.24
+  },
+  {
+   "text": "It is also linked in the description.",
+   "start": 531.12,
+   "duration": 3.76
+  },
+  {
+   "text": "And here's some interesting data for",
+   "start": 533.279,
+   "duration": 4.321
+  },
+  {
+   "text": "you. The OECD found generative AI",
+   "start": 534.88,
+   "duration": 4.8
+  },
+  {
+   "text": "adoption was the highest in information",
+   "start": 537.6,
+   "duration": 4.0
+  },
+  {
+   "text": "and communication while more traditional",
+   "start": 539.68,
+   "duration": 4.0
+  },
+  {
+   "text": "and physically intensive sectors were",
+   "start": 541.6,
+   "duration": 4.4
+  },
+  {
+   "text": "further behind. And even among small",
+   "start": 543.68,
+   "duration": 4.719
+  },
+  {
+   "text": "businesses already using generative AI,",
+   "start": 546.0,
+   "duration": 5.12
+  },
+  {
+   "text": "only 29% said they were using it in the",
+   "start": 548.399,
+   "duration": 4.961
+  },
+  {
+   "text": "core activities of the business. Andre",
+   "start": 551.12,
+   "duration": 3.92
+  },
+  {
+   "text": "Horovitz, a top investment firm in",
+   "start": 553.36,
+   "duration": 4.479
+  },
+  {
+   "text": "Silicon Valley, looked at more than 600",
+   "start": 555.04,
+   "duration": 5.2
+  },
+  {
+   "text": "US industry categories from laundromats",
+   "start": 557.839,
+   "duration": 4.801
+  },
+  {
+   "text": "to veterary clinics and reach a similar",
+   "start": 560.24,
+   "duration": 4.64
+  },
+  {
+   "text": "conclusion. Cheaper software can make",
+   "start": 562.64,
+   "duration": 4.879
+  },
+  {
+   "text": "small, highly specialized markets",
+   "start": 564.88,
+   "duration": 4.48
+  },
+  {
+   "text": "viable. So I went through seven areas",
+   "start": 567.519,
+   "duration": 3.76
+  },
+  {
+   "text": "I'd look at and rank them using three",
+   "start": 569.36,
+   "duration": 4.08
+  },
+  {
+   "text": "things. How easy they are to start in,",
+   "start": 571.279,
+   "duration": 3.761
+  },
+  {
+   "text": "how valuable the problem is to the",
+   "start": 573.44,
+   "duration": 3.12
+  },
+  {
+   "text": "business, and how much industry",
+   "start": 575.04,
+   "duration": 4.0
+  },
+  {
+   "text": "expertise you need to actually solve the",
+   "start": 576.56,
+   "duration": 4.0
+  },
+  {
+   "text": "problem well. And there is a pattern.",
+   "start": 579.04,
+   "duration": 3.52
+  },
+  {
+   "text": "The easiest opportunities are lower on",
+   "start": 580.56,
+   "duration": 3.92
+  },
+  {
+   "text": "the list. As we move toward number one,",
+   "start": 582.56,
+   "duration": 3.76
+  },
+  {
+   "text": "they become more specialized, the cost",
+   "start": 584.48,
+   "duration": 3.68
+  },
+  {
+   "text": "of getting things wrong gets higher, and",
+   "start": 586.32,
+   "duration": 3.84
+  },
+  {
+   "text": "domain expertise matters more. So, let's",
+   "start": 588.16,
+   "duration": 3.679
+  },
+  {
+   "text": "start with number seven. Local marketing",
+   "start": 590.16,
+   "duration": 3.359
+  },
+  {
+   "text": "for physical businesses. This is",
+   "start": 591.839,
+   "duration": 3.361
+  },
+  {
+   "text": "probably the easiest one on the list",
+   "start": 593.519,
+   "duration": 4.161
+  },
+  {
+   "text": "today. And it's not about, okay, make me",
+   "start": 595.2,
+   "duration": 4.72
+  },
+  {
+   "text": "30 Instagram posts. We all know that",
+   "start": 597.68,
+   "duration": 4.56
+  },
+  {
+   "text": "doesn't work. Like, the AI generated",
+   "start": 599.92,
+   "duration": 4.88
+  },
+  {
+   "text": "social media post ideas are so bad, but",
+   "start": 602.24,
+   "duration": 4.0
+  },
+  {
+   "text": "it's good at spotting patterns. But it's",
+   "start": 604.8,
+   "duration": 3.44
+  },
+  {
+   "text": "a that's a topic for another video.",
+   "start": 606.24,
+   "duration": 3.84
+  },
+  {
+   "text": "Bring all customers back. Respond to",
+   "start": 608.24,
+   "duration": 4.159
+  },
+  {
+   "text": "inbound emails, turn missed messages",
+   "start": 610.08,
+   "duration": 4.319
+  },
+  {
+   "text": "into appointments. For these tasks, you",
+   "start": 612.399,
+   "duration": 4.081
+  },
+  {
+   "text": "can show a before and after pretty fast,",
+   "start": 614.399,
+   "duration": 4.0
+  },
+  {
+   "text": "and you don't need years of industry",
+   "start": 616.48,
+   "duration": 4.32
+  },
+  {
+   "text": "expertise to get started. Number six,",
+   "start": 618.399,
+   "duration": 5.12
+  },
+  {
+   "text": "home services, HVAC, roofing, pool",
+   "start": 620.8,
+   "duration": 4.8
+  },
+  {
+   "text": "companies, repairs. We have tons of them",
+   "start": 623.519,
+   "duration": 3.841
+  },
+  {
+   "text": "here in Silicon Valley, and they still",
+   "start": 625.6,
+   "duration": 4.64
+  },
+  {
+   "text": "operate really manually. Like the guy",
+   "start": 627.36,
+   "duration": 4.96
+  },
+  {
+   "text": "comes to clean our pipes, he still",
+   "start": 630.24,
+   "duration": 4.24
+  },
+  {
+   "text": "writes um all the estimates on the piece",
+   "start": 632.32,
+   "duration": 4.24
+  },
+  {
+   "text": "of paper. But the money that they're",
+   "start": 634.48,
+   "duration": 4.64
+  },
+  {
+   "text": "making, oh my god. I don't know if you",
+   "start": 636.56,
+   "duration": 4.8
+  },
+  {
+   "text": "want to hear this, but they cleaned one",
+   "start": 639.12,
+   "duration": 4.0
+  },
+  {
+   "text": "of the pipes. Yes, they brought like the",
+   "start": 641.36,
+   "duration": 4.4
+  },
+  {
+   "text": "special machine. $750. Welcome to",
+   "start": 643.12,
+   "duration": 4.24
+  },
+  {
+   "text": "Silicon Valley. Maybe that's an offline",
+   "start": 645.76,
+   "duration": 3.199
+  },
+  {
+   "text": "opportunity that can compete with all of",
+   "start": 647.36,
+   "duration": 4.0
+  },
+  {
+   "text": "the AIS. Anyways, I like all of these",
+   "start": 648.959,
+   "duration": 4.721
+  },
+  {
+   "text": "boring industries because the money leak",
+   "start": 651.36,
+   "duration": 4.08
+  },
+  {
+   "text": "is usually really obvious. Somebody",
+   "start": 653.68,
+   "duration": 4.08
+  },
+  {
+   "text": "misses a call, an estimate goes out 2",
+   "start": 655.44,
+   "duration": 4.16
+  },
+  {
+   "text": "days late, nobody follows up because the",
+   "start": 657.76,
+   "duration": 3.84
+  },
+  {
+   "text": "competition is real. That makes the ROI",
+   "start": 659.6,
+   "duration": 4.16
+  },
+  {
+   "text": "easy to explain to an owner and you can",
+   "start": 661.6,
+   "duration": 4.479
+  },
+  {
+   "text": "start with one narrow workflow. Number",
+   "start": 663.76,
+   "duration": 4.56
+  },
+  {
+   "text": "five, property management. You already",
+   "start": 666.079,
+   "duration": 4.401
+  },
+  {
+   "text": "saw this with Alex Mashraov. There are",
+   "start": 668.32,
+   "duration": 4.48
+  },
+  {
+   "text": "more moving parts here. There's listing,",
+   "start": 670.48,
+   "duration": 4.479
+  },
+  {
+   "text": "inquiry, viewing, paperwork, deposit.",
+   "start": 672.8,
+   "duration": 3.599
+  },
+  {
+   "text": "That makes the workflow harder to",
+   "start": 674.959,
+   "duration": 3.761
+  },
+  {
+   "text": "automate end to end, but it also creates",
+   "start": 676.399,
+   "duration": 4.641
+  },
+  {
+   "text": "a lot more places where time and money",
+   "start": 678.72,
+   "duration": 4.96
+  },
+  {
+   "text": "can disappear. Number four, payroll and",
+   "start": 681.04,
+   "duration": 4.239
+  },
+  {
+   "text": "small business bookkeeping. I personally",
+   "start": 683.68,
+   "duration": 3.52
+  },
+  {
+   "text": "invested in a startup a couple years ago",
+   "start": 685.279,
+   "duration": 3.841
+  },
+  {
+   "text": "that was automating bookkeeping with AI",
+   "start": 687.2,
+   "duration": 4.48
+  },
+  {
+   "text": "and later they raised money from OpenAI",
+   "start": 689.12,
+   "duration": 5.2
+  },
+  {
+   "text": "and all the other firms. And by the way,",
+   "start": 691.68,
+   "duration": 4.24
+  },
+  {
+   "text": "when you see this and you think, \"Oh,",
+   "start": 694.32,
+   "duration": 3.199
+  },
+  {
+   "text": "that means there is no place for me on",
+   "start": 695.92,
+   "duration": 2.72
+  },
+  {
+   "text": "the market.\" That actually means the",
+   "start": 697.519,
+   "duration": 2.401
+  },
+  {
+   "text": "opposite. That means there's market",
+   "start": 698.64,
+   "duration": 3.04
+  },
+  {
+   "text": "opportunity. And market really",
+   "start": 699.92,
+   "duration": 3.68
+  },
+  {
+   "text": "appreciates having different competitors",
+   "start": 701.68,
+   "duration": 4.159
+  },
+  {
+   "text": "with different perks. So, I don't know,",
+   "start": 703.6,
+   "duration": 3.84
+  },
+  {
+   "text": "maybe that's your sign to start. And",
+   "start": 705.839,
+   "duration": 3.12
+  },
+  {
+   "text": "we're getting into work that repeats",
+   "start": 707.44,
+   "duration": 3.68
+  },
+  {
+   "text": "constantly and is directly connected to",
+   "start": 708.959,
+   "duration": 4.161
+  },
+  {
+   "text": "money, deadline, documents, approvals,",
+   "start": 711.12,
+   "duration": 4.48
+  },
+  {
+   "text": "reminders. The value is higher, but so",
+   "start": 713.12,
+   "duration": 4.48
+  },
+  {
+   "text": "is the cost of getting something wrong.",
+   "start": 715.6,
+   "duration": 4.0
+  },
+  {
+   "text": "So, knowing the industry starts to",
+   "start": 717.6,
+   "duration": 3.76
+  },
+  {
+   "text": "matter a lot more. My friend who started",
+   "start": 719.6,
+   "duration": 4.0
+  },
+  {
+   "text": "that company, he's not a CPA, but he",
+   "start": 721.36,
+   "duration": 4.8
+  },
+  {
+   "text": "started hiring a lot of CPAs and tax",
+   "start": 723.6,
+   "duration": 4.72
+  },
+  {
+   "text": "consultants. Number three, freight and",
+   "start": 726.16,
+   "duration": 3.919
+  },
+  {
+   "text": "logistics. That industry is super",
+   "start": 728.32,
+   "duration": 4.16
+  },
+  {
+   "text": "boring, but oh my god, they have so many",
+   "start": 730.079,
+   "duration": 4.56
+  },
+  {
+   "text": "call spreadsheets, status updates,",
+   "start": 732.48,
+   "duration": 3.76
+  },
+  {
+   "text": "documents, moving between different",
+   "start": 734.639,
+   "duration": 3.521
+  },
+  {
+   "text": "companies all day. And there's a lot",
+   "start": 736.24,
+   "duration": 3.52
+  },
+  {
+   "text": "here to automate, and there is a lot of",
+   "start": 738.16,
+   "duration": 3.04
+  },
+  {
+   "text": "value if you get it right. But this",
+   "start": 739.76,
+   "duration": 3.28
+  },
+  {
+   "text": "isn't a market I would enter completely",
+   "start": 741.2,
+   "duration": 3.68
+  },
+  {
+   "text": "cold. You need to understand how the",
+   "start": 743.04,
+   "duration": 4.08
+  },
+  {
+   "text": "pieces fit together, and it can be quite",
+   "start": 744.88,
+   "duration": 3.6
+  },
+  {
+   "text": "difficult. Another piece of business",
+   "start": 747.12,
+   "duration": 3.68
+  },
+  {
+   "text": "advice like this actually applies to any",
+   "start": 748.48,
+   "duration": 4.24
+  },
+  {
+   "text": "industry. Ideally, you know some people.",
+   "start": 750.8,
+   "duration": 3.36
+  },
+  {
+   "text": "Ideally, you have a friend who owns a",
+   "start": 752.72,
+   "duration": 3.2
+  },
+  {
+   "text": "company. Ideally, I know you work for",
+   "start": 754.16,
+   "duration": 3.919
+  },
+  {
+   "text": "that company. As a creator in the US",
+   "start": 755.92,
+   "duration": 3.919
+  },
+  {
+   "text": "who's been doing this for 12 years, I",
+   "start": 758.079,
+   "duration": 3.44
+  },
+  {
+   "text": "can say that in the creator economy,",
+   "start": 759.839,
+   "duration": 3.281
+  },
+  {
+   "text": "everything also runs on personal",
+   "start": 761.519,
+   "duration": 2.961
+  },
+  {
+   "text": "relationships because people trust",
+   "start": 763.12,
+   "duration": 4.32
+  },
+  {
+   "text": "people that they know. Um, so don't be",
+   "start": 764.48,
+   "duration": 4.88
+  },
+  {
+   "text": "discouraged by lack of success in the",
+   "start": 767.44,
+   "duration": 3.36
+  },
+  {
+   "text": "first few years. You're just learning",
+   "start": 769.36,
+   "duration": 3.36
+  },
+  {
+   "text": "how the industry works. You're making",
+   "start": 770.8,
+   "duration": 4.08
+  },
+  {
+   "text": "necessary connections and your goal is",
+   "start": 772.72,
+   "duration": 4.239
+  },
+  {
+   "text": "for other people to see how useful you",
+   "start": 774.88,
+   "duration": 3.92
+  },
+  {
+   "text": "can be to their businesses. It doesn't",
+   "start": 776.959,
+   "duration": 4.241
+  },
+  {
+   "text": "happen overnight. Even in the AI era",
+   "start": 778.8,
+   "duration": 4.479
+  },
+  {
+   "text": "where information travels fast. Anyways,",
+   "start": 781.2,
+   "duration": 4.319
+  },
+  {
+   "text": "number two, document workflows for small",
+   "start": 783.279,
+   "duration": 3.921
+  },
+  {
+   "text": "law firms. As someone who went through",
+   "start": 785.519,
+   "duration": 3.921
+  },
+  {
+   "text": "the immigration process, I saw how",
+   "start": 787.2,
+   "duration": 4.639
+  },
+  {
+   "text": "broken it is and it is still very broken",
+   "start": 789.44,
+   "duration": 5.12
+  },
+  {
+   "text": "in 2026 because your lawyer has to",
+   "start": 791.839,
+   "duration": 4.881
+  },
+  {
+   "text": "manage so many documents for different",
+   "start": 794.56,
+   "duration": 4.88
+  },
+  {
+   "text": "people and uh my pile was like that for",
+   "start": 796.72,
+   "duration": 4.64
+  },
+  {
+   "text": "my O1 visa. There is intake, there is",
+   "start": 799.44,
+   "duration": 3.76
+  },
+  {
+   "text": "sorting, there's status updates, there",
+   "start": 801.36,
+   "duration": 4.0
+  },
+  {
+   "text": "is reminders, there is a huge amount of",
+   "start": 803.2,
+   "duration": 4.319
+  },
+  {
+   "text": "repetitive work around the actual legal",
+   "start": 805.36,
+   "duration": 3.84
+  },
+  {
+   "text": "work. But this is also where the",
+   "start": 807.519,
+   "duration": 4.241
+  },
+  {
+   "text": "expertise barrier comes very real. AI",
+   "start": 809.2,
+   "duration": 4.319
+  },
+  {
+   "text": "can organize the workflow. Legal",
+   "start": 811.76,
+   "duration": 3.36
+  },
+  {
+   "text": "judgment stays with the lawyer who",
+   "start": 813.519,
+   "duration": 3.921
+  },
+  {
+   "text": "remains responsible for the work. And",
+   "start": 815.12,
+   "duration": 4.399
+  },
+  {
+   "text": "finally, number one, dental and medical",
+   "start": 817.44,
+   "duration": 4.56
+  },
+  {
+   "text": "billing. Oh my god, I had a couple of",
+   "start": 819.519,
+   "duration": 4.401
+  },
+  {
+   "text": "very prominent doctors here on my",
+   "start": 822.0,
+   "duration": 4.48
+  },
+  {
+   "text": "podcast working for top institutions and",
+   "start": 823.92,
+   "duration": 4.64
+  },
+  {
+   "text": "they both were saying how broken the",
+   "start": 826.48,
+   "duration": 4.479
+  },
+  {
+   "text": "system was. And it is number one not",
+   "start": 828.56,
+   "duration": 4.0
+  },
+  {
+   "text": "because it's easy. It's almost the",
+   "start": 830.959,
+   "duration": 4.32
+  },
+  {
+   "text": "opposite. There's forms, codes, rejected",
+   "start": 832.56,
+   "duration": 5.2
+  },
+  {
+   "text": "claims, resubmissions. The work repeats",
+   "start": 835.279,
+   "duration": 4.961
+  },
+  {
+   "text": "constantly. Mistakes cost real money.",
+   "start": 837.76,
+   "duration": 4.16
+  },
+  {
+   "text": "And you really need to understand the",
+   "start": 840.24,
+   "duration": 3.76
+  },
+  {
+   "text": "industry. And that's exactly why I find",
+   "start": 841.92,
+   "duration": 4.159
+  },
+  {
+   "text": "it super interesting. And the more",
+   "start": 844.0,
+   "duration": 4.0
+  },
+  {
+   "text": "people I talk to inside the industry,",
+   "start": 846.079,
+   "duration": 3.681
+  },
+  {
+   "text": "the more they tell me the solution has",
+   "start": 848.0,
+   "duration": 3.519
+  },
+  {
+   "text": "to come from outside. So if you start",
+   "start": 849.76,
+   "duration": 3.199
+  },
+  {
+   "text": "working with a small clinic that you",
+   "start": 851.519,
+   "duration": 3.521
+  },
+  {
+   "text": "know and come up with solutions and can",
+   "start": 852.959,
+   "duration": 3.601
+  },
+  {
+   "text": "scale that, this is actually the best",
+   "start": 855.04,
+   "duration": 3.2
+  },
+  {
+   "text": "way you can do it. And of course, if you",
+   "start": 856.56,
+   "duration": 3.12
+  },
+  {
+   "text": "have experience working inside that",
+   "start": 858.24,
+   "duration": 3.52
+  },
+  {
+   "text": "industry, it does become your advantage",
+   "start": 859.68,
+   "duration": 3.599
+  },
+  {
+   "text": "against someone who just built their",
+   "start": 861.76,
+   "duration": 3.68
+  },
+  {
+   "text": "first AI agent over the weekend. I don't",
+   "start": 863.279,
+   "duration": 3.92
+  },
+  {
+   "text": "mean that everyone should go straight to",
+   "start": 865.44,
+   "duration": 3.44
+  },
+  {
+   "text": "number one. Of course not. Everything",
+   "start": 867.199,
+   "duration": 3.281
+  },
+  {
+   "text": "depends on the level of your ambition",
+   "start": 868.88,
+   "duration": 4.16
+  },
+  {
+   "text": "and how you reason uh starting a",
+   "start": 870.48,
+   "duration": 4.24
+  },
+  {
+   "text": "business for yourself. For me, I always",
+   "start": 873.04,
+   "duration": 3.599
+  },
+  {
+   "text": "try to solve problems that I understand",
+   "start": 874.72,
+   "duration": 4.239
+  },
+  {
+   "text": "that I encounter daily and I know what a",
+   "start": 876.639,
+   "duration": 4.081
+  },
+  {
+   "text": "great solution looks like because if you",
+   "start": 878.959,
+   "duration": 3.281
+  },
+  {
+   "text": "don't know what great looks like, it's",
+   "start": 880.72,
+   "duration": 3.679
+  },
+  {
+   "text": "kind of hard to program your way to a",
+   "start": 882.24,
+   "duration": 4.0
+  },
+  {
+   "text": "good solution. In an ideal world, of",
+   "start": 884.399,
+   "duration": 3.44
+  },
+  {
+   "text": "course, you want the most valuable",
+   "start": 886.24,
+   "duration": 3.36
+  },
+  {
+   "text": "problem on this list that you already",
+   "start": 887.839,
+   "duration": 3.841
+  },
+  {
+   "text": "understand unusually well. And whichever",
+   "start": 889.6,
+   "duration": 4.08
+  },
+  {
+   "text": "one you choose, keep the offer narrow.",
+   "start": 891.68,
+   "duration": 4.0
+  },
+  {
+   "text": "AI for dentists could mean almost",
+   "start": 893.68,
+   "duration": 4.959
+  },
+  {
+   "text": "anything. I help dental practices follow",
+   "start": 895.68,
+   "duration": 5.36
+  },
+  {
+   "text": "up with every new inquiry tells the",
+   "start": 898.639,
+   "duration": 4.241
+  },
+  {
+   "text": "owner exactly what you solve. One thing",
+   "start": 901.04,
+   "duration": 3.84
+  },
+  {
+   "text": "before we keep going, if you want the",
+   "start": 902.88,
+   "duration": 3.519
+  },
+  {
+   "text": "full version of what we just went",
+   "start": 904.88,
+   "duration": 3.6
+  },
+  {
+   "text": "through, I put it in my newsletter,",
+   "start": 906.399,
+   "duration": 4.161
+  },
+  {
+   "text": "Future Proof. We take the use cases and",
+   "start": 908.48,
+   "duration": 4.24
+  },
+  {
+   "text": "the exact workflows from every one of",
+   "start": 910.56,
+   "duration": 4.399
+  },
+  {
+   "text": "these conversations and turn them into",
+   "start": 912.72,
+   "duration": 4.239
+  },
+  {
+   "text": "something you can actually apply. Plus,",
+   "start": 914.959,
+   "duration": 4.081
+  },
+  {
+   "text": "how I'm using this stuff in my own team.",
+   "start": 916.959,
+   "duration": 3.68
+  },
+  {
+   "text": "This week, I'm sending the full ranked",
+   "start": 919.04,
+   "duration": 3.68
+  },
+  {
+   "text": "list of these seven niches and the",
+   "start": 920.639,
+   "duration": 4.161
+  },
+  {
+   "text": "onepage map I'd used to find where a",
+   "start": 922.72,
+   "duration": 4.08
+  },
+  {
+   "text": "business is losing money between steps.",
+   "start": 924.8,
+   "duration": 3.599
+  },
+  {
+   "text": "The one I described with a property",
+   "start": 926.8,
+   "duration": 3.36
+  },
+  {
+   "text": "company. It's free. Link is in the",
+   "start": 928.399,
+   "duration": 3.761
+  },
+  {
+   "text": "description. You get that one and you",
+   "start": 930.16,
+   "duration": 4.0
+  },
+  {
+   "text": "can read the previous issues and see",
+   "start": 932.16,
+   "duration": 3.359
+  },
+  {
+   "text": "what you missed. and keep watching",
+   "start": 934.16,
+   "duration": 3.44
+  },
+  {
+   "text": "because at the end I'll pull all of this",
+   "start": 935.519,
+   "duration": 4.721
+  },
+  {
+   "text": "into a five-step 90-day plan. How I",
+   "start": 937.6,
+   "duration": 4.72
+  },
+  {
+   "text": "choose one niche, set the first paying",
+   "start": 940.24,
+   "duration": 3.68
+  },
+  {
+   "text": "client, and figure out if you can",
+   "start": 942.32,
+   "duration": 3.199
+  },
+  {
+   "text": "actually make money before quitting",
+   "start": 943.92,
+   "duration": 3.279
+  },
+  {
+   "text": "anything. But first, there is an obvious",
+   "start": 945.519,
+   "duration": 3.12
+  },
+  {
+   "text": "problem with this ranking. The",
+   "start": 947.199,
+   "duration": 3.76
+  },
+  {
+   "text": "opportunities near the top are also some",
+   "start": 948.639,
+   "duration": 4.56
+  },
+  {
+   "text": "of the hardest businesses to change. A",
+   "start": 950.959,
+   "duration": 3.921
+  },
+  {
+   "text": "dental office or an accounting firm",
+   "start": 953.199,
+   "duration": 3.601
+  },
+  {
+   "text": "isn't going to rebuild its entire",
+   "start": 954.88,
+   "duration": 3.759
+  },
+  {
+   "text": "workflow because somebody walks in and",
+   "start": 956.8,
+   "duration": 4.32
+  },
+  {
+   "text": "says AI agents. Fair, but that doesn't",
+   "start": 958.639,
+   "duration": 4.32
+  },
+  {
+   "text": "mean they aren't already experimenting",
+   "start": 961.12,
+   "duration": 3.839
+  },
+  {
+   "text": "with AI. Eddie Kim is the co-founder and",
+   "start": 962.959,
+   "duration": 3.761
+  },
+  {
+   "text": "head of technology at Gusto, which",
+   "start": 964.959,
+   "duration": 3.761
+  },
+  {
+   "text": "serves more than half a million small",
+   "start": 966.72,
+   "duration": 4.4
+  },
+  {
+   "text": "businesses, and he sees something very",
+   "start": 968.72,
+   "duration": 4.4
+  },
+  {
+   "text": "different. Here's what he said. A lot of",
+   "start": 971.12,
+   "duration": 3.839
+  },
+  {
+   "text": "small businesses start starting to use",
+   "start": 973.12,
+   "duration": 4.56
+  },
+  {
+   "text": "AI to help run their business. Um, and I",
+   "start": 974.959,
+   "duration": 4.641
+  },
+  {
+   "text": "think maybe even a little bit more so",
+   "start": 977.68,
+   "duration": 4.56
+  },
+  {
+   "text": "than your average like tech uh startup",
+   "start": 979.6,
+   "duration": 4.239
+  },
+  {
+   "text": "or enterprise business. And I think the",
+   "start": 982.24,
+   "duration": 3.76
+  },
+  {
+   "text": "reason why is because uh just out of",
+   "start": 983.839,
+   "duration": 4.481
+  },
+  {
+   "text": "necessity, right? Small businesses have",
+   "start": 986.0,
+   "duration": 4.24
+  },
+  {
+   "text": "so much less resources. They have to be",
+   "start": 988.32,
+   "duration": 4.079
+  },
+  {
+   "text": "a lot more creative. That creates a very",
+   "start": 990.24,
+   "duration": 4.24
+  },
+  {
+   "text": "practical opportunity. Take the AI tools",
+   "start": 992.399,
+   "duration": 3.761
+  },
+  {
+   "text": "the business is already experimenting",
+   "start": 994.48,
+   "duration": 3.76
+  },
+  {
+   "text": "with and turn them into a process the",
+   "start": 996.16,
+   "duration": 4.56
+  },
+  {
+   "text": "team can actually use every week. And",
+   "start": 998.24,
+   "duration": 4.399
+  },
+  {
+   "text": "this is where that expertise score",
+   "start": 1000.72,
+   "duration": 3.84
+  },
+  {
+   "text": "really matters. You don't necessarily",
+   "start": 1002.639,
+   "duration": 3.76
+  },
+  {
+   "text": "have to enter one of these industries",
+   "start": 1004.56,
+   "duration": 3.92
+  },
+  {
+   "text": "from the outside. The easiest way may be",
+   "start": 1006.399,
+   "duration": 4.721
+  },
+  {
+   "text": "to already be inside. Jesse Jang, the",
+   "start": 1008.48,
+   "duration": 4.88
+  },
+  {
+   "text": "CEO of Decagon, has already seen",
+   "start": 1011.12,
+   "duration": 4.24
+  },
+  {
+   "text": "customer support employees move into new",
+   "start": 1013.36,
+   "duration": 4.719
+  },
+  {
+   "text": "roles designing and managing AI systems.",
+   "start": 1015.36,
+   "duration": 3.839
+  },
+  {
+   "text": "Uh for us what we're seeing actually",
+   "start": 1018.079,
+   "duration": 3.361
+  },
+  {
+   "text": "with a lot of our customers is that",
+   "start": 1019.199,
+   "duration": 4.08
+  },
+  {
+   "text": "people kind of grow into new roles that",
+   "start": 1021.44,
+   "duration": 3.92
+  },
+  {
+   "text": "are much more exciting. So it could be",
+   "start": 1023.279,
+   "duration": 3.76
+  },
+  {
+   "text": "like there's now this concept of like a",
+   "start": 1025.36,
+   "duration": 3.76
+  },
+  {
+   "text": "conversation architect or AI architect",
+   "start": 1027.039,
+   "duration": 5.121
+  },
+  {
+   "text": "and their whole job is to use Decagon to",
+   "start": 1029.12,
+   "duration": 5.439
+  },
+  {
+   "text": "design the way that their AI should",
+   "start": 1032.16,
+   "duration": 5.279
+  },
+  {
+   "text": "behave and you know that that requires a",
+   "start": 1034.559,
+   "duration": 4.081
+  },
+  {
+   "text": "little bit of a different skill set. You",
+   "start": 1037.439,
+   "duration": 3.281
+  },
+  {
+   "text": "have to be fairly good at reasoning. You",
+   "start": 1038.64,
+   "duration": 4.0
+  },
+  {
+   "text": "have to be fairly good at communicating",
+   "start": 1040.72,
+   "duration": 3.359
+  },
+  {
+   "text": ">> and they were customer support before",
+   "start": 1042.64,
+   "duration": 2.08
+  },
+  {
+   "text": "those people.",
+   "start": 1044.079,
+   "duration": 2.48
+  },
+  {
+   "text": ">> Yeah. Uh so before they were kind of you",
+   "start": 1044.72,
+   "duration": 5.68
+  },
+  {
+   "text": "know either managers, CX managers or um",
+   "start": 1046.559,
+   "duration": 5.841
+  },
+  {
+   "text": "you know they were in charge of kind of",
+   "start": 1050.4,
+   "duration": 3.76
+  },
+  {
+   "text": "their original knowledge base or they",
+   "start": 1052.4,
+   "duration": 4.0
+  },
+  {
+   "text": "were in charge of kind of the old school",
+   "start": 1054.16,
+   "duration": 4.48
+  },
+  {
+   "text": "chat bots and so their their roles have",
+   "start": 1056.4,
+   "duration": 3.12
+  },
+  {
+   "text": "kind of evolved as well.",
+   "start": 1058.64,
+   "duration": 3.039
+  },
+  {
+   "text": ">> If this becomes a side hustle, describe",
+   "start": 1059.52,
+   "duration": 4.8
+  },
+  {
+   "text": "it in the owner's language. An auto shop",
+   "start": 1061.679,
+   "duration": 4.88
+  },
+  {
+   "text": "owner cares about getting missed calls",
+   "start": 1064.32,
+   "duration": 4.4
+  },
+  {
+   "text": "answered and appointments booked. The",
+   "start": 1066.559,
+   "duration": 4.561
+  },
+  {
+   "text": "technology behind it is secondary. So,",
+   "start": 1068.72,
+   "duration": 4.72
+  },
+  {
+   "text": "the offer could be, \"I'll respond to",
+   "start": 1071.12,
+   "duration": 4.08
+  },
+  {
+   "text": "every missed inquiry, collect the",
+   "start": 1073.44,
+   "duration": 3.84
+  },
+  {
+   "text": "details your team needs and pass along",
+   "start": 1075.2,
+   "duration": 3.839
+  },
+  {
+   "text": "qualified leads.\" With one client,",
+   "start": 1077.28,
+   "duration": 3.92
+  },
+  {
+   "text": "that's a side hustle. If the same offer",
+   "start": 1079.039,
+   "duration": 4.241
+  },
+  {
+   "text": "works with several small businesses, you",
+   "start": 1081.2,
+   "duration": 3.76
+  },
+  {
+   "text": "can standardize it into a product test",
+   "start": 1083.28,
+   "duration": 3.84
+  },
+  {
+   "text": "service and charge monthly. A useful",
+   "start": 1084.96,
+   "duration": 4.48
+  },
+  {
+   "text": "starting question is, \"Which manual task",
+   "start": 1087.12,
+   "duration": 4.0
+  },
+  {
+   "text": "does this business already spend money",
+   "start": 1089.44,
+   "duration": 3.76
+  },
+  {
+   "text": "on?\" In Eddie's example, AI helped",
+   "start": 1091.12,
+   "duration": 4.48
+  },
+  {
+   "text": "surface a potential tax opportunity and",
+   "start": 1093.2,
+   "duration": 3.599
+  },
+  {
+   "text": "prepare the paperwork.",
+   "start": 1095.6,
+   "duration": 2.24
+  },
+  {
+   "text": ">> Yeah, and that's one of the ways that",
+   "start": 1096.799,
+   "duration": 3.921
+  },
+  {
+   "text": "we're leveraging AI. Um, we're using AI",
+   "start": 1097.84,
+   "duration": 5.44
+  },
+  {
+   "text": "to analyze um, all the things that we",
+   "start": 1100.72,
+   "duration": 4.24
+  },
+  {
+   "text": "know about a small business and",
+   "start": 1103.28,
+   "duration": 3.92
+  },
+  {
+   "text": "proactively letting them know of things",
+   "start": 1104.96,
+   "duration": 4.32
+  },
+  {
+   "text": "that they should be doing or they things",
+   "start": 1107.2,
+   "duration": 4.0
+  },
+  {
+   "text": "that they should know about um, to help",
+   "start": 1109.28,
+   "duration": 3.759
+  },
+  {
+   "text": "improve their business. And what you",
+   "start": 1111.2,
+   "duration": 4.96
+  },
+  {
+   "text": "just referred to is called the R&D tax",
+   "start": 1113.039,
+   "duration": 3.681
+  },
+  {
+   "text": "credit.",
+   "start": 1116.16,
+   "duration": 2.24
+  },
+  {
+   "text": ">> When you're co like uh, developing",
+   "start": 1116.72,
+   "duration": 2.16
+  },
+  {
+   "text": "something,",
+   "start": 1118.4,
+   "duration": 1.68
+  },
+  {
+   "text": ">> you're developing something. It's it's",
+   "start": 1118.88,
+   "duration": 5.039
+  },
+  {
+   "text": "it's a tax credit that's um, given to",
+   "start": 1120.08,
+   "duration": 5.76
+  },
+  {
+   "text": "any business in the US that's doing some",
+   "start": 1123.919,
+   "duration": 3.921
+  },
+  {
+   "text": "sort of qualified research. And we",
+   "start": 1125.84,
+   "duration": 3.839
+  },
+  {
+   "text": "helped this one company called Cabana",
+   "start": 1127.84,
+   "duration": 4.64
+  },
+  {
+   "text": "Pools uh where we use AI to let them",
+   "start": 1129.679,
+   "duration": 5.041
+  },
+  {
+   "text": "know that they are actually potentially",
+   "start": 1132.48,
+   "duration": 4.8
+  },
+  {
+   "text": "eligible for this R&D tax credit. And",
+   "start": 1134.72,
+   "duration": 4.319
+  },
+  {
+   "text": "not only did we do that, we actually",
+   "start": 1137.28,
+   "duration": 4.639
+  },
+  {
+   "text": "helped them uh fill out the forms uh",
+   "start": 1139.039,
+   "duration": 5.201
+  },
+  {
+   "text": "also very much assisted through AI that",
+   "start": 1141.919,
+   "duration": 3.601
+  },
+  {
+   "text": "they then submitted to the government",
+   "start": 1144.24,
+   "duration": 4.08
+  },
+  {
+   "text": "agency and ultimately got uh like I",
+   "start": 1145.52,
+   "duration": 4.96
+  },
+  {
+   "text": "think it was like $50,000 in R&D tax",
+   "start": 1148.32,
+   "duration": 4.08
+  },
+  {
+   "text": "credits, not just one time, but year",
+   "start": 1150.48,
+   "duration": 2.64
+  },
+  {
+   "text": "after year.",
+   "start": 1152.4,
+   "duration": 1.92
+  },
+  {
+   "text": ">> And this is where pricing gets",
+   "start": 1153.12,
+   "duration": 3.28
+  },
+  {
+   "text": "interesting. If AI lets you finish in 20",
+   "start": 1154.32,
+   "duration": 4.08
+  },
+  {
+   "text": "minutes what used to take 2 days, that",
+   "start": 1156.4,
+   "duration": 3.76
+  },
+  {
+   "text": "doesn't mean the client suddenly got",
+   "start": 1158.4,
+   "duration": 3.6
+  },
+  {
+   "text": "less value. They're still getting the",
+   "start": 1160.16,
+   "duration": 4.32
+  },
+  {
+   "text": "same result. Ali K. Miller put the rule",
+   "start": 1162.0,
+   "duration": 5.76
+  },
+  {
+   "text": "much more simply. Stop selling hours.",
+   "start": 1164.48,
+   "duration": 5.04
+  },
+  {
+   "text": "You said you're personally like 10x more",
+   "start": 1167.76,
+   "duration": 3.039
+  },
+  {
+   "text": "productive, right? In the past, some",
+   "start": 1169.52,
+   "duration": 3.279
+  },
+  {
+   "text": "tasks 2x and some tasks I'm like, \"Oh my",
+   "start": 1170.799,
+   "duration": 4.24
+  },
+  {
+   "text": "god, where did the time go?\" Um, it",
+   "start": 1172.799,
+   "duration": 5.12
+  },
+  {
+   "text": "feels like the concept of an hour has",
+   "start": 1175.039,
+   "duration": 4.0
+  },
+  {
+   "text": "changed. Like something that I talk",
+   "start": 1177.919,
+   "duration": 2.561
+  },
+  {
+   "text": "about with my team a lot is just like,",
+   "start": 1179.039,
+   "duration": 4.321
+  },
+  {
+   "text": "\"What is time? What is time? What are we",
+   "start": 1180.48,
+   "duration": 5.199
+  },
+  {
+   "text": "doing? Should we ever charge by the hour",
+   "start": 1183.36,
+   "duration": 4.08
+  },
+  {
+   "text": "again? Like,",
+   "start": 1185.679,
+   "duration": 2.24
+  },
+  {
+   "text": ">> yeah,",
+   "start": 1187.44,
+   "duration": 2.0
+  },
+  {
+   "text": ">> it's a very weird.",
+   "start": 1187.919,
+   "duration": 3.12
+  },
+  {
+   "text": ">> We're actually switching that in my team",
+   "start": 1189.44,
+   "duration": 3.52
+  },
+  {
+   "text": "cuz we used to pay by hour and I'm like,",
+   "start": 1191.039,
+   "duration": 3.441
+  },
+  {
+   "text": "we should pay by video cuz I don't care",
+   "start": 1192.96,
+   "duration": 3.12
+  },
+  {
+   "text": "if you spend 5 minutes on this video. If",
+   "start": 1194.48,
+   "duration": 4.079
+  },
+  {
+   "text": "you have a process set up, then",
+   "start": 1196.08,
+   "duration": 4.88
+  },
+  {
+   "text": ">> we made that same. When did you make",
+   "start": 1198.559,
+   "duration": 2.961
+  },
+  {
+   "text": "that shift?",
+   "start": 1200.96,
+   "duration": 1.599
+  },
+  {
+   "text": ">> Like a week ago.",
+   "start": 1201.52,
+   "duration": 2.56
+  },
+  {
+   "text": ">> Yeah. But still, but like now is the",
+   "start": 1202.559,
+   "duration": 2.48
+  },
+  {
+   "text": "time. Yeah. Right.",
+   "start": 1204.08,
+   "duration": 1.28
+  },
+  {
+   "text": ">> Yeah.",
+   "start": 1205.039,
+   "duration": 3.041
+  },
+  {
+   "text": ">> Yeah. I think paying by output and at a",
+   "start": 1205.36,
+   "duration": 6.0
+  },
+  {
+   "text": "minimum quality level um is the right",
+   "start": 1208.08,
+   "duration": 5.76
+  },
+  {
+   "text": "play. Um, and so if you are someone",
+   "start": 1211.36,
+   "duration": 4.08
+  },
+  {
+   "text": "who's like, I don't know, you're",
+   "start": 1213.84,
+   "duration": 3.68
+  },
+  {
+   "text": "building AI SEO strategies for",
+   "start": 1215.44,
+   "duration": 3.68
+  },
+  {
+   "text": "smallmedium businesses in your",
+   "start": 1217.52,
+   "duration": 4.24
+  },
+  {
+   "text": "neighborhood, which is perfectly",
+   "start": 1219.12,
+   "duration": 4.32
+  },
+  {
+   "text": "lucrative right now and still is a",
+   "start": 1221.76,
+   "duration": 2.88
+  },
+  {
+   "text": "really nice business opportunity, or",
+   "start": 1223.44,
+   "duration": 3.359
+  },
+  {
+   "text": "you're building websites for restaurants",
+   "start": 1224.64,
+   "duration": 4.72
+  },
+  {
+   "text": "in your area, whatever it is. Maybe",
+   "start": 1226.799,
+   "duration": 5.041
+  },
+  {
+   "text": "before it took you two days of work, you",
+   "start": 1229.36,
+   "duration": 4.88
+  },
+  {
+   "text": "are still giving the same level of value",
+   "start": 1231.84,
+   "duration": 5.12
+  },
+  {
+   "text": "to that end buyer. They were no more",
+   "start": 1234.24,
+   "duration": 5.2
+  },
+  {
+   "text": "likely to solve their own problems. So,",
+   "start": 1236.96,
+   "duration": 5.92
+  },
+  {
+   "text": "why would you charge 148th of what you",
+   "start": 1239.44,
+   "duration": 5.04
+  },
+  {
+   "text": "used to charge just because you can do",
+   "start": 1242.88,
+   "duration": 3.44
+  },
+  {
+   "text": "it in one hour instead of two days?",
+   "start": 1244.48,
+   "duration": 3.36
+  },
+  {
+   "text": ">> For your first client, start with",
+   "start": 1246.32,
+   "duration": 4.0
+  },
+  {
+   "text": "someone you can speak to this week, a",
+   "start": 1247.84,
+   "duration": 4.4
+  },
+  {
+   "text": "former employer, a client from your day",
+   "start": 1250.32,
+   "duration": 4.08
+  },
+  {
+   "text": "job, your accountant, or a friend's",
+   "start": 1252.24,
+   "duration": 3.84
+  },
+  {
+   "text": "company. Ask them to walk you through",
+   "start": 1254.4,
+   "duration": 3.68
+  },
+  {
+   "text": "the mess. What happens after a missed",
+   "start": 1256.08,
+   "duration": 3.92
+  },
+  {
+   "text": "call? How do they prepare an estimate?",
+   "start": 1258.08,
+   "duration": 3.76
+  },
+  {
+   "text": "How do they chase missing documents? If",
+   "start": 1260.0,
+   "duration": 3.76
+  },
+  {
+   "text": "the same complaint comes up several",
+   "start": 1261.84,
+   "duration": 4.24
+  },
+  {
+   "text": "times, build a small pilot around that",
+   "start": 1263.76,
+   "duration": 4.96
+  },
+  {
+   "text": "one workflow and show a clear before and",
+   "start": 1266.08,
+   "duration": 4.8
+  },
+  {
+   "text": "after. At that stage, the client only",
+   "start": 1268.72,
+   "duration": 4.16
+  },
+  {
+   "text": "needs evidence that you can make the",
+   "start": 1270.88,
+   "duration": 3.919
+  },
+  {
+   "text": "problem smaller. Once you have a niche,",
+   "start": 1272.88,
+   "duration": 4.159
+  },
+  {
+   "text": "a problem, and an offer, give yourself a",
+   "start": 1274.799,
+   "duration": 5.201
+  },
+  {
+   "text": "limited test. Daniel Priestley suggests",
+   "start": 1277.039,
+   "duration": 6.161
+  },
+  {
+   "text": "90 days. Deliberately do some side",
+   "start": 1280.0,
+   "duration": 5.12
+  },
+  {
+   "text": "hustles that are open and shut within 90",
+   "start": 1283.2,
+   "duration": 3.44
+  },
+  {
+   "text": "days.",
+   "start": 1285.12,
+   "duration": 4.48
+  },
+  {
+   "text": "So, open and shut side hustles might be",
+   "start": 1286.64,
+   "duration": 5.76
+  },
+  {
+   "text": "I'm going to promote a workshop and it's",
+   "start": 1289.6,
+   "duration": 4.8
+  },
+  {
+   "text": "going to be $300",
+   "start": 1292.4,
+   "duration": 3.92
+  },
+  {
+   "text": "and there's going to be 30 people there",
+   "start": 1294.4,
+   "duration": 3.759
+  },
+  {
+   "text": "and I'm going to organize it and deliver",
+   "start": 1296.32,
+   "duration": 3.839
+  },
+  {
+   "text": "it and everything's going to go open and",
+   "start": 1298.159,
+   "duration": 3.76
+  },
+  {
+   "text": "shut in 90 days and it's like",
+   "start": 1300.159,
+   "duration": 3.52
+  },
+  {
+   "text": ">> there's no pressure of continuity like I",
+   "start": 1301.919,
+   "duration": 2.561
+  },
+  {
+   "text": "have to do this for you.",
+   "start": 1303.679,
+   "duration": 2.561
+  },
+  {
+   "text": ">> Exactly. It's just a complete start",
+   "start": 1304.48,
+   "duration": 4.079
+  },
+  {
+   "text": "finish thing. You might say, \"All right,",
+   "start": 1306.24,
+   "duration": 5.28
+  },
+  {
+   "text": "I'm going to be a um AI consultant to",
+   "start": 1308.559,
+   "duration": 4.641
+  },
+  {
+   "text": "some small businesses, and I'm going to",
+   "start": 1311.52,
+   "duration": 3.36
+  },
+  {
+   "text": "do that for 90 days and see whether I",
+   "start": 1313.2,
+   "duration": 4.32
+  },
+  {
+   "text": "whether I can do that.\" Um, and it's",
+   "start": 1314.88,
+   "duration": 3.919
+  },
+  {
+   "text": "it's not going to be a business. It's",
+   "start": 1317.52,
+   "duration": 2.96
+  },
+  {
+   "text": "just something I'm it's a project for 90",
+   "start": 1318.799,
+   "duration": 4.161
+  },
+  {
+   "text": "days. I'm just testing it out to see how",
+   "start": 1320.48,
+   "duration": 3.679
+  },
+  {
+   "text": "that works.",
+   "start": 1322.96,
+   "duration": 3.76
+  },
+  {
+   "text": ">> Um, or I might, you know, see if I can",
+   "start": 1324.159,
+   "duration": 4.88
+  },
+  {
+   "text": "sell 100 items of clothing in the next",
+   "start": 1326.72,
+   "duration": 5.12
+  },
+  {
+   "text": "90 days. And but at the the the",
+   "start": 1329.039,
+   "duration": 5.76
+  },
+  {
+   "text": "commitment is it finishes at 90 days. So",
+   "start": 1331.84,
+   "duration": 6.4
+  },
+  {
+   "text": "you're you're able to start, have a go,",
+   "start": 1334.799,
+   "duration": 5.521
+  },
+  {
+   "text": "finish all in 90 days. If you make a",
+   "start": 1338.24,
+   "duration": 4.24
+  },
+  {
+   "text": "grand, if you make two grand, fantastic.",
+   "start": 1340.32,
+   "duration": 4.16
+  },
+  {
+   "text": "But it's about the learning of going",
+   "start": 1342.48,
+   "duration": 3.52
+  },
+  {
+   "text": "through a value creation cycle.",
+   "start": 1344.48,
+   "duration": 3.04
+  },
+  {
+   "text": ">> Okay. So where would you actually start?",
+   "start": 1346.0,
+   "duration": 3.36
+  },
+  {
+   "text": "If you're completely new to this, I stay",
+   "start": 1347.52,
+   "duration": 3.68
+  },
+  {
+   "text": "closer to the bottom of the ranking.",
+   "start": 1349.36,
+   "duration": 4.16
+  },
+  {
+   "text": "Local marketing, home services, maybe",
+   "start": 1351.2,
+   "duration": 4.32
+  },
+  {
+   "text": "property management. The problems are",
+   "start": 1353.52,
+   "duration": 3.84
+  },
+  {
+   "text": "easier to see. You can talk to an owner",
+   "start": 1355.52,
+   "duration": 3.519
+  },
+  {
+   "text": "quickly. You understand the problems",
+   "start": 1357.36,
+   "duration": 3.439
+  },
+  {
+   "text": "better, and you can test one result",
+   "start": 1359.039,
+   "duration": 3.921
+  },
+  {
+   "text": "without needing years of industry",
+   "start": 1360.799,
+   "duration": 3.921
+  },
+  {
+   "text": "experience. But if you already work in",
+   "start": 1362.96,
+   "duration": 3.68
+  },
+  {
+   "text": "accounting, logistics, legal, or",
+   "start": 1364.72,
+   "duration": 3.52
+  },
+  {
+   "text": "healthcare, I would not ignore that",
+   "start": 1366.64,
+   "duration": 3.279
+  },
+  {
+   "text": "experience because the industry feels",
+   "start": 1368.24,
+   "duration": 3.919
+  },
+  {
+   "text": "boring. That's exactly what lets you",
+   "start": 1369.919,
+   "duration": 4.561
+  },
+  {
+   "text": "move toward the more specialized end of",
+   "start": 1372.159,
+   "duration": 4.161
+  },
+  {
+   "text": "the list. So, the goal is to find the",
+   "start": 1374.48,
+   "duration": 4.079
+  },
+  {
+   "text": "highest value boring problem that you",
+   "start": 1376.32,
+   "duration": 4.479
+  },
+  {
+   "text": "understand better than most people. And",
+   "start": 1378.559,
+   "duration": 4.48
+  },
+  {
+   "text": "once you picked it, I'd run the same",
+   "start": 1380.799,
+   "duration": 4.88
+  },
+  {
+   "text": "five-step 90-day test. First, choose an",
+   "start": 1383.039,
+   "duration": 4.481
+  },
+  {
+   "text": "industry and know well enough to",
+   "start": 1385.679,
+   "duration": 3.521
+  },
+  {
+   "text": "recognize its small recurring problems.",
+   "start": 1387.52,
+   "duration": 3.76
+  },
+  {
+   "text": "Then map out one customer journey from",
+   "start": 1389.2,
+   "duration": 4.64
+  },
+  {
+   "text": "the first inquiry to payment and make",
+   "start": 1391.28,
+   "duration": 4.8
+  },
+  {
+   "text": "every point where someone waits, copies",
+   "start": 1393.84,
+   "duration": 4.4
+  },
+  {
+   "text": "information or follows up manually.",
+   "start": 1396.08,
+   "duration": 3.839
+  },
+  {
+   "text": "Third, find out what the business",
+   "start": 1398.24,
+   "duration": 3.919
+  },
+  {
+   "text": "already spends on that problem, staff,",
+   "start": 1399.919,
+   "duration": 4.561
+  },
+  {
+   "text": "agencies, freelancers or software.",
+   "start": 1402.159,
+   "duration": 4.481
+  },
+  {
+   "text": "Fourth, package one clear result, faster",
+   "start": 1404.48,
+   "duration": 4.4
+  },
+  {
+   "text": "responses to new leads, missed inquiries",
+   "start": 1406.64,
+   "duration": 3.84
+  },
+  {
+   "text": "turned into booked appointments, and",
+   "start": 1408.88,
+   "duration": 3.76
+  },
+  {
+   "text": "finally give it 90 days. Talk to real",
+   "start": 1410.48,
+   "duration": 4.559
+  },
+  {
+   "text": "customers, test one offer, and build one",
+   "start": 1412.64,
+   "duration": 4.56
+  },
+  {
+   "text": "working pilot. By day 90, you need three",
+   "start": 1415.039,
+   "duration": 4.721
+  },
+  {
+   "text": "answers. Did anyone pay for it? Can you",
+   "start": 1417.2,
+   "duration": 4.479
+  },
+  {
+   "text": "repeat the result? Can you deliver it",
+   "start": 1419.76,
+   "duration": 4.0
+  },
+  {
+   "text": "faster for client number two? Three",
+   "start": 1421.679,
+   "duration": 3.841
+  },
+  {
+   "text": "yeses and you have something worth",
+   "start": 1423.76,
+   "duration": 4.08
+  },
+  {
+   "text": "pursuing. And the next good AI business",
+   "start": 1425.52,
+   "duration": 4.639
+  },
+  {
+   "text": "may still look incredibly ordinary from",
+   "start": 1427.84,
+   "duration": 4.079
+  },
+  {
+   "text": "outside. And that's the whole point. The",
+   "start": 1430.159,
+   "duration": 3.921
+  },
+  {
+   "text": "boring part might actually be your",
+   "start": 1431.919,
+   "duration": 3.441
+  },
+  {
+   "text": "advantage. Thank you so much for",
+   "start": 1434.08,
+   "duration": 2.959
+  },
+  {
+   "text": "watching up to the very end and I'll see",
+   "start": 1435.36,
+   "duration": 4.88
+  },
+  {
+   "text": "you soon on Silicon Valley",
+   "start": 1437.039,
+   "duration": 3.201
+  }
+ ]
+}

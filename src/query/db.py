@@ -1,44 +1,36 @@
-from neo4j import GraphDatabase, Driver
+"""Neo4j drivers. Sync for batch/CLI work, async for the API — one of each per process."""
+
+from neo4j import AsyncGraphDatabase, GraphDatabase
+
 from src.config import settings
-from typing import Optional
+
+_auth = (settings.neo4j_username, settings.neo4j_password) if settings.neo4j_password else None
+_sync = None
+_async = None
 
 
-class Neo4jConnection:
-    """Manages Neo4j database connections"""
-    
-    _instance: Optional[Driver] = None
-    
-    @classmethod
-    def get_driver(cls) -> Driver:
-        """Get or create Neo4j driver instance"""
-        if cls._instance is None:
-            auth = None if not settings.neo4j_password else (settings.neo4j_username, settings.neo4j_password)
-            cls._instance = GraphDatabase.driver(
-                settings.neo4j_uri,
-                auth=auth,
-            )
-        return cls._instance
-    
-    @classmethod
-    def close(cls):
-        """Close the Neo4j driver"""
-        if cls._instance is not None:
-            cls._instance.close()
-            cls._instance = None
-    
-    @classmethod
-    def verify_connection(cls) -> bool:
-        """Verify connection to Neo4j"""
-        try:
-            driver = cls.get_driver()
-            with driver.session() as session:
-                session.run("RETURN 1")
-            return True
-        except Exception as e:
-            print(f"Neo4j connection failed: {e}")
-            return False
+def driver():
+    global _sync
+    if _sync is None:
+        _sync = GraphDatabase.driver(settings.neo4j_uri, auth=_auth, connection_timeout=5)
+    return _sync
 
 
-def get_db() -> Driver:
-    """Dependency injection for FastAPI"""
-    return Neo4jConnection.get_driver()
+def async_driver():
+    global _async
+    if _async is None:
+        _async = AsyncGraphDatabase.driver(settings.neo4j_uri, auth=_auth)
+    return _async
+
+
+def run(query: str, **params) -> list[dict]:
+    """Run one query on the sync driver, return rows as dicts."""
+    with driver().session() as s:
+        return s.run(query, **params).data()
+
+
+def close() -> None:
+    global _sync
+    if _sync is not None:
+        _sync.close()
+        _sync = None

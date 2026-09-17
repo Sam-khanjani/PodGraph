@@ -1,27 +1,17 @@
 from pydantic_settings import BaseSettings
-from typing import Optional
+
 
 class Settings(BaseSettings):
-
-    #neo4j
     neo4j_uri: str = "bolt://localhost:7687"
     neo4j_username: str = "neo4j"
-    neo4j_password: str = "testpasssword123"
+    neo4j_password: str = ""  # empty = no auth (matches NEO4J_AUTH=none in docker-compose)
 
-    #kafka
-    kafka_bootstrap_servers: str = "kafka:9092"
+    kafka_bootstrap_servers: str = "kafka:9092"  # deferred; see docs/ARCHITECTURE.md
 
-    #API 
-    api_host: str = "0.0.0.0"
-    api_port: int = 8000
+    openrouter_api_key: str = ""
+    llm_model: str = "openai/gpt-4o-mini"  # any OpenRouter model id
 
-
-    # Groq 
-    groq_api_key: Optional[str] = None
-
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
+    model_config = {"env_file": ".env", "extra": "ignore"}
 
 
 settings = Settings()

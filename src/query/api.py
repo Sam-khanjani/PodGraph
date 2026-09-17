@@ -1,86 +1,156 @@
-from fastapi import FastAPI, Depends, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from neo4j import Driver
+import asyncio
 import logging
-from src.config import settings
-from src.query.db import get_db, Neo4jConnection
+from contextlib import asynccontextmanager
+from typing import Annotated
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from fastapi import Depends, FastAPI, HTTPException, Query, Request
+from fastapi.responses import JSONResponse
 
-# Create FastAPI app
-app = FastAPI(
-    title="GraphRAG Podcast AI",
-    description="Agentic AI system for cross-podcast synthesis",
-    version="0.1.0"
-)
+from src.agents import qa
+from src.ingestion.embedder import embed
+from src.query import schemas as s
+from src.query.db import async_driver
+from src.query.repository import GraphRepository, NotFoundError
 
-# Add CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(name)s | %(message)s")
 
 
-@app.on_event("startup")
-async def startup_event():
-    """Verify Neo4j connection on startup"""
-    logger.info("Starting up GraphRAG API...")
-    if Neo4jConnection.verify_connection():
-        logger.info("✓ Neo4j connection verified")
-    else:
-        logger.error("✗ Neo4j connection failed")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    yield
+    await async_driver().close()
 
 
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Close Neo4j connection on shutdown"""
-    logger.info("Shutting down GraphRAG API...")
-    Neo4jConnection.close()
+app = FastAPI(title="PodGraph", description="Cross-podcast synthesis over a Neo4j knowledge graph.",
+              version="0.2.0", lifespan=lifespan)
 
 
-@app.get("/health")
-async def health_check():
-    """Health check endpoint"""
-    return {
-        "status": "ok",
-        "service": "graphrag-api",
-        "version": "0.1.0"
-    }
+@app.exception_handler(NotFoundError)
+async def not_found(_: Request, exc: NotFoundError):
+    return JSONResponse(status_code=404, content={"detail": str(exc)})
 
 
-@app.get("/info")
-async def info():
-    """System info endpoint"""
-    return {
-        "name": "GraphRAG Podcast AI",
-        "neo4j_uri": settings.neo4j_uri,
-        "kafka_bootstrap_servers": settings.kafka_bootstrap_servers,
-    }
+async def get_repo():
+    async with async_driver().session() as session:
+        yield GraphRepository(session)
 
 
-@app.get("/podcasts")
-async def get_podcasts(db: Driver = Depends(get_db)):
-    """Get all podcasts in the database"""
+Repo = Annotated[GraphRepository, Depends(get_repo)]
+Limit = Annotated[int, Query(ge=1, le=100)]
+Offset = Annotated[int, Query(ge=0)]
+
+
+async def embed_query(text: str) -> list[float]:
+    return (await asyncio.to_thread(embed, [text]))[0]  # CPU-bound: keep it off the event loop
+
+
+# ---- system ----------------------------------------------------------------------
+
+@app.get("/health", tags=["system"])
+async def health():
+    return {"status": "ok"}
+
+
+@app.get("/ready", tags=["system"])
+async def ready():
     try:
-        with db.session() as session:
-            result = session.run("MATCH (p:Podcast) RETURN p.name as name, p.host as host")
-            podcasts = [dict(record) for record in result]
-        
-        if not podcasts:
-            return {"podcasts": [], "message": "No podcasts found yet"}
-        
-        return {"podcasts": podcasts}
-    
-    except Exception as e:
-        logger.error(f"Error fetching podcasts: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        await async_driver().verify_connectivity()
+    except Exception as exc:
+        raise HTTPException(503, f"Neo4j not reachable: {exc}")
+    return {"status": "ready"}
 
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host=settings.api_host, port=settings.api_port)
+# ---- entities --------------------------------------------------------------------
+
+@app.get("/podcasts", response_model=list[s.PodcastOut], tags=["entities"])
+async def list_podcasts(repo: Repo):
+    return await repo.list_podcasts()
+
+
+@app.get("/episodes/{episode_id}", response_model=s.EpisodeOut, tags=["entities"])
+async def get_episode(episode_id: str, repo: Repo):
+    return await repo.get_episode(episode_id)
+
+
+@app.get("/guests/{name}", response_model=s.GuestOut, tags=["entities"])
+async def get_guest(name: str, repo: Repo):
+    return await repo.get_guest(name)
+
+
+@app.get("/concepts", response_model=list[s.ConceptSummary], tags=["entities"])
+async def list_concepts(repo: Repo, category: str | None = None, limit: Limit = 20, offset: Offset = 0):
+    return await repo.list_concepts(category, limit, offset)
+
+
+@app.get("/concepts/{name}", response_model=s.ConceptOut, tags=["entities"],
+         summary="What each show says about a concept (case-insensitive)")
+async def get_concept(name: str, repo: Repo):
+    return await repo.get_concept(name)
+
+
+# ---- people: who said what, when, on which show -----------------------------------
+
+@app.get("/people", response_model=list[s.PersonOut], tags=["people"], summary="Everyone attributed as a speaker")
+async def list_people(repo: Repo):
+    return await repo.list_people()
+
+
+@app.get("/people/{name}", response_model=list[s.PersonTopic], tags=["people"], summary="What a person talks about")
+async def person_topics(name: str, repo: Repo):
+    return await repo.person_topics(name)
+
+
+@app.get("/people/{name}/mentions", response_model=list[s.Mention], tags=["people"],
+         summary="When and on which show a person talked about a concept")
+async def person_mentions(name: str, repo: Repo, concept: str | None = None):
+    return await repo.person_mentions(name, concept)
+
+
+# ---- search ----------------------------------------------------------------------
+
+@app.get("/search", response_model=list[s.SearchHit], tags=["search"], summary="Keyword (substring) search")
+async def search(repo: Repo, term: Annotated[str, Query(min_length=2)], limit: Limit = 20, offset: Offset = 0):
+    return await repo.search_chunks(term, limit, offset)
+
+
+@app.get("/search/semantic", response_model=list[s.SearchHit], tags=["search"],
+         summary="Semantic search: meaning, not substrings, with podcast/episode/guest context")
+async def semantic_search(repo: Repo, q: Annotated[str, Query(min_length=2)], k: Annotated[int, Query(ge=1, le=50)] = 8):
+    return await repo.semantic_search(await embed_query(q), k)
+
+
+# ---- insights: the queries that justify the graph --------------------------------
+
+@app.get("/insights/shared-guests", response_model=list[s.SharedGuest], tags=["insights"])
+async def shared_guests(repo: Repo):
+    return await repo.shared_guests()
+
+
+@app.get("/insights/concept-reach", response_model=list[s.ConceptReach], tags=["insights"])
+async def concept_reach(repo: Repo, min_podcasts: Annotated[int, Query(ge=1)] = 2, limit: Limit = 20):
+    return await repo.concept_reach(min_podcasts, limit)
+
+
+@app.get("/insights/bridge-guests", response_model=list[s.BridgeGuest], tags=["insights"],
+         summary="Guests whose episodes touch BOTH concepts")
+async def bridge_guests(repo: Repo, concept_a: Annotated[str, Query(min_length=2)],
+                        concept_b: Annotated[str, Query(min_length=2)]):
+    return await repo.bridge_guests(concept_a, concept_b)
+
+
+@app.get("/insights/semantic-compare", response_model=list[s.PodcastQuotes], tags=["insights"],
+         summary="What does EACH show say about this? Any phrasing — vector finds, graph groups")
+async def semantic_compare(repo: Repo, q: Annotated[str, Query(min_length=2)], k: Annotated[int, Query(ge=2, le=50)] = 12):
+    return await repo.semantic_compare(await embed_query(q), k)
+
+
+# ---- agentic Q&A -----------------------------------------------------------------
+
+@app.post("/query", response_model=s.Answer, tags=["agents"],
+          summary="Ask a cross-podcast question; router agent -> graph -> synthesis agent")
+async def query(body: s.Question, repo: Repo):
+    try:
+        return await qa.answer(body.question, repo)
+    except Exception as exc:
+        logging.exception("query failed")
+        raise HTTPException(502, f"LLM/graph step failed: {exc}")

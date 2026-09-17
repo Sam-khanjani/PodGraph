@@ -242,3 +242,37 @@ desktop.ini
 
 # Local virtual environment (project-specific venv name)
 myenv/
+
+# keep the template, ignore real env files
+!.env.example
+
+# ---- PodGraph: never commit credentials, embeddings or database state ----
+# credentials (the .env* rules above already cover .env; .env.example is the only exception)
+*.env
+secrets/
+.claude/settings.local.json
+
+# Neo4j data, dumps and backups (data lives in Docker volumes; see docs/DEPLOYMENT.md)
+neo4j_data/
+neo4j_logs/
+*.dump
+*.backup
+*.tgz
+*.tar.gz
+
+# embeddings, vectors and model weights / caches
+*.npy
+*.npz
+*.parquet
+*.faiss
+*.safetensors
+*.pt
+*.pth
+*.onnx
+hf_cache/
+.cache/
+models/
+
+# data: only the hand-curated transcripts under data/transcripts/ are versioned
+data/*
+!data/transcripts/
