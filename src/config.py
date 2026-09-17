@@ -9,7 +9,8 @@ class Settings(BaseSettings):
     kafka_bootstrap_servers: str = "kafka:9092"  # deferred; see docs/ARCHITECTURE.md
 
     openrouter_api_key: str = ""
-    llm_model: str = "openai/gpt-4o-mini"  # any OpenRouter model id
+    llm_model: str = "nex-agi/nex-n2.5-pro:free"  # any OpenRouter id; free tier by default (paid: openai/gpt-4o-mini)
+    llm_parallel: int = 2  # concurrent LLM calls during ingestion; free tier is rate-limited (~20 req/min)
 
     model_config = {"env_file": ".env", "extra": "ignore"}
 

@@ -5,8 +5,8 @@ import asyncio
 import pytest
 from fastapi.testclient import TestClient
 
-from src.agents import llm, qa
-from src.ingestion.chunker import chunk, timestamp_turns
+from src.agents import qa
+from src.ingestion.chunker import chunk, chunks_from_ranges, timestamp_turns
 from src.ingestion.models import Segment, Transcript
 from src.query.api import app, get_repo
 from src.query.repository import NotFoundError
@@ -35,6 +35,15 @@ def test_turn_timestamps_come_from_caption_segments():
     turns = timestamp_turns([{"text": "hello there how are you"}, {"text": "I am fine thanks great to hear"},
                              {"text": "not in the chunk at all"}], c)
     assert [x["start"] for x in turns] == [5, 8, 5]  # unmatched turn falls back to the chunk start
+
+
+def test_semantic_ranges_become_chunks_and_long_topics_split():
+    t = _transcript(n=10, text="x" * 600)
+    segs = t.segments
+    chunks = chunks_from_ranges(t, segs, [0, 3, 10])  # two topics: captions 0-2 and 3-9
+    assert [c.chunk_id for c in chunks] == ["ep-0001", "ep-0002", "ep-0003"]  # 2nd topic is 4200 chars -> split
+    assert (chunks[0].timestamp_start, chunks[0].timestamp_end) == (0, 30)
+    assert chunks[1].timestamp_start == 30 and chunks[-1].timestamp_end == 100
 
 
 def test_chunker_skips_blank_segments():
@@ -99,17 +108,6 @@ def test_endpoints_shape_and_validation(client):
 
 
 # ---- agents (fake LLM) -----------------------------------------------------------
-
-
-def test_analyse_chunk_normalises_output(monkeypatch):
-    monkeypatch.setattr(llm, "chat", lambda *a, **k: '```json\n{"turns": ['
-                        '{"speaker": "Bob", "text": " hi ", "concepts": [{"name": " Remote Work", "category": "career"}, '
-                        '{"name": "AI"}, {"category": "Tool"}]}, {"speaker": null, "text": "yo", "concepts": ["Git"]}, '
-                        '{"text": "  "}, "not a turn"]}\n```')
-    assert llm.analyse_chunk("...", ["Bob (host)"]) == [
-        {"speaker": "Bob", "text": "hi",
-         "concepts": [{"name": "Remote Work", "category": "Career"}, {"name": "AI", "category": "Other"}]},
-        {"speaker": "Unknown", "text": "yo", "concepts": [{"name": "Git", "category": "Other"}]}]
 
 
 def test_router_dispatches_tool_and_caches(monkeypatch):

@@ -18,6 +18,8 @@ requests = "^2.32.0"
 sentence-transformers = "^3.0"
 torch = { version = "^2.4", source = "pytorch-cpu" }  # CPU wheel: keeps the image small
 youtube-transcript-api = "^1.2"
+langgraph = "^1.2"
+langchain-openai = "^1.6"
 
 [[tool.poetry.source]]
 name = "pytorch-cpu"

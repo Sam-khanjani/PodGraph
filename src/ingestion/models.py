@@ -32,4 +32,7 @@ class Chunk(BaseModel):
     timestamp_end: int
     embedding: list[float] | None = None
     segments: list[Segment] = []  # the captions it was built from (for turn timestamps; not stored)
+    topic: str | None = None
+    summary: str | None = None
     turns: list[dict] = []  # [{"speaker", "text", "start", "concepts": [{"name", "category"}]}], from the LLM
+    recommendations: list[dict] = []  # [{"source", "target", "reason"}] between this chunk's concepts

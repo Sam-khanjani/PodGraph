@@ -1,29 +1,31 @@
 # Agents
 
 All LLM calls go through `src/agents/llm.py: chat()` — one OpenRouter chat-completions request.
-Model is `LLM_MODEL` in `.env` (default `openai/gpt-4o-mini`, pennies per episode / per question).
+Model is `LLM_MODEL` in `.env`. Default `nex-agi/nex-n2.5-pro:free` — OpenRouter's free tier, $0, rate-limited
+(~20 req/min, hence `LLM_PARALLEL=2`). Any model that supports structured output works; `openai/gpt-4o-mini` is
+the tested paid alternative (faster, pennies per episode). Free models that ignore JSON schemas (e.g. gemma) fail.
 
-## Turn + concept analyser (ingestion time)
+## Ingestion agents (`src/agents/llm.py`, wired by the LangGraph in `src/ingestion/pipeline.py`)
 
-`llm.analyse_chunk(text, participants, known)` — one call per chunk. YouTube captions carry no
-speaker labels, so the model is told who is in the room ("Patrick Akil (host), Bruno Schaatsbergen
-(guest)") and splits the passage into speaker turns, tagging each turn with 0-3 concepts. Each turn's
-timestamp comes from aligning its opening words back to the caption segments (`chunker.timestamp_turns`).
-Stored as `(Chunk)-[:MENTIONS {speaker, start, quote}]->(Concept)` plus `Chunk.turns` for display,
-which is what answers "when did X talk about Y, on which show".
+Each is one prompt with a Pydantic output schema (`llm.with_structured_output`), so the pipeline never
+parses free text.
 
-Accuracy note: attribution is inferred from text (question/answer rhythm, names in context). Good for
-two-person interviews, weaker for panels or unnamed speakers, where it labels "Unknown". Audio
-diarization would be the accurate alternative, at the cost of a much heavier dependency stack.
+| agent | in → out | node |
+|---|---|---|
+| `find_boundaries` | numbered captions → indices where a new topic starts | `segment` |
+| `infer_metadata` | transcript opening → host, guest, summary (null when unsure) | `analyse` (once per episode, only if CLI didn't say) |
+| `analyse` | one topic passage + participants + known concept names → topic, summary, speaker turns each with 0-3 concepts | `analyse` (per chunk) |
+| `same_concept` | two labels → same concept? (strict: 'Pull Requests'='Pull Request', 'AI'≠'AI Agents') | `resolve_concepts` (only for 0.80–0.92 vector matches) |
+| `recommend` | chunk summary + its concept names → `source helps target` + reason | `recommend` (per chunk) |
 
-Concept names: the model is shown the graph's 80 most-used names and told to reuse them, so the same
-topic from different shows lands on one node. Chunks run in a thread pool of 4; transient network
-errors are retried. Re-ingesting an episode replaces its tags. Skip with `--no-llm`.
+**Concept bank.** `Concept` nodes carry an embedding of their name (`concept_embedding_index`). A candidate
+is embedded, its nearest bank entry looked up, and reused at ≥0.92 cosine (or exact name), LLM-confirmed
+between 0.80 and 0.92, otherwise added — immediately, so the next candidate in the same run can match it.
+The analyser is also shown the 80 most-used names up front. Re-ingesting an episode replaces its tags and
+relations; concepts nothing mentions any more are deleted.
 
-## Metadata agent (ingestion time)
-
-`llm.infer_metadata(opening)` — when the CLI wasn't given `--host`/`--guest`, the first ~4000
-characters are sent once to identify host, guest and a one-sentence summary (null when unsure).
+**Speaker attribution** is inferred from text (the analyser is told who is in the room). Reliable for
+two-person interviews, "Unknown" when it can't tell; audio diarization would be the accurate alternative.
 
 ## Router agent (`qa.answer`, step 1)
 

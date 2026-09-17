@@ -26,7 +26,7 @@ cp .env.example .env      # add OPENROUTER_API_KEY (needed for /query and for co
 make up                   # Neo4j in Docker
 make install              # poetry install (PyTorch CPU, ~2 GB, one-time)
 make init-db              # constraints + vector index
-make ingest-sample        # the two saved real episodes: chunk → embed → LLM tags → graph (~2 min)
+make ingest-sample        # the two saved real episodes through the LangGraph (free tier: ~10 min, $0)
 make api                  # http://localhost:8010/docs
 ```
 
@@ -83,15 +83,18 @@ inferred from text — reliable for two-person interviews, "Unknown" when it can
 ## How it works
 
 ```
-transcript (file | YouTube) → chunker → embedder (MiniLM, local) → LLM: metadata + concepts → graph writer → Neo4j
-                                                 ▲ Kafka seam: today a function call
+LangGraph:  segment (LLM topic boundaries) → embed (MiniLM, local) → analyse (topic, summary, speaker turns,
+            concepts) → resolve_concepts (bank: vector match / LLM confirm / add) → recommend → write
+                                                                          ▲ Kafka seam: today a function call
 FastAPI ── repository (all Cypher) ── Neo4j                    POST /query: cache → router agent → tool → synthesis agent
 ```
 
 - **Ingestion is idempotent and self-healing** — deterministic chunk ids + `MERGE`; stale chunks pruned; re-tagging replaces old tags; every run leaves an `IngestRun` audit node; the flaky steps (YouTube, LLM) retry with backoff.
 - **Embeddings are local and free** — `all-MiniLM-L6-v2` (384-d) on `Chunk.embedding`, queried via Neo4j's native vector index. No separate vector DB.
-- **Concepts converge across shows** — the extractor is shown the graph's most-used concept names so "AI Agents" from one episode lands on the same node as from another.
-- **LLM via OpenRouter** — any model id in `LLM_MODEL` (default `openai/gpt-4o-mini`; the two episodes cost a few cents). Answers cached as `CachedAnswer` nodes, invalidated on ingest.
+- **Semantic chunks** — an LLM marks topic changes, so each chunk is one coherent discussion with a title and a summary, not a 1000-character window.
+- **A concept bank, not free-text tags** — every candidate concept is embedded and matched against existing concepts (≥0.92 reuse, 0.80–0.92 LLM-confirmed, else added), so the same topic from different shows is one node.
+- **Grounded relations** — `(Concept)-[:RECOMMENDS {reason, chunk_id}]->(Concept)` only between concepts of the same passage, with the passage as evidence. `GET /concepts/{name}/recommendations`.
+- **LLM via OpenRouter, free tier by default** — `LLM_MODEL=nex-agi/nex-n2.5-pro:free` costs $0 (rate-limited, so ingestion runs 2 calls at a time); set `openai/gpt-4o-mini` for speed. Answers cached as `CachedAnswer` nodes, invalidated on ingest.
 - **LLM-written Cypher is read-only by construction** — keyword check + Neo4j read transaction; empty or failing queries fall back to semantic retrieval.
 - **Kafka is deliberately deferred** — see [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -101,8 +104,8 @@ Docs: [ARCHITECTURE](docs/ARCHITECTURE.md) · [GRAPH_SCHEMA](docs/GRAPH_SCHEMA.m
 
 ```
 src/
-├── ingestion/   models · sources (file, YouTube) · chunker · embedder · graph_writer · pipeline (CLI)
-├── agents/      llm (OpenRouter call, concept + metadata extractors) · qa (router → tool → synthesis, cache)
+├── ingestion/   models · sources (file, YouTube) · chunker · embedder · graph_writer · pipeline (LangGraph + CLI)
+├── agents/      llm (LangChain client + 5 typed ingestion agents) · qa (router → tool → synthesis, cache)
 ├── query/       api (FastAPI) · repository (all Cypher) · schemas · db (drivers)
 ├── setup/       init_neo4j (schema)
 └── tests/       test_unit (no external deps) · test_live (needs Neo4j + ingested data; auto-skips otherwise)

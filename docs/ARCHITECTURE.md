@@ -1,25 +1,29 @@
 # Architecture
 
-## Ingestion (batch, sync driver)
+## Ingestion — a LangGraph, one node per agent
 
 ```
-sources.from_file / from_youtube  →  Transcript
-chunker.chunk                     →  list[Chunk]     ~1000 chars, breaks on caption boundaries, keeps timestamps
-embedder.embed                    →  Chunk.embedding  all-MiniLM-L6-v2, 384-d, normalised, CPU
-llm.extract_concepts (threaded)   →  Chunk.concepts   [{name, category}] per chunk
----------------------------------- KAFKA SEAM ----------------------------------
-graph_writer.write                →  Neo4j            MERGE podcast/episode/guest/chunks/concepts, prune stale, IngestRun
+segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─▶ write        (--no-llm: segment ─▶ embed ─▶ write)
 ```
 
-Everything left of the seam produces plain Pydantic objects; everything right of it only consumes
-them. Today `pipeline.ingest()` calls `write()` directly. With Kafka, the chunker side becomes a
-producer on a `graph-updates` topic and `write()` runs in a consumer — neither side's logic changes.
+| node | what | how |
+|---|---|---|
+| `segment` | semantic chunking | LLM marks topic changes in ~8k-char windows of numbered captions; over-long topics split at 2500 chars on caption boundaries |
+| `embed` | vectors | `all-MiniLM-L6-v2`, 384-d, CPU, local |
+| `analyse` | per chunk: topic, summary, speaker turns, concept candidates | one typed LLM call per chunk (`LLM_PARALLEL` at a time); turns aligned to captions for timestamps |
+| `resolve_concepts` | concept bank | each candidate name is embedded and matched against `concept_embedding_index`: ≥0.92 reuse · 0.80–0.92 LLM "same concept?" · else add to bank |
+| `recommend` | `RECOMMENDS` relations | per chunk, only between its resolved concepts, with a reason and the chunk as evidence |
+| `write` | Neo4j | idempotent MERGE by deterministic ids; tags/relations replaced on re-ingest; `IngestRun` audit |
 
-**Why no Kafka now:** volume is a handful of episodes on demand, one ingest at a time, and a failed
-run is simply re-run (the writer is idempotent). A broker would be over-engineering; the seam keeps
-the option open. The Kafka service is still defined in `docker-compose.yml` but nothing uses it.
+The state passed between nodes is a `Transcript` plus `list[Chunk]` (Pydantic) — the same objects a Kafka
+message would carry, so the seam between `recommend` and `write` is where a broker would slot in.
 
-**Failure handling:** the only flaky step (YouTube fetch) gets 3 retries with backoff. Every run —
+**Why LangGraph:** the design is a small state machine with one agent per job; `StateGraph` expresses
+exactly that and keeps each agent a plain typed function. Parallelism is inside a node
+(`asyncio.gather`, semaphore of `LLM_PARALLEL`) rather than graph fan-out — same speed, far less state plumbing.
+**Why no Kafka now:** a handful of episodes on demand, one at a time, failed runs simply re-run.
+
+**Failure handling:** the LLM client retries transient errors (5×); YouTube fetch retries 3×. Every run —
 success or failure — appends an `IngestRun` node (`docs/queries/ingest_history.cypher`).
 
 ## Query (live, async driver)

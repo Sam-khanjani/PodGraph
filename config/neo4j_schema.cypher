@@ -40,3 +40,9 @@ OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity_function`: '
 
 CREATE INDEX cached_answer_key_idx IF NOT EXISTS
 FOR (a:CachedAnswer) ON (a.key);
+
+// ---------- Concept bank: vector index on concept names (same embedder as chunks) ----------
+
+CREATE VECTOR INDEX concept_embedding_index IF NOT EXISTS
+FOR (k:Concept) ON (k.embedding)
+OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}};

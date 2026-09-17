@@ -13,7 +13,19 @@ class ChunkOut(BaseModel):
     text: str
     timestamp_start: int
     timestamp_end: int
+    topic: str | None = None
+    summary: str | None = None
     turns: list[dict] = []  # who said what: [{speaker, text, start, concepts}]
+
+
+class RecommendationOut(BaseModel):
+    source: str
+    target: str
+    reason: str
+    chunk_id: str
+    timestamp: int
+    episode_title: str
+    podcast: str
 
 
 class PersonOut(BaseModel):

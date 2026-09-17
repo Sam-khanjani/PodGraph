@@ -12,6 +12,7 @@ Interactive docs: `http://localhost:8010/docs`. All list endpoints return `[]`, 
 | GET | `/guests/{name}` | | guest + podcasts + episodes (with concepts per episode) |
 | GET | `/concepts` | `category`, `limit`, `offset` | concepts ranked by mentions |
 | GET | `/concepts/{name}` | | quotes grouped by podcast |
+| GET | `/concepts/{name}/recommendations` | | what it is recommended for / by, with reason and the passage |
 | GET | `/people` | | everyone attributed as a speaker, with mention counts |
 | GET | `/people/{name}` | | concepts this person talks about, per show |
 | GET | `/people/{name}/mentions` | `concept` (optional, substring) | when (seconds) and on which show they talked about it, with the quote |

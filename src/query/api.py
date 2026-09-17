@@ -88,6 +88,12 @@ async def get_concept(name: str, repo: Repo):
     return await repo.get_concept(name)
 
 
+@app.get("/concepts/{name}/recommendations", response_model=list[s.RecommendationOut], tags=["entities"],
+         summary="What this concept is recommended for / by, with the passage that said so")
+async def concept_recommendations(name: str, repo: Repo):
+    return await repo.concept_recommendations(name)
+
+
 # ---- people: who said what, when, on which show -----------------------------------
 
 @app.get("/people", response_model=list[s.PersonOut], tags=["people"], summary="Everyone attributed as a speaker")

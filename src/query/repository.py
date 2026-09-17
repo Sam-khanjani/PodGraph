@@ -37,7 +37,7 @@ class GraphRepository:
             OPTIONAL MATCH (g:Guest)-[:APPEARED_IN]->(e)
             OPTIONAL MATCH (e)-[:CONTAINS]->(c:Chunk)
             WITH e, p, collect(DISTINCT g.name) AS guests, c ORDER BY c.timestamp_start
-            WITH e, p, guests, collect(c {.chunk_id, .text, .timestamp_start, .timestamp_end, .turns}) AS chunks
+            WITH e, p, guests, collect(c {.chunk_id, .text, .timestamp_start, .timestamp_end, .topic, .summary, .turns}) AS chunks
             RETURN e.episode_id AS episode_id, e.title AS title, e.number AS number,
                    toString(e.publish_date) AS publish_date, e.audio_url AS audio_url,
                    e.summary AS summary, e.duration_seconds AS duration_seconds,
@@ -77,6 +77,16 @@ class GraphRepository:
             WITH k, collect(CASE WHEN p IS NULL THEN null ELSE
                    {podcast: p.name, host: p.host, quotes: quotes} END) AS podcasts
             RETURN k.name AS name, k.category AS category, podcasts""", name=name)
+
+    async def concept_recommendations(self, name: str):
+        """What a concept is recommended for / by, with the passage that said so."""
+        return await self._rows("""
+            MATCH (a:Concept)-[r:RECOMMENDS]->(b:Concept)
+            WHERE toLower(a.name) = toLower($name) OR toLower(b.name) = toLower($name)
+            MATCH (p:Podcast)-[:HAS_EPISODE]->(e:Episode)-[:CONTAINS]->(c:Chunk {chunk_id: r.chunk_id})
+            RETURN a.name AS source, b.name AS target, r.reason AS reason, c.chunk_id AS chunk_id,
+                   c.timestamp_start AS timestamp, e.title AS episode_title, p.name AS podcast
+            ORDER BY podcast, episode_title, timestamp""", name=name)
 
     # ---- people: who said what ---------------------------------------------------
 
