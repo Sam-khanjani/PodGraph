@@ -38,6 +38,64 @@ calling the LLM) runs via `asyncio.to_thread` so the event loop never blocks.
 Semantic search is one query: `db.index.vector.queryNodes` finds chunks, then a `MATCH` walks to
 episode, podcast and guest. That's the GraphRAG core — no second lookup system.
 
+### Retrieval flow — `POST /query`
+
+Two LLM calls at most (router, synthesis); everything between them is Cypher.
+
+```mermaid
+flowchart TD
+    Q["POST /query"] --> C{"cached answer<br/>for this question?"}
+    C -->|hit| CR["return it, cached: true<br/>no LLM call at all"]
+    C -->|miss| R["Router agent<br/>gets schema + tool list<br/>returns tool + args"]
+
+    R --> T{"which tool?"}
+    T -->|semantic_compare| SC["vector search over chunks,<br/>grouped per podcast"]
+    T -->|person_mentions| PM["MENTIONS edge:<br/>speaker + timestamp"]
+    T -->|recommendations| RC["RECOMMENDS edge:<br/>reason + source passage"]
+    T -->|shared_guests / concept_reach / bridge_guests| G["graph traversal"]
+    T -->|cypher| CY{"contains write<br/>keywords?"}
+
+    E{"any rows?"}
+    CY -->|yes, reject| E
+    CY -->|no| RD["run inside execute_read"]
+
+    SC --> E
+    PM --> E
+    RC --> E
+    G --> E
+    RD --> E
+
+    E -->|yes| SY["Synthesis agent<br/>answer ONLY from evidence,<br/>cite podcast, episode, mm:ss"]
+    E -->|no| F{"first try<br/>and tool was cypher?"}
+
+    F -->|yes| RP["Router re-plans,<br/>shown the error"]
+    RP --> T
+    F -->|no| FB["Fallback:<br/>embed the question,<br/>run semantic_compare"]
+    FB --> SY
+
+    SY --> W["store CachedAnswer"]
+    W --> OUT["answer + sources"]
+```
+
+**The `any rows?` gate is the important one.** A tool that finds nothing is a *routing* failure, not an
+answer — the router may have invented a concept name that isn't in the bank, or misspelt a guest. Every
+tool funnels through that one check (`src/agents/qa.py`), so an empty result always reaches the fallback
+instead of reaching the synthesis agent, which would faithfully reply "the evidence does not answer the
+question." Vector search needs no exact names, so it is the one path that can't miss for this reason.
+
+**Worked example** — *"charging by hour is it ok?"*
+
+| step | what happens |
+|---|---|
+| router | picks `recommendations(concept="charging by hour")` — a name it invented from the question |
+| tool | the bank holds `Pricing`, `Billing`, `Payment` — no such concept → `[]` |
+| gate | empty → routing failure, not cypher → fall back |
+| fallback | question embedded; nearest chunk scores **0.79** on *"paying by output … is the right play"* despite sharing almost no words |
+| synthesis | answers with citations at 19:13 and 19:27 of the Silicon Valley Girl episode |
+
+Opinion questions (*"is X ok?"*) and any question whose topic isn't literally a node name belong on the
+semantic path; the router prompt says so, and the gate catches it when the router forgets.
+
 ## Agents
 
 See [AGENTS.md](AGENTS.md). `POST /query` = cache check → router agent → one graph tool → synthesis agent → cache.
