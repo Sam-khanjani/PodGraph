@@ -61,7 +61,7 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
-    env_file: .env                      # OPENROUTER_API_KEY, LLM_MODEL
+    env_file: .env                      # GROQ_API_KEY, LLM_MODEL_*
     environment:
       NEO4J_URI: bolt://neo4j:7687
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092

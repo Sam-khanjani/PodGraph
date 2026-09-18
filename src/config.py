@@ -8,9 +8,12 @@ class Settings(BaseSettings):
 
     kafka_bootstrap_servers: str = "kafka:9092"  # deferred; see docs/ARCHITECTURE.md
 
-    openrouter_api_key: str = ""
-    llm_model: str = "nex-agi/nex-n2.5-pro:free"  # any OpenRouter id; free tier by default (paid: openai/gpt-4o-mini)
-    llm_parallel: int = 2  # concurrent LLM calls during ingestion; free tier is rate-limited (~20 req/min)
+    # Groq free tier: limits are PER MODEL (1000 req/day, 8k tokens/min, 200k tokens/day each) -> tasks spread over three.
+    groq_api_key: str = ""
+    llm_model_reason: str = "openai/gpt-oss-120b"  # topic boundaries, recommendations, /query router + synthesis
+    llm_model_bulk: str = "openai/gpt-oss-20b"     # per-chunk analysis (alternates with the fast model)
+    llm_model_fast: str = "qwen/qwen3.8-27b"       # concept-bank confirms, episode metadata
+    llm_parallel: int = 3  # concurrent LLM calls during ingestion (~one in flight per model)
 
     model_config = {"env_file": ".env", "extra": "ignore"}
 

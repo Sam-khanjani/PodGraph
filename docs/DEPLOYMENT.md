@@ -4,7 +4,7 @@ The whole stack is `docker-compose.yml`; a single VPS with Docker is enough.
 
 ```bash
 git clone <repo> && cd PodGraph
-cp .env.example .env               # set OPENROUTER_API_KEY; set NEO4J_PASSWORD and NEO4J_AUTH for anything public
+cp .env.example .env               # set GROQ_API_KEY; set NEO4J_PASSWORD and NEO4J_AUTH for anything public
 docker compose up -d --build       # Neo4j + API (+ Kafka, unused)
 docker compose exec api python -m src.setup.init_neo4j
 docker compose exec api python -m src.ingestion.pipeline file "data/transcripts/*.json"   # the saved real episodes

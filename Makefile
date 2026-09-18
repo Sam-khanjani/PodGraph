@@ -30,7 +30,7 @@ clean:
 init-db:
 	poetry run python -m src.setup.init_neo4j
 
-ingest-sample:  ## the real episodes saved in data/transcripts (needs OPENROUTER_API_KEY; add --no-llm to skip)
+ingest-sample:  ## the real episodes saved in data/transcripts (needs GROQ_API_KEY; add --no-llm to skip)
 	poetry run python -m src.ingestion.pipeline file data/transcripts/*.json
 
 ingest-youtube: ## make ingest-youtube ID=VIDEO_ID PODCAST="Show name"

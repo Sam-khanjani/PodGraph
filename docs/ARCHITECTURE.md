@@ -23,7 +23,7 @@ exactly that and keeps each agent a plain typed function. Parallelism is inside 
 (`asyncio.gather`, semaphore of `LLM_PARALLEL`) rather than graph fan-out — same speed, far less state plumbing.
 **Why no Kafka now:** a handful of episodes on demand, one at a time, failed runs simply re-run.
 
-**Failure handling:** the LLM client retries transient errors (5×); YouTube fetch retries 3×. Every run —
+**Failure handling:** the LLM clients retry transient errors and rate limits (5×); YouTube fetch retries 3×. Every run —
 success or failure — appends an `IngestRun` node (`docs/queries/ingest_history.cypher`).
 
 ## Query (live, async driver)

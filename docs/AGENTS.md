@@ -1,9 +1,13 @@
 # Agents
 
-All LLM calls go through `src/agents/llm.py: chat()` — one OpenRouter chat-completions request.
-Model is `LLM_MODEL` in `.env`. Default `nex-agi/nex-n2.5-pro:free` — OpenRouter's free tier, $0, rate-limited
-(~20 req/min, hence `LLM_PARALLEL=2`). Any model that supports structured output works; `openai/gpt-4o-mini` is
-the tested paid alternative (faster, pennies per episode). Free models that ignore JSON schemas (e.g. gemma) fail.
+All LLM calls go through `src/agents/llm.py` — LangChain `ChatOpenAI` pointed at **Groq's free tier** ($0).
+Groq limits are per model (1,000 requests/day, 8k tokens/min, 200k tokens/day each), so the agents are pinned to three models:
+`LLM_MODEL_REASON` (`openai/gpt-oss-120b`: boundaries, recommendations, /query), `LLM_MODEL_BULK`
+(`openai/gpt-oss-20b`: the per-chunk analysis) and `LLM_MODEL_FAST` (`qwen/qwen3.8-27b`: bank confirms, metadata).
+All three support structured output. The gpt-oss models run with `reasoning_effort="low"`: by default they emit ~1,000
+hidden reasoning tokens per call, which is what exhausts the per-minute and per-day budgets. On 429 the client sleeps
+exactly as long as Groq asks; on a JSON-validation failure it retries on the pair's other model, then via tool calling;
+a chunk that still fails is kept as one unattributed turn rather than failing the episode.
 
 ## Ingestion agents (`src/agents/llm.py`, wired by the LangGraph in `src/ingestion/pipeline.py`)
 

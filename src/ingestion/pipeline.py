@@ -30,7 +30,7 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(name)s | %(mes
 log = logging.getLogger(__name__)
 
 TRANSCRIPTS = Path("data/transcripts")
-WINDOW_CHARS = 8000   # captions sent per boundary-detection call
+WINDOW_CHARS = 4000   # captions sent per boundary-detection call (free models are slow on long inputs)
 PARALLEL = asyncio.Semaphore(settings.llm_parallel)
 
 
@@ -88,8 +88,12 @@ async def analyse(s: State) -> State:
                                      "ORDER BY n DESC LIMIT 80 RETURN k.name AS name")]
 
     async def one(c: Chunk):
-        a = await agents.analyse(c.text, people, known)
-        c.topic, c.summary = a.topic, a.summary
+        try:
+            a = await agents.analyse(c.text.replace(">>", "\n"), people, known)  # '>>' = caption speaker change
+        except Exception as exc:  # one unparseable chunk must not sink the episode: keep it, untagged
+            log.warning("%s: analysis failed (%s); kept as a single unattributed turn", c.chunk_id, str(exc)[:120])
+            a = agents.Analysis(topic="", summary="", turns=[agents.Turn(text=c.text)])
+        c.topic, c.summary = a.topic or None, a.summary or None
         c.turns = timestamp_turns([t.model_dump() for t in a.turns], c)
 
     await _each(s["chunks"], one)

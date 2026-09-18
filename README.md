@@ -58,7 +58,7 @@ segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─
 - **Concept bank:** candidate concepts are embedded and matched against existing ones, so the same topic from different shows is one node — cross-podcast synthesis actually joins
 - **Grounded relations:** `RECOMMENDS` edges only between concepts of the same passage, each with a reason and the passage as evidence
 - **Cross-Episode Synthesis:** graph queries that keyword or vector search structurally cannot do — shared guests, topics spanning shows, guests bridging two topics
-- **Cost-Optimized:** local embeddings, no separate vector DB, OpenRouter **free tier by default** ($0); `openai/gpt-4o-mini` for speed
+- **Cost-Optimized:** local embeddings, no separate vector DB, LLM calls on **Groq's free tier** ($0) — tasks spread over three models because Groq's limits are per model
 - **Safe agentic Cypher:** LLM-written queries are keyword-checked and executed in a read transaction; failures fall back to semantic retrieval
 - **Production-Ready:** Docker, GitHub Actions (Neo4j service container + GHCR image), idempotent self-healing ingestion, tests at two layers
 
@@ -67,7 +67,7 @@ segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─
 ### Prerequisites
 - Docker & Docker Compose
 - Python 3.12 (< 3.15)
-- An [OpenRouter](https://openrouter.ai) API key (free tier is enough)
+- A [Groq](https://console.groq.com) API key (free, no card)
 
 ### Run Locally
 
@@ -75,11 +75,11 @@ segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─
 git clone <your fork>
 cd PodGraph
 
-cp .env.example .env            # add OPENROUTER_API_KEY; API_PORT defaults to 8010
+cp .env.example .env            # add GROQ_API_KEY; API_PORT defaults to 8010
 make up                         # Neo4j (http://localhost:7474, no auth)
 make install                    # poetry install (PyTorch CPU, ~2 GB, one-time)
 make init-db                    # constraints + vector indexes
-make ingest-sample              # the two saved real episodes through the LangGraph (free tier ≈10 min)
+make ingest-sample              # the two saved real episodes through the LangGraph (~15 min on Groq's free tier)
 make api                        # http://localhost:8010/docs
 
 # Ask a question
@@ -161,10 +161,7 @@ PodGraph/
 ```
 
 ## ⚠️ Known limits
-
-- Speaker attribution is inferred from text — reliable for two-person interviews, "Unknown" when unsure. Audio diarization would be the accurate alternative.
-- `RECOMMENDS` edges are LLM judgement; each carries its reason and source passage so they can be inspected.
-- The free-tier model is ~5× slower than a paid one and rate-limited (`LLM_PARALLEL=2`).
+- Groq's free tier caps each model at 8k tokens/min; ingestion throttles itself via retries, so a long episode takes ~10 min. 
 
 ## 🤝 Contributing
 

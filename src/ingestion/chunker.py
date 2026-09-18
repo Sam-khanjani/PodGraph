@@ -1,6 +1,7 @@
 from src.ingestion.models import Chunk, Segment, Transcript
 
 MAX_CHARS = 2500  # a topic longer than this is split on caption boundaries
+MIN_CHARS = 400   # a topic shorter than this is merged into the next one (fewer, meaningful LLM calls)
 
 
 def chunk(t: Transcript, target: int = 1000) -> list[Chunk]:
@@ -13,8 +14,12 @@ def chunks_from_ranges(t: Transcript, segs: list[Segment], starts: list[int]) ->
     """Semantic chunks: `starts` are caption indices where topics begin (first 0, last len(segs)).
     Over-long topics are still split at MAX_CHARS. IDs are positional (episode-0001...) so re-ingest replaces."""
     chunks: list[Chunk] = []
-    for a, b in zip(starts, starts[1:]):
+    a = starts[0]
+    for b in starts[1:]:
+        if b != starts[-1] and sum(len(s.text) for s in segs[a:b]) < MIN_CHARS:
+            continue  # too small to be a topic on its own: extend to the next boundary
         chunks += _pack(t.episode_id, segs[a:b], MAX_CHARS, start_index=len(chunks) + 1)
+        a = b
     return chunks
 
 
