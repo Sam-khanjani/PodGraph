@@ -28,6 +28,25 @@ POST /query {"question": "What is open source recommended for, according to the 
   networking opportunities and builds trust among contributors (…, 21:10).
 ```
 
+The router agent picks a different path per question — no endpoint to choose, no query to write:
+
+```
+POST /query {"question": "find the guests of beyond coding"}
+                                                    → router wrote Cypher over HAS_EPISODE / APPEARED_IN
+→ The guest listed for Beyond Coding is Bruno Schaatsbergen (Beyond Coding).
+
+POST /query {"question": "what is Patrick opinion about first contribution"}
+                                                → router fell back to meaning-based retrieval
+→ Patrick says his first contribution was a "quickly-merged" addition that let him unblock his work
+  at Adidas, which felt "quite satisfying" and put him in a strong consulting position (Beyond Coding
+  — Why World Class Engineers Get Jobs on Easy Mode, 05:45). He also notes that a first-time pull
+  request — such as fixing a typo in a README — is a good way to become familiar with the
+  contribution process (…, 12:54).
+```
+
+*Patrick* is the host and is never labelled in the captions; the timestamps come off the
+`MENTIONS {speaker, start}` edges — so every claim is a citation, not a paraphrase.
+
 ## 🏗️ Architecture
 
 ![Architecture](pr-flow.png)

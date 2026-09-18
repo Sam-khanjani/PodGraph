@@ -34,6 +34,9 @@ Tools:
   properties, not nodes. Add LIMIT 25. Follow the schema's arrows exactly and match names case-insensitively:
   MATCH (p:Podcast)-[:HAS_EPISODE]->(e:Episode)<-[:APPEARED_IN]-(g:Guest) ...
   MATCH (:Chunk)-[m:MENTIONS]->(k:Concept) WHERE toLower(k.name) CONTAINS 'problem' RETURN m.speaker, count(m)
+Pick a named tool only when the question names a person or topic that is plainly a node in the graph.
+If you would have to invent a concept name, or the question asks an opinion ("is X ok?", "what do they
+think about X"), use semantic_compare — it matches on meaning and needs no exact name.
 Reply with JSON: {{"tool": "<name>", "args": {{...}}}}"""
 
 SYNTH = """Answer the question using ONLY the evidence JSON. After each claim cite its source in parentheses
@@ -45,22 +48,23 @@ If the evidence does not answer the question, say exactly that — never guess o
 WRITE_KEYWORDS = re.compile(r"\b(CREATE|MERGE|DELETE|SET|REMOVE|DROP|LOAD|CALL\s*\{)\b", re.I)
 
 
-async def _retrieve(tool: str, args: dict, question: str, repo: GraphRepository):
+async def _retrieve(tool: str, args: dict, repo: GraphRepository):
+    rows = []
     if tool == "shared_guests":
-        return await repo.shared_guests()
-    if tool == "concept_reach":
-        return await repo.concept_reach(2, 20)
-    if tool == "bridge_guests":
-        return await repo.bridge_guests(args["a"], args["b"])
-    if tool == "person_mentions":
-        return await repo.person_mentions(args["person"], args.get("concept"))
-    if tool == "recommendations":
-        return await repo.concept_recommendations(args["concept"])
-    if tool == "cypher" and not WRITE_KEYWORDS.search(args["query"]):
+        rows = await repo.shared_guests()
+    elif tool == "concept_reach":
+        rows = await repo.concept_reach(2, 20)
+    elif tool == "bridge_guests":
+        rows = await repo.bridge_guests(args["a"], args["b"])
+    elif tool == "person_mentions":
+        rows = await repo.person_mentions(args["person"], args.get("concept"))
+    elif tool == "recommendations":
+        rows = await repo.concept_recommendations(args["concept"])
+    elif tool == "cypher" and not WRITE_KEYWORDS.search(args["query"]):
         rows = await repo.read_cypher(args["query"])  # read transaction: Neo4j rejects writes anyway
-        if rows:
-            return rows
-    raise ValueError(f"unusable plan: {tool} {args}")  # incl. Cypher that matched nothing -> semantic fallback
+    if not rows:  # unknown tool, unsafe Cypher, or a plan that matched nothing (an invented concept
+        raise ValueError(f"no evidence: {tool} {args}")  # name, a misspelt guest) -> semantic fallback
+    return rows
 
 
 async def answer(question: str, repo: GraphRepository) -> dict:
@@ -71,7 +75,7 @@ async def answer(question: str, repo: GraphRepository) -> dict:
     for attempt in range(2):
         tool, args = plan.get("tool", "semantic_compare"), plan.get("args") or {}
         try:
-            evidence = await _retrieve(tool, args, question, repo)
+            evidence = await _retrieve(tool, args, repo)
             break
         except Exception as exc:
             log.warning("plan %s failed: %s", plan, exc)
@@ -82,6 +86,7 @@ async def answer(question: str, repo: GraphRepository) -> dict:
             tool, args = "semantic_compare", {"q": args.get("q") or question}  # last resort: semantic retrieval
             vec = await asyncio.to_thread(embed, [args["q"]])
             evidence = await repo.semantic_compare(vec[0], 12)
+            break
 
     text = await asyncio.to_thread(chat, SYNTH, json.dumps({"question": question, "evidence": evidence}, default=str))
     result = {"question": question, "answer": text, "tool": tool, "args": args, "sources": evidence}
