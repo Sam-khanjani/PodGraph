@@ -11,7 +11,7 @@ docker compose exec api python -m src.ingestion.pipeline file "data/transcripts/
 docker compose exec api python -m src.ingestion.pipeline youtube VIDEO_ID --podcast "Show"   # add more
 ```
 
-- The API image is built by CI and pushed to `ghcr.io/<owner>/<repo>:latest` on every push to `main`;
+- The API image is built by CI and pushed to `ghcr.io/<owner>/<repo>:latest` (lowercased — registries reject capitals) on every push to `main`;
   swap `build:` for `image:` in the compose file to use it.
 - The embedding model (~90 MB) downloads on first use inside the container; mount `~/.cache/huggingface`
   as a volume to keep it across restarts.

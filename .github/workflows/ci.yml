@@ -37,9 +37,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"  # registry names must be lowercase; the repo is Sam-khanjani/PodGraph
       - uses: docker/build-push-action@v6
         with:
           context: .
           file: Dockerfile.api
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ${{ env.IMAGE }}:latest
