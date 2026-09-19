@@ -35,6 +35,10 @@ flake8 = "^7.0.0"
 mypy = "^1.10.0"
 httpx = "^0.28"
 
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "strict"
+
 [tool.black]
 line-length = 100
 target-version = ['py312']
