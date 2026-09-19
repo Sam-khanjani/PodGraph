@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from src.agents import qa
+from src.agents.llm import Claim
 from src.ingestion.chunker import chunk, chunks_from_ranges, timestamp_turns
 from src.ingestion.models import Segment, Transcript
 from src.query.api import app, get_repo
@@ -110,18 +111,43 @@ def test_endpoints_shape_and_validation(client):
 # ---- agents (fake LLM) -----------------------------------------------------------
 
 
-def test_router_dispatches_tool_and_caches(monkeypatch):
-    monkeypatch.setattr(qa, "chat_json", lambda *a: {"tool": "bridge_guests", "args": {"a": "Sleep", "b": "Magnesium"}})
-    monkeypatch.setattr(qa, "chat", lambda *a: "Answer.")
+def _fake_llm(monkeypatch, plan, answer, claims=None):
+    """Router, synthesis and verifier agents faked; verifier passes every sentence unless `claims` says otherwise."""
+    monkeypatch.setattr(qa, "chat_json", lambda *a: plan)
+    monkeypatch.setattr(qa, "chat", lambda *a: answer)
+
+    async def verify_claims(question, answer, *a):
+        return claims if claims is not None else [Claim(text=answer, supported=True)]
+    monkeypatch.setattr(qa, "verify_claims", verify_claims)
+
+
+def test_router_dispatches_tool_and_caches_verified_answer(monkeypatch):
+    _fake_llm(monkeypatch, {"tool": "bridge_guests", "args": {"a": "Sleep", "b": "Magnesium"}}, "Answer.")
     repo = FakeRepo()
     out = asyncio.run(qa.answer("who bridges?", repo))
     assert out["tool"] == "bridge_guests" and out["sources"] == [{"guest": "G", "episodes": ["E"]}]
-    assert out["answer"] == "Answer." and repo.cached["question"] == "who bridges?"
+    assert out["answer"] == "Answer." and out["verified"] and repo.cached["question"] == "who bridges?"
 
 
 def test_write_cypher_is_rejected_and_falls_back(monkeypatch):
-    monkeypatch.setattr(qa, "chat_json", lambda *a: {"tool": "cypher", "args": {"query": "MATCH (n) DETACH DELETE n"}})
-    monkeypatch.setattr(qa, "chat", lambda *a: "Answer.")
+    _fake_llm(monkeypatch, {"tool": "cypher", "args": {"query": "MATCH (n) DETACH DELETE n"}}, "Answer.")
     monkeypatch.setattr(qa, "embed", lambda texts: [[0.0] * 384])
     out = asyncio.run(qa.answer("drop everything", FakeRepo()))
     assert out["tool"] == "semantic_compare" and out["sources"] == [{"podcast": "A", "quotes": []}]
+
+
+def test_verifier_reports_unsupported_sentences_and_leaves_the_answer_alone(monkeypatch):
+    ok = "Bruno talked about it (A — t, 01:01)."                # evidence timestamp 61s = 01:01
+    bad_time = "He returned to it later (A — t, 05:00)."       # 05:00 is nowhere in the evidence
+    unsupported = "He also said it changed his career (A — t, 01:01)."
+    draft = f"{ok} {bad_time} {unsupported}"
+    _fake_llm(monkeypatch, {"tool": "person_mentions", "args": {"person": "Bruno", "concept": "x"}}, draft,
+              claims=[Claim(text=ok, supported=True), Claim(text=bad_time, supported=True),
+                      Claim(text=unsupported, supported=False, reason="career change not in evidence")])
+    repo = FakeRepo()
+    out = asyncio.run(qa.answer("when did Bruno talk about x?", repo))
+    assert out["answer"] == draft and not out["verified"] and repo.cached["verified"] is False
+    v = out["verification"]
+    assert v["bad_timestamps"] == ["05:00"] and (v["claims"], v["supported"]) == (3, 1)
+    assert [u["reason"] for u in v["unsupported"]] == ["cited timestamp is not in the evidence",
+                                                        "career change not in evidence"]

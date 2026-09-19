@@ -68,7 +68,7 @@ segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─
 
 **Graph:** `Podcast-HAS_EPISODE->Episode`, `Guest-APPEARED_IN->Episode`, `Episode-CONTAINS->Chunk`, `Chunk-MENTIONS {speaker, start, quote}->Concept`, `Concept-RECOMMENDS->Concept`.
 
-**Query — retrieval is "vector to find, graph to connect":** a semantic hit immediately knows which show, episode, speaker and second. `POST /query` runs a router agent (picks a graph tool, or writes read-only Cypher with one self-correction round) and a synthesis agent (answers only from the retrieved evidence, with citations); answers are cached in the graph.
+**Query — retrieval is "vector to find, graph to connect":** a semantic hit immediately knows which show, episode, speaker and second. `POST /query` is a second LangGraph: a router agent (picks a graph tool, or writes read-only Cypher with one self-correction round), a synthesis agent (answers only from the retrieved evidence, with citations) and a verifier agent (checks every cited timestamp against the evidence exactly, and every sentence against it with an LLM fact-checker; the answer is returned untouched with `verified` and the list of unsupported sentences). Answers are cached in the graph.
 
 ## ⚡ Key Features
 
@@ -79,6 +79,7 @@ segment ─▶ embed ─▶ analyse ─▶ resolve_concepts ─▶ recommend ─
 - **Cross-Episode Synthesis:** graph queries that keyword or vector search structurally cannot do — shared guests, topics spanning shows, guests bridging two topics
 - **Cost-Optimized:** local embeddings, no separate vector DB, LLM calls on **Groq's free tier** ($0) — tasks spread over three models because Groq's limits are per model
 - **Safe agentic Cypher:** LLM-written queries are keyword-checked and executed in a read transaction; failures fall back to semantic retrieval
+- **Verified answers:** a fact-checker agent judges each sentence of the answer against the same evidence the writer saw; a cited `mm:ss` that isn't in the evidence is caught without any LLM. The answer is untouched — the response carries `verified` and which sentences failed, and why
 - **Production-Ready:** Docker, GitHub Actions (Neo4j service container + GHCR image), idempotent self-healing ingestion, tests at two layers
 
 ## 🚀 Quick Start

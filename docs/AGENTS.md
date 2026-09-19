@@ -31,7 +31,13 @@ relations; concepts nothing mentions any more are deleted.
 **Speaker attribution** is inferred from text (the analyser is told who is in the room). Reliable for
 two-person interviews, "Unknown" when it can't tell; audio diarization would be the accurate alternative.
 
-## Router agent (`qa.answer`, step 1)
+## Question answering (`src/agents/qa.py`) — a second LangGraph
+
+```
+route ─▶ retrieve ─▶ synthesize ─▶ verify ─▶ END      (retrieve fails: re-plan once for Cypher, else fallback)
+```
+
+## Router agent (step 1)
 
 Gets the graph schema and a tool list, returns `{"tool", "args"}`:
 
@@ -53,9 +59,33 @@ If the plan or the query fails, the router falls back to `semantic_compare` — 
 ## Synthesis agent (step 2)
 
 Receives `{question, evidence}` and must answer **only** from the evidence, citing
-`(Podcast — Episode title)`, or say the evidence is insufficient.
+`(Podcast — Episode title, mm:ss)`, or say the evidence is insufficient.
+
+## Verifier agent (step 3, `qa.verify`)
+
+The synthesis agent is a writer, not a judge, so its draft is checked before it leaves:
+
+1. **Timestamps, exactly.** Every `mm:ss` cited in the draft must exist (as seconds) somewhere in the evidence
+   rows. No LLM: this is where language models are least reliable and a set lookup is perfect.
+2. **Claims, by an LLM fact-checker** (`verify_claims`, on the fast model). The draft is split into sentences
+   and each is judged against the *same* evidence JSON the writer saw, plus the retrieval plan (a show name in a
+   Cypher `WHERE` is evidence for that link). Facts, numbers and attribution must be in the evidence; wording
+   need not be. Inventing, mis-attributing, or inflating one guest's view into "experts agree" = unsupported,
+   with a one-clause reason.
+
+The verifier **never edits the answer**. It reports, and the caller decides what to do with a sentence that
+failed:
+
+```json
+"verified": false,
+"verification": {"claims": 4, "supported": 3, "bad_timestamps": [],
+                 "unsupported": [{"text": "…experts recommend…", "reason": "one guest's view presented as a general claim"}]}
+```
+
+`verified` is true only when every sentence passed both checks. If the verifier itself fails (rate limit
+exhausted), the answer is returned with `verified: false` and `verification.error` rather than lost.
 
 ## Cache
 
-The full result is stored as a `CachedAnswer` node keyed by the lower-cased, trimmed question.
-Repeat questions return `"cached": true` without any LLM call.
+The full result, verification included, is stored as a `CachedAnswer` node keyed by the lower-cased,
+trimmed question. Repeat questions return `"cached": true` without any LLM call.

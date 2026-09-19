@@ -38,9 +38,10 @@ calling the LLM) runs via `asyncio.to_thread` so the event loop never blocks.
 Semantic search is one query: `db.index.vector.queryNodes` finds chunks, then a `MATCH` walks to
 episode, podcast and guest. That's the GraphRAG core — no second lookup system.
 
-### Retrieval flow — `POST /query`
+### Retrieval flow — `POST /query` (a LangGraph, `src/agents/qa.py`)
 
-Two LLM calls at most (router, synthesis); everything between them is Cypher.
+Three LLM calls (router, synthesis, verifier; plus one re-plan when generated Cypher fails); everything
+else is Cypher.
 
 ```mermaid
 flowchart TD
@@ -73,8 +74,9 @@ flowchart TD
     F -->|no| FB["Fallback:<br/>embed the question,<br/>run semantic_compare"]
     FB --> SY
 
-    SY --> W["store CachedAnswer"]
-    W --> OUT["answer + sources"]
+    SY --> V["Verifier, reports only:<br/>every cited mm:ss in the evidence?<br/>every sentence supported by it?"]
+    V --> W["store CachedAnswer"]
+    W --> OUT["answer (untouched) + sources<br/>+ verified + verification.unsupported"]
 ```
 
 **The `any rows?` gate is the important one.** A tool that finds nothing is a *routing* failure, not an
@@ -98,7 +100,8 @@ semantic path; the router prompt says so, and the gate catches it when the route
 
 ## Agents
 
-See [AGENTS.md](AGENTS.md). `POST /query` = cache check → router agent → one graph tool → synthesis agent → cache.
+See [AGENTS.md](AGENTS.md). `POST /query` = cache check → router agent → one graph tool → synthesis agent →
+verifier agent (reports, never edits) → cache.
 
 ## Storage
 

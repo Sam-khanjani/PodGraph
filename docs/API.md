@@ -22,7 +22,7 @@ Interactive docs: `http://localhost:8010/docs`. All list endpoints return `[]`, 
 | GET | `/insights/concept-reach` | `min_podcasts`, `limit` | concepts ranked by podcast reach |
 | GET | `/insights/bridge-guests` | `concept_a`, `concept_b` | guests whose episodes touch both |
 | GET | `/insights/semantic-compare` | `q`, `k` (2–50) | top-3 semantic quotes per podcast |
-| POST | `/query` | body `{"question": "..."}` | `{answer, tool, args, sources, cached}` — 502 if the LLM step fails |
+| POST | `/query` | body `{"question": "..."}` | `{answer, tool, args, sources, verified, verification, cached}` — `answer` is never edited; `verified` is true when every sentence is supported by `sources` and every cited timestamp exists in them, and `verification.unsupported` lists the sentences that failed and why; 502 if an LLM step fails |
 
 Examples:
 

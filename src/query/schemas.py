@@ -145,4 +145,6 @@ class Answer(BaseModel):
     tool: str
     args: dict
     sources: list
+    verified: bool  # verifier agent: every sentence supported by the sources and every cited mm:ss found in them
+    verification: dict = {}  # {claims, supported, unsupported: [{text, reason}], bad_timestamps} — answer is untouched
     cached: bool

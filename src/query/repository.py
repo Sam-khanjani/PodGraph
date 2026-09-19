@@ -183,12 +183,14 @@ class GraphRepository:
         rows = await self._rows("""
             MATCH (a:CachedAnswer {key: toLower(trim($q))})
             RETURN a.question AS question, a.answer AS answer, a.tool AS tool,
-                   a.args AS args, a.sources AS sources""", q=question)
-        return rows and {**rows[0], "args": json.loads(rows[0]["args"]), "sources": json.loads(rows[0]["sources"])}
+                   a.args AS args, a.sources AS sources, a.verified AS verified, a.verification AS verification""",
+                                q=question)
+        return rows and {**rows[0], "verified": bool(rows[0]["verified"]),
+                         **{k: json.loads(rows[0][k] or "{}") for k in ("args", "sources", "verification")}}
 
     async def cache(self, result: dict):
         await self._rows("""
             MERGE (a:CachedAnswer {key: toLower(trim($question))})
-            SET a.question = $question, a.answer = $answer, a.tool = $tool,
-                a.args = $args, a.sources = $sources, a.created_at = datetime()""",
-            **{**result, "args": json.dumps(result["args"]), "sources": json.dumps(result["sources"], default=str)})
+            SET a.question = $question, a.answer = $answer, a.tool = $tool, a.args = $args, a.sources = $sources,
+                a.verified = $verified, a.verification = $verification, a.created_at = datetime()""",
+            **{**result, **{k: json.dumps(result[k], default=str) for k in ("args", "sources", "verification")}})

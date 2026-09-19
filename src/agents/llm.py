@@ -1,7 +1,8 @@
-"""LLM clients (LangChain ChatOpenAI over Groq's free tier) + the ingestion agents as typed, single-purpose calls.
+"""LLM clients (LangChain ChatOpenAI over Groq's free tier) + the agents as typed, single-purpose calls.
 
 Groq's free limits are per model, so each agent is pinned to one of three models (see config.py).
-Each agent is one prompt with a Pydantic output schema; the LangGraph in src/ingestion/pipeline.py wires them.
+Each agent is one prompt with a Pydantic output schema; the LangGraphs in src/ingestion/pipeline.py (ingestion)
+and src/agents/qa.py (question answering) wire them.
 """
 
 import asyncio
@@ -108,6 +109,16 @@ class Same(BaseModel):
     same: bool
 
 
+class Claim(BaseModel):
+    text: str = Field(description="one sentence of the answer, copied verbatim including its citation")
+    supported: bool
+    reason: str = Field(default="", description="when unsupported: what the evidence lacks or contradicts, one clause")
+
+
+class Verification(BaseModel):
+    claims: list[Claim]
+
+
 # ---- ingestion agents --------------------------------------------------------------
 
 async def infer_metadata(opening: str) -> Metadata:
@@ -158,3 +169,23 @@ async def recommend(summary: str, concepts: list[str]) -> list[Recommendation]:
                    "target. Give a one-sentence reason quoting the gist. Return an empty list if none."),
         ("human", f"Concepts: {', '.join(concepts)}\n\nSummary: {summary}")])
     return [r for r in out.items if r.source in concepts and r.target in concepts and r.source != r.target]
+
+
+# ---- query-time agent ----------------------------------------------------------------
+
+async def verify_claims(question: str, answer: str, evidence: list, tool: str, args: dict) -> list[Claim]:
+    """Fact-check a synthesised answer sentence by sentence against the SAME evidence the writer saw, plus how it
+    was retrieved (a Cypher WHERE clause is evidence too). Runs on the fast model: no competition with the
+    router/synthesis budget."""
+    out = await _typed((fast, reason), Verification, [
+        ("system", "You are a fact-checker for a podcast Q&A system. Split ANSWER into its sentences and copy each "
+                   "one verbatim, citation included. A sentence is SUPPORTED when its facts - names, numbers, who said "
+                   "what, which show - are stated in EVIDENCE or follow directly from it; wording does not matter, "
+                   "paraphrase and summary are fine. UNSUPPORTED: a fact, attribution or opinion the evidence does not "
+                   "contain or contradicts, or one guest's view inflated into a general claim ('experts agree'). Say "
+                   "what is missing in one clause. EVIDENCE was produced by RETRIEVAL: a filter in that query (a show "
+                   "or person name in a Cypher WHERE, a person_mentions argument) is evidence for that link. A "
+                   "sentence saying the evidence is insufficient counts as supported."),
+        ("human", f"QUESTION: {question}\n\nRETRIEVAL: {json.dumps({'tool': tool, 'args': args})}\n\n"
+                  f"ANSWER:\n{answer}\n\nEVIDENCE:\n{json.dumps(evidence, default=str)}")])
+    return out.claims
