@@ -1,33 +1,73 @@
-from datetime import date
-from enum import Enum
-from pydantic import BaseModel, ConfigDict, Field
-
-
-class ConceptCategory(str, Enum):
-    """Controlled vocabulary for concept categories (matches the seed data)."""
-    supplement = "Supplement"
-    biomarker = "Biomarker"
-    exercise = "Exercise"
-    diet = "Diet"
-    disease = "Disease"
-    physiology = "Physiology"
+from pydantic import BaseModel
 
 
 class PodcastOut(BaseModel):
-    model_config = ConfigDict( 
-        json_schema_extra={
-            "example": {
-                "name": "Huberman Lab",
-                "host": "Andrew Huberman",
-                "platform_url": "https://hubermanlab.com",
-                "episode_count": 2,
-            }
-        }
-    )
     name: str
-    host: str
+    host: str | None = None
     platform_url: str | None = None
-    episode_count: int = 0
+    episode_count: int
+
+
+class ChunkOut(BaseModel):
+    chunk_id: str
+    text: str
+    timestamp_start: int
+    timestamp_end: int
+    topic: str | None = None
+    summary: str | None = None
+    turns: list[dict] = []  # who said what: [{speaker, text, start, concepts}]
+
+
+class RecommendationOut(BaseModel):
+    source: str
+    target: str
+    reason: str
+    chunk_id: str
+    timestamp: int
+    episode_title: str
+    podcast: str
+
+
+class PersonOut(BaseModel):
+    name: str
+    mentions: int
+
+
+class PersonTopic(BaseModel):
+    concept: str
+    category: str | None = None
+    mentions: int
+    podcasts: list[str]
+
+
+class Mention(BaseModel):
+    podcast: str
+    episode_id: str
+    episode_title: str
+    speaker: str
+    concept: str
+    timestamp: int
+    quote: str
+
+
+class EpisodeOut(BaseModel):
+    episode_id: str
+    title: str
+    number: int | None = None
+    publish_date: str | None = None
+    audio_url: str | None = None
+    summary: str | None = None
+    duration_seconds: int | None = None
+    podcast: str
+    guests: list[str]
+    chunks: list[ChunkOut]
+
+
+class GuestEpisode(BaseModel):
+    podcast: str
+    episode_id: str
+    episode_title: str
+    concepts: list[str]
 
 
 class GuestOut(BaseModel):
@@ -35,72 +75,74 @@ class GuestOut(BaseModel):
     title: str | None = None
     institution: str | None = None
     bio: str | None = None
-
-
-class ChunkOut(BaseModel):
-    chunk_id: str
-    text: str
-    timestamp_start: int = Field(..., description="Start time in seconds")
-    timestamp_end: int = Field(..., description="End time in seconds")
-
-
-class EpisodeOut(BaseModel):
-    episode_id: str
-    title: str
-    number: int | None = None
-    publish_date: date | None = None
-    summary: str | None = None
-    audio_url: str | None = None
-    podcast: str
-    guests: list[GuestOut] = []
-    chunks: list[ChunkOut] = []
+    podcasts: list[str]
+    episodes: list[GuestEpisode]
 
 
 class ConceptSummary(BaseModel):
     name: str
-    category: str
-    mentions: int = Field(0, description="How many chunks mention this concept")
+    category: str | None = None
+    mentions: int
 
 
-# --- The cross-podcast "graph power" response, grouped by show ---
-
-class QuoteOut(BaseModel):
+class Quote(BaseModel):
     episode_id: str
     episode_title: str
     quote: str
     timestamp_start: int
+    score: float | None = None  # only for semantic results
 
 
 class PodcastQuotes(BaseModel):
     podcast: str
-    host: str
-    quotes: list[QuoteOut]
+    host: str | None = None
+    quotes: list[Quote]
 
 
-class ConceptDetailOut(BaseModel):
+class ConceptOut(BaseModel):
     name: str
-    category: str
-    podcasts: list[PodcastQuotes] = []
-
-
-# --- Guest detail (multi-hop) ---
-
-class GuestEpisodeOut(BaseModel):
-    podcast: str
-    episode_id: str
-    episode_title: str
-    concepts: list[str] = []
-
-
-class GuestDetailOut(GuestOut):
-    podcasts: list[str] = []
-    episodes: list[GuestEpisodeOut] = []
-    concepts: list[str] = []
+    category: str | None = None
+    podcasts: list[PodcastQuotes]
 
 
 class SearchHit(BaseModel):
-    episode_id: str
-    episode_title: str
     chunk_id: str
     text: str
     timestamp_start: int
+    episode_id: str
+    episode_title: str
+    podcast: str | None = None
+    guest: str | None = None
+    score: float | None = None
+
+
+class SharedGuest(BaseModel):
+    guest: str
+    podcasts: list[str]
+    episode_count: int
+
+
+class ConceptReach(BaseModel):
+    concept: str
+    category: str | None = None
+    podcast_count: int
+    podcasts: list[str]
+    mention_count: int
+
+
+class BridgeGuest(BaseModel):
+    guest: str
+    episodes: list[str]
+
+
+class Question(BaseModel):
+    question: str
+
+
+class Answer(BaseModel):
+    question: str
+    answer: str
+    tool: str
+    args: dict
+    sources: list
+    cached: bool

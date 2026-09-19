@@ -1,29 +1,10 @@
-.PHONY: help up down logs test lint format clean install
-
-help:
-	@echo "Available commands:"
-	@echo "  make install   - Install dependencies"
-	@echo "  make up        - Start all services"
-	@echo "  make down      - Stop all services"
-	@echo "  make logs      - View logs (all services)"
-	@echo "  make logs-api  - View API logs"
-	@echo "  make logs-neo4j - View Neo4j logs"
-	@echo "  make test      - Run tests"
-	@echo "  make lint      - Run linting"
-	@echo "  make format    - Format code with black"
-	@echo "  make clean     - Clean up containers and volumes"
-	@echo "  make init-db    - Apply Neo4j schema"
-	@echo "  make seed       - Load sample data"
-	@echo "  make setup-data - init-db + seed in one shot"
-	@echo "  make test-api   - test fastapi"
-	@echo "  make test-live  - the 3 live integration tests"
+.PHONY: install up down logs test lint format clean init-db reset-db ingest-sample ingest-file ingest-youtube backfill api
 
 install:
 	poetry install
 
 up:
-	docker compose up -d
-	@echo "Services starting... check with 'docker compose ps'"
+	docker compose up -d neo4j
 
 down:
 	docker compose down
@@ -31,39 +12,35 @@ down:
 logs:
 	docker compose logs -f
 
-logs-api:
-	docker compose logs -f api
-
-logs-neo4j:
-	docker compose logs -f neo4j
+api:            ## run the API locally with reload (port 8010; 8000 is often taken)
+	poetry run uvicorn src.query.api:app --reload --port 8010
 
 test:
-	python -m pytest src/tests -v --cov=src
+	poetry run pytest src/tests -q --cov=src
 
 lint:
-	black --check src/
-	flake8 src/
+	poetry run flake8 src/
 
 format:
-	black src/
+	poetry run black src/
 
 clean:
 	docker compose down -v
-	find . -type d -name __pycache__ -exec rm -rf {} +
-	find . -type f -name "*.pyc" -delete
 
 init-db:
 	poetry run python -m src.setup.init_neo4j
 
-seed:
-	poetry run python -m src.setup.sample_data
+ingest-sample:  ## the real episodes saved in data/transcripts (needs GROQ_API_KEY; add --no-llm to skip)
+	poetry run python -m src.ingestion.pipeline file data/transcripts/*.json
 
-setup-data: init-db seed
-	@echo "Schema applied and sample data loaded.
+ingest-youtube: ## make ingest-youtube ID=VIDEO_ID PODCAST="Show name"
+	poetry run python -m src.ingestion.pipeline youtube $(ID) --podcast "$(PODCAST)"
 
-test-api:
-	poetry run pytest src/tests/test_api.py -v
+reset-db:       ## wipe every node, keep the schema
+	poetry run python -c "from src.query.db import run, close; run('MATCH (n) DETACH DELETE n'); close()"
 
-test-live:
-	# Linux/Mac: RUN_LIVE_TESTS=1 poetry run pytest src/tests/test_api_integration.py -v
-	poetry run python -c "import os,subprocess,sys; os.environ['RUN_LIVE_TESTS']='1'; sys.exit(subprocess.run(['pytest','src/tests/test_api_integration.py','-v']).returncode)"
+ingest-file:    ## make ingest-file FILE=path/to/transcript.json
+	poetry run python -m src.ingestion.pipeline file $(FILE)
+
+backfill:       ## embed chunks that predate embeddings
+	poetry run python -m src.ingestion.pipeline backfill

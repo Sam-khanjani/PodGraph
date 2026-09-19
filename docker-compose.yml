@@ -61,14 +61,17 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
+    env_file: .env                      # GROQ_API_KEY, LLM_MODEL_*
     environment:
       NEO4J_URI: bolt://neo4j:7687
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       PYTHONUNBUFFERED: 'true'
     ports:
-      - "8000:8000"
+      - "${API_PORT:-8010}:8000"   # host port; override with API_PORT in .env
     volumes:
       - ./src:/app/src
+      - ./data:/app/data
+      - hf_cache:/root/.cache/huggingface   # keep the embedding model across restarts
     command: python -m uvicorn src.query.api:app --host 0.0.0.0 --port 8000 --reload
     networks:
       - podgragh-network
@@ -77,6 +80,7 @@ services:
 volumes:
   neo4j_data:
   neo4j_logs:
+  hf_cache:
 
 networks:
   podgragh-network:
